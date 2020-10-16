@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ZJH</title>
+  
+  <subtitle>秋小白</subtitle>
+  <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://zuojiahui.github.io/"/>
+  <updated>2020-10-16T14:06:10.017Z</updated>
+  <id>http://zuojiahui.github.io/</id>
+  
+  <author>
+    <name>秋小白</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://zuojiahui.github.io/2020/101416107.html"/>
+    <id>http://zuojiahui.github.io/2020/101416107.html</id>
+    <published>2020-10-14T04:54:13.943Z</published>
+    <updated>2020-10-16T14:06:10.017Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
