@@ -3,11 +3,11 @@
   <title>Blanca</title>
   
   <subtitle>长路漫漫</subtitle>
-  <link href="http://zuo_jiahui.gitee.io/atom.xml" rel="self"/>
+  <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
   
-  <link href="http://zuo_jiahui.gitee.io/"/>
+  <link href="http://zuojiahui.github.io/"/>
   <updated>2021-01-18T05:54:22.956Z</updated>
-  <id>http://zuo_jiahui.gitee.io/</id>
+  <id>http://zuojiahui.github.io/</id>
   
   <author>
     <name>Blanca</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>js中遍历对象的几种方式</title>
-    <link href="http://zuo_jiahui.gitee.io/2021/011846907.html"/>
-    <id>http://zuo_jiahui.gitee.io/2021/011846907.html</id>
+    <link href="http://zuojiahui.github.io/2021/011846907.html"/>
+    <id>http://zuojiahui.github.io/2021/011846907.html</id>
     <published>2021-01-18T03:47:35.792Z</published>
     <updated>2021-01-18T05:54:22.956Z</updated>
     
@@ -34,17 +34,17 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="对象" scheme="http://zuo_jiahui.gitee.io/tags/%E5%AF%B9%E8%B1%A1/"/>
+    <category term="对象" scheme="http://zuojiahui.github.io/tags/%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
   <entry>
     <title>js中遍历数组的几种方式</title>
-    <link href="http://zuo_jiahui.gitee.io/2021/011830917.html"/>
-    <id>http://zuo_jiahui.gitee.io/2021/011830917.html</id>
+    <link href="http://zuojiahui.github.io/2021/011830917.html"/>
+    <id>http://zuojiahui.github.io/2021/011830917.html</id>
     <published>2021-01-18T01:37:18.300Z</published>
     <updated>2021-01-18T05:05:21.764Z</updated>
     
@@ -59,17 +59,17 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="数组" scheme="http://zuo_jiahui.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="http://zuojiahui.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
   <entry>
     <title>务必记住的200条Git命令</title>
-    <link href="http://zuo_jiahui.gitee.io/2021/01167920.html"/>
-    <id>http://zuo_jiahui.gitee.io/2021/01167920.html</id>
+    <link href="http://zuojiahui.github.io/2021/01167920.html"/>
+    <id>http://zuojiahui.github.io/2021/01167920.html</id>
     <published>2021-01-16T07:45:57.452Z</published>
     <updated>2021-01-16T09:21:09.700Z</updated>
     
@@ -84,17 +84,17 @@
     
     
     
-    <category term="Git" scheme="http://zuo_jiahui.gitee.io/categories/Git/"/>
+    <category term="Git" scheme="http://zuojiahui.github.io/categories/Git/"/>
     
     
-    <category term="git命令" scheme="http://zuo_jiahui.gitee.io/tags/git%E5%91%BD%E4%BB%A4/"/>
+    <category term="git命令" scheme="http://zuojiahui.github.io/tags/git%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>JS闭包的理解</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/122950862.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/122950862.html</id>
+    <link href="http://zuojiahui.github.io/2020/122950862.html"/>
+    <id>http://zuojiahui.github.io/2020/122950862.html</id>
     <published>2020-12-29T02:48:21.419Z</published>
     <updated>2021-01-18T03:44:25.997Z</updated>
     
@@ -109,17 +109,17 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="闭包" scheme="http://zuo_jiahui.gitee.io/tags/%E9%97%AD%E5%8C%85/"/>
+    <category term="闭包" scheme="http://zuojiahui.github.io/tags/%E9%97%AD%E5%8C%85/"/>
     
   </entry>
   
   <entry>
     <title>call apply bind三者之间的区别及作用</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/122818266.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/122818266.html</id>
+    <link href="http://zuojiahui.github.io/2020/122818266.html"/>
+    <id>http://zuojiahui.github.io/2020/122818266.html</id>
     <published>2020-12-28T06:34:15.669Z</published>
     <updated>2020-12-29T02:38:37.920Z</updated>
     
@@ -134,21 +134,21 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="call" scheme="http://zuo_jiahui.gitee.io/tags/call/"/>
+    <category term="call" scheme="http://zuojiahui.github.io/tags/call/"/>
     
-    <category term="apply" scheme="http://zuo_jiahui.gitee.io/tags/apply/"/>
+    <category term="apply" scheme="http://zuojiahui.github.io/tags/apply/"/>
     
-    <category term="bind" scheme="http://zuo_jiahui.gitee.io/tags/bind/"/>
+    <category term="bind" scheme="http://zuojiahui.github.io/tags/bind/"/>
     
   </entry>
   
   <entry>
     <title>JS中的浅拷贝与深拷贝</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/122135313.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/122135313.html</id>
+    <link href="http://zuojiahui.github.io/2020/122135313.html"/>
+    <id>http://zuojiahui.github.io/2020/122135313.html</id>
     <published>2020-12-21T08:25:28.530Z</published>
     <updated>2020-12-27T04:34:54.704Z</updated>
     
@@ -163,19 +163,19 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="浅拷贝" scheme="http://zuo_jiahui.gitee.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    <category term="浅拷贝" scheme="http://zuojiahui.github.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
     
-    <category term="深拷贝" scheme="http://zuo_jiahui.gitee.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
+    <category term="深拷贝" scheme="http://zuojiahui.github.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
     
   </entry>
   
   <entry>
     <title>星空特效</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/122024884.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/122024884.html</id>
+    <link href="http://zuojiahui.github.io/2020/122024884.html"/>
+    <id>http://zuojiahui.github.io/2020/122024884.html</id>
     <published>2020-12-20T11:05:52.994Z</published>
     <updated>2020-12-20T11:34:58.214Z</updated>
     
@@ -191,17 +191,17 @@
     
     
     
-    <category term="炫酷特效" scheme="http://zuo_jiahui.gitee.io/categories/%E7%82%AB%E9%85%B7%E7%89%B9%E6%95%88/"/>
+    <category term="炫酷特效" scheme="http://zuojiahui.github.io/categories/%E7%82%AB%E9%85%B7%E7%89%B9%E6%95%88/"/>
     
     
-    <category term="Javascript" scheme="http://zuo_jiahui.gitee.io/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://zuojiahui.github.io/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>小星星特效</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/12197920.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/12197920.html</id>
+    <link href="http://zuojiahui.github.io/2020/12197920.html"/>
+    <id>http://zuojiahui.github.io/2020/12197920.html</id>
     <published>2020-12-19T10:37:03.623Z</published>
     <updated>2020-12-20T11:02:24.826Z</updated>
     
@@ -217,17 +217,17 @@
     
     
     
-    <category term="炫酷特效" scheme="http://zuo_jiahui.gitee.io/categories/%E7%82%AB%E9%85%B7%E7%89%B9%E6%95%88/"/>
+    <category term="炫酷特效" scheme="http://zuojiahui.github.io/categories/%E7%82%AB%E9%85%B7%E7%89%B9%E6%95%88/"/>
     
     
-    <category term="Javascript" scheme="http://zuo_jiahui.gitee.io/tags/Javascript/"/>
+    <category term="Javascript" scheme="http://zuojiahui.github.io/tags/Javascript/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript中this指向问题</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/12193329.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/12193329.html</id>
+    <link href="http://zuojiahui.github.io/2020/12193329.html"/>
+    <id>http://zuojiahui.github.io/2020/12193329.html</id>
     <published>2020-12-19T05:15:45.921Z</published>
     <updated>2020-12-19T08:49:12.691Z</updated>
     
@@ -242,17 +242,17 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="this" scheme="http://zuo_jiahui.gitee.io/tags/this/"/>
+    <category term="this" scheme="http://zuojiahui.github.io/tags/this/"/>
     
   </entry>
   
   <entry>
     <title>React中使用axios发送请求</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/121850332.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/121850332.html</id>
+    <link href="http://zuojiahui.github.io/2020/121850332.html"/>
+    <id>http://zuojiahui.github.io/2020/121850332.html</id>
     <published>2020-12-18T07:26:39.468Z</published>
     <updated>2020-12-18T10:39:17.973Z</updated>
     
@@ -268,17 +268,17 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="axios" scheme="http://zuo_jiahui.gitee.io/tags/axios/"/>
+    <category term="axios" scheme="http://zuojiahui.github.io/tags/axios/"/>
     
   </entry>
   
   <entry>
     <title>React实现数据双向绑定</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/121051352.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/121051352.html</id>
+    <link href="http://zuojiahui.github.io/2020/121051352.html"/>
+    <id>http://zuojiahui.github.io/2020/121051352.html</id>
     <published>2020-12-10T01:05:48.058Z</published>
     <updated>2020-12-13T14:53:50.310Z</updated>
     
@@ -293,17 +293,17 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="双向绑定" scheme="http://zuo_jiahui.gitee.io/tags/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/"/>
+    <category term="双向绑定" scheme="http://zuojiahui.github.io/tags/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript中数组的使用及方法</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/12013498.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/12013498.html</id>
+    <link href="http://zuojiahui.github.io/2020/12013498.html"/>
+    <id>http://zuojiahui.github.io/2020/12013498.html</id>
     <published>2020-12-01T01:13:49.799Z</published>
     <updated>2020-12-12T16:25:52.194Z</updated>
     
@@ -318,17 +318,17 @@
     
     
     
-    <category term="JavaScript" scheme="http://zuo_jiahui.gitee.io/categories/JavaScript/"/>
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
     
     
-    <category term="数组" scheme="http://zuo_jiahui.gitee.io/tags/%E6%95%B0%E7%BB%84/"/>
+    <category term="数组" scheme="http://zuojiahui.github.io/tags/%E6%95%B0%E7%BB%84/"/>
     
   </entry>
   
   <entry>
     <title>hooks使用</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/11224234.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/11224234.html</id>
+    <link href="http://zuojiahui.github.io/2020/11224234.html"/>
+    <id>http://zuojiahui.github.io/2020/11224234.html</id>
     <published>2020-11-22T13:57:43.259Z</published>
     <updated>2020-11-29T16:20:22.958Z</updated>
     
@@ -343,17 +343,17 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="hooks" scheme="http://zuo_jiahui.gitee.io/tags/hooks/"/>
+    <category term="hooks" scheme="http://zuojiahui.github.io/tags/hooks/"/>
     
   </entry>
   
   <entry>
     <title>响应式布局</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/11149461.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/11149461.html</id>
+    <link href="http://zuojiahui.github.io/2020/11149461.html"/>
+    <id>http://zuojiahui.github.io/2020/11149461.html</id>
     <published>2020-11-13T16:00:00.000Z</published>
     <updated>2020-12-18T08:10:59.767Z</updated>
     
@@ -369,17 +369,17 @@
     
     
     
-    <category term="CSS" scheme="http://zuo_jiahui.gitee.io/categories/CSS/"/>
+    <category term="CSS" scheme="http://zuojiahui.github.io/categories/CSS/"/>
     
     
-    <category term="响应式布局" scheme="http://zuo_jiahui.gitee.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
+    <category term="响应式布局" scheme="http://zuojiahui.github.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
   <entry>
     <title>React redux的使用</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/110857455.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/110857455.html</id>
+    <link href="http://zuojiahui.github.io/2020/110857455.html"/>
+    <id>http://zuojiahui.github.io/2020/110857455.html</id>
     <published>2020-11-08T13:35:03.000Z</published>
     <updated>2020-12-20T11:38:09.609Z</updated>
     
@@ -394,17 +394,17 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="redux" scheme="http://zuo_jiahui.gitee.io/tags/redux/"/>
+    <category term="redux" scheme="http://zuojiahui.github.io/tags/redux/"/>
     
   </entry>
   
   <entry>
     <title>React路由的基本使用</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/110142024.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/110142024.html</id>
+    <link href="http://zuojiahui.github.io/2020/110142024.html"/>
+    <id>http://zuojiahui.github.io/2020/110142024.html</id>
     <published>2020-11-01T09:15:33.000Z</published>
     <updated>2020-11-10T16:23:20.413Z</updated>
     
@@ -419,17 +419,17 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="react-router" scheme="http://zuo_jiahui.gitee.io/tags/react-router/"/>
+    <category term="react-router" scheme="http://zuojiahui.github.io/tags/react-router/"/>
     
   </entry>
   
   <entry>
     <title>React中props与state的区别</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/102745355.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/102745355.html</id>
+    <link href="http://zuojiahui.github.io/2020/102745355.html"/>
+    <id>http://zuojiahui.github.io/2020/102745355.html</id>
     <published>2020-10-27T03:35:03.000Z</published>
     <updated>2020-11-03T01:21:53.983Z</updated>
     
@@ -444,19 +444,19 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="props" scheme="http://zuo_jiahui.gitee.io/tags/props/"/>
+    <category term="props" scheme="http://zuojiahui.github.io/tags/props/"/>
     
-    <category term="state" scheme="http://zuo_jiahui.gitee.io/tags/state/"/>
+    <category term="state" scheme="http://zuojiahui.github.io/tags/state/"/>
     
   </entry>
   
   <entry>
     <title>React组件的生命周期的使用</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/102645464.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/102645464.html</id>
+    <link href="http://zuojiahui.github.io/2020/102645464.html"/>
+    <id>http://zuojiahui.github.io/2020/102645464.html</id>
     <published>2020-10-26T04:35:03.000Z</published>
     <updated>2020-10-28T11:39:36.156Z</updated>
     
@@ -471,17 +471,17 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="React组件生命周期" scheme="http://zuo_jiahui.gitee.io/tags/React%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <category term="React组件生命周期" scheme="http://zuojiahui.github.io/tags/React%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
     
   </entry>
   
   <entry>
     <title>React组件的使用</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/102545355.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/102545355.html</id>
+    <link href="http://zuojiahui.github.io/2020/102545355.html"/>
+    <id>http://zuojiahui.github.io/2020/102545355.html</id>
     <published>2020-10-25T04:35:03.000Z</published>
     <updated>2020-12-28T08:30:29.697Z</updated>
     
@@ -496,19 +496,19 @@
     
     
     
-    <category term="React" scheme="http://zuo_jiahui.gitee.io/categories/React/"/>
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
     
     
-    <category term="React创建组件" scheme="http://zuo_jiahui.gitee.io/tags/React%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/"/>
+    <category term="React创建组件" scheme="http://zuojiahui.github.io/tags/React%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/"/>
     
-    <category term="React组件传值" scheme="http://zuo_jiahui.gitee.io/tags/React%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
+    <category term="React组件传值" scheme="http://zuojiahui.github.io/tags/React%E7%BB%84%E4%BB%B6%E4%BC%A0%E5%80%BC/"/>
     
   </entry>
   
   <entry>
     <title>Markdown常用语法</title>
-    <link href="http://zuo_jiahui.gitee.io/2020/101852877.html"/>
-    <id>http://zuo_jiahui.gitee.io/2020/101852877.html</id>
+    <link href="http://zuojiahui.github.io/2020/101852877.html"/>
+    <id>http://zuojiahui.github.io/2020/101852877.html</id>
     <published>2020-10-18T04:35:03.000Z</published>
     <updated>2020-10-21T06:11:09.761Z</updated>
     
@@ -523,10 +523,10 @@
     
     
     
-    <category term="Markdown" scheme="http://zuo_jiahui.gitee.io/categories/Markdown/"/>
+    <category term="Markdown" scheme="http://zuojiahui.github.io/categories/Markdown/"/>
     
     
-    <category term="Markdown" scheme="http://zuo_jiahui.gitee.io/tags/Markdown/"/>
+    <category term="Markdown" scheme="http://zuojiahui.github.io/tags/Markdown/"/>
     
   </entry>
   
