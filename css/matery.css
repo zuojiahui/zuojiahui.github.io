@@ -269,7 +269,7 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #e94b27a8 0%,#69ffc8 100%);
+    background-image: linear-gradient(to right, #0955ffa8 0%,#3ea542 100%);
     opacity: 0.8;
 }
 
@@ -585,7 +585,7 @@ header .go-back i {
     animation: rainbow 60s infinite;
 }
 
-.bg-cover:before,
+/* .bg-cover:before,
 .bg-cover:after {
     position: absolute;
     z-index: 1;
@@ -595,7 +595,7 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
-}
+} */
 
 .bg-cover .container {
     position: relative;
