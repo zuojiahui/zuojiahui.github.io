@@ -505,6 +505,9 @@
 <blockquote>
 <p>需要转换为的数据： [{…}, {…}, {…}, {…}]<br>0: {id: 0, name: “苹果”}<br>1: {id: 1, name: “西瓜”}<br>2: {id: 2, name: “香蕉”}<br>3: {id: 3, name: “梨子”}</p>
 </blockquote>
+<blockquote>
+<p>id，name可根据具体需求修改</p>
+</blockquote>
 <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><pre><code>let arr = [&quot;苹果&quot;, &quot;西瓜&quot;, &quot;香蕉&quot;, &quot;梨子&quot;];
 let obj = &#123;&#125;;
 // 将数组转化为对象
@@ -516,9 +519,6 @@ newObj = Object.keys(obj).map((val) =&gt; (&#123;
   name: obj[val],
 &#125;));
 console.log(newObj);</code></pre>
-<blockquote>
-<p>id，name可根据具体需求修改</p>
-</blockquote>
 <h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><pre><code>let arr = [&quot;苹果&quot;, &quot;西瓜&quot;, &quot;香蕉&quot;, &quot;梨子&quot;];
 let newArr = []
 for(let i = 0, len = arr.length; i &lt; len; i++) &#123;
