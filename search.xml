@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>前端面试必问基础</title>
-      <link href="2021/03121314.html"/>
-      <url>2021/03121314.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于前端知识点太多就很复杂，面试的时候有很多面试官又经常问一些偏基础的技术点，故整理此文章来帮助大家更高的应对面试，也以备自己不时之需</p><h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h3><h4 id="Javascript三大部分"><a href="#Javascript三大部分" class="headerlink" title="Javascript三大部分"></a>Javascript三大部分</h4><ol><li>ECMAScript (JS的语法和基本对象)</li><li>DOM (文档对象模型:处理网页内容的方法和接口)</li><li>BOM (浏览器对象模型:与浏览器交互的方法和接口)</li></ol><h4 id="Javascript特点"><a href="#Javascript特点" class="headerlink" title="Javascript特点"></a>Javascript特点</h4><p><code>解释性语言</code>:语言分为两种  </p><ol><li><p>解释性语言：翻译一行执行一行，不会生成文件<br>优点：可以跨平台（windows linux ）<br>缺点：编译稍微慢</p></li><li><p>编译性语言：翻译过程为通篇翻译，看完一行，看完第二行，看完全部，生成翻译完的文件，并且执行翻译完的文件（ 列如 C C++ ）<br>优点：编译快<br>缺点：不可以跨平台</p></li></ol><p><code>单线程</code>:线程分为两种</p><ol><li>单线程（同步）：同一时间只能做一件事</li><li>多线程（异步）：同一时间做多件事</li></ol><h4 id="数据类型-—-值类型（分为两类）"><a href="#数据类型-—-值类型（分为两类）" class="headerlink" title="数据类型 —- 值类型（分为两类）"></a>数据类型 —- 值类型（分为两类）</h4><p><code>栈数据（原始值，基本数据类型）</code>：Number  &emsp;  String  &emsp;  Boolean &emsp;   undefined    &emsp;  null &emsp; (五大类)<br>原始值存在栈里面：简单数据类型的值是储存在栈中，当把一个变量传递给另一个变量时，是把一个栈中的东西复制到另一个到栈中，并且这两个变量互不影响，修改其中的变量值时，不会改变另外一个变量的结果。</p><pre><code>var a = 1;var b = a;a = 2;console.log(a);   //2console.log(b);   //1</code></pre><p><code>堆数据（引用值）</code>:  array    &emsp;  object    &emsp;  function  …..<br>引用值大致存在堆里面：引用值（复杂数据类型）是把引用变量的名称（内存地址）存储在栈中，但是把其实际对象存储在堆中，栈中的内存地址指向堆中的实际对象，当把引用对象传递给另一个变量时，复制的其实是指向实际对象的指针（内存地址），此时两者指向的是同一个数据，若通过方法改变其中一个变量的值，则访问另一个变量时，其值也会跟着改变， 因为JavaScript 中对象的赋值是默认引用赋值的。</p><pre><code>var a = [1];var b = a;a.push(2);console.log(a);   //[1, 2]console.log(b);   //[1, 2]</code></pre><h4 id="null和undefined的区别"><a href="#null和undefined的区别" class="headerlink" title="null和undefined的区别"></a>null和undefined的区别</h4><p>在一些情况下，null和undefined几乎是一样的。例如：</p><pre><code>if (!undefined) &#123;// undefined is false    console.log(&#39;undefined is false&#39;);&#125;if (!null) &#123;// null is false    console.log(&#39;null is false&#39;);&#125;if(undefined == null) &#123;// true    console.log(&#39;undefined == null&#39;);&#125;</code></pre><p><strong>但是null和undefined仍然存在一些区别：</strong><br>1.类型不一样<br>null是一个object！所以，我们可以这么理解，null是一个对象的占位符，表示这个对象还未初始化，是个”空对象”；而undefined表示压根没人对这个变量做定义，没人知道这到底是个什么玩意儿。</p><pre><code>console.log(typeof undefined); //undefinedconsole.log(typeof null); //object</code></pre><p>2.转为数值时，值不一样<br>undefined转为数值NaN，null转为数值0。</p><pre><code>console.log(Number(undefined)); //NaNconsole.log(undefined + 10);//NaNconsole.log(Number(null)); //0console.log(null + 10); //10</code></pre><p><strong>null的典型用法</strong><br>（1） 作为函数的参数，表示该函数的参数不是对象。</p><pre><code>function testObj(obj) &#123;    if(null == obj) &#123;        // 异常处理,比如创造一个新对象    &#125;&#125;</code></pre><p>（2） 作为对象原型链的终点。</p><pre><code>Object.getPrototypeOf(Object.prototype)// null</code></pre><p><strong>undefined的典型用法</strong></p><pre><code>// (1)变量被声明了，但没有赋值时，就等于undefined。var i;i // undefined//（2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。function f(x) &#123;    console.log(x)&#125;f() // undefined// (3)对象没有赋值的属性，该属性的值为undefined。var  o = new Object();o.p // undefined//（4）函数没有返回值时，默认返回undefined。var x = f();x // undefined</code></pre><h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> 前端面试 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数组对象 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>数组去重的几种常见写法</title>
       <link href="2021/012228872.html"/>
       <url>2021/012228872.html</url>
