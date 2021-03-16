@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数组去重的几种常见写法, Blanca">
+    <meta name="keywords" content="前端, Blanca">
     <meta name="description" content="只要朝着一个方向努力，一切都会变得得心应手">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数组去重的几种常见写法 | Blanca</title>
+    <title>前端 | Blanca</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -267,7 +267,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数组去重的几种常见写法</h1>
+                    <h1 class="description center-align post-title">前端</h1>
                 </div>
             </div>
         </div>
@@ -384,8 +384,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">
-                                <span class="chip bg-color">数组去重</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
                             </a>
                         
                     </div>
@@ -396,8 +396,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaScript/" class="post-category">
-                                JavaScript
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
                             </a>
                         
                     </div>
@@ -409,7 +409,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-22
+                    2021-03-13
                 </div>
                 
 
@@ -418,7 +418,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.1k
                 </div>
                 
 
@@ -430,169 +430,88 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在实际工作或面试中，我们经常会遇到“数组去重”问题，以下来是总结的一些实现的数组去重的多种方法</p>
-<h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><p>使用双层循环改变原数组</p>
-<pre><code>var arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 4, 3, 1, 2, 6, 6, 6, 6];
-function norepeat(arr) &#123;
-  for (var i = 0; i &lt; arr.length; i++) &#123;
-    for (var j = 0; j &lt; arr.length; j++) &#123;
-      if (arr[i] == arr[j] &amp;&amp; i != j) &#123;
-        arr.splice(j, 1);
-      &#125;
-    &#125;
-  &#125;
-  return arr;
+                <!-- ### 前言
+由于前端知识点太多就很复杂，面试的时候有很多面试官又经常问一些偏基础的技术点，故整理此文章来帮助大家更高的应对面试，也以备自己不时之需 -->
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><h3 id="Javascript"><a href="#Javascript" class="headerlink" title="Javascript"></a>Javascript</h3><h4 id="Javascript三大部分"><a href="#Javascript三大部分" class="headerlink" title="Javascript三大部分"></a>Javascript三大部分</h4><ol>
+<li>ECMAScript (JS的语法和基本对象)</li>
+<li>DOM (文档对象模型:处理网页内容的方法和接口)</li>
+<li>BOM (浏览器对象模型:与浏览器交互的方法和接口)</li>
+</ol>
+<h4 id="Javascript特点"><a href="#Javascript特点" class="headerlink" title="Javascript特点"></a>Javascript特点</h4><p><code>解释性语言</code>:语言分为两种  </p>
+<ol>
+<li><p>解释性语言：翻译一行执行一行，不会生成文件<br>优点：可以跨平台（windows linux ）<br>缺点：编译稍微慢</p>
+</li>
+<li><p>编译性语言：翻译过程为通篇翻译，看完一行，看完第二行，看完全部，生成翻译完的文件，并且执行翻译完的文件（ 列如 C C++ ）<br>优点：编译快<br>缺点：不可以跨平台</p>
+</li>
+</ol>
+<p><code>单线程</code>:线程分为两种</p>
+<ol>
+<li>单线程（同步）：同一时间只能做一件事</li>
+<li>多线程（异步）：同一时间做多件事</li>
+</ol>
+<h4 id="数据类型-—-值类型（分为两类）"><a href="#数据类型-—-值类型（分为两类）" class="headerlink" title="数据类型 —- 值类型（分为两类）"></a>数据类型 —- 值类型（分为两类）</h4><p><code>栈数据（原始值，基本数据类型）</code>：Number  &emsp;  String  &emsp;  Boolean &emsp;   undefined    &emsp;  null &emsp; (五大类)<br>原始值存在栈里面：简单数据类型的值是储存在栈中，当把一个变量传递给另一个变量时，是把一个栈中的东西复制到另一个到栈中，并且这两个变量互不影响，修改其中的变量值时，不会改变另外一个变量的结果。</p>
+<pre><code>var a = 1;
+var b = a;
+a = 2;
+console.log(a);   //2
+console.log(b);   //1</code></pre>
+<p><code>堆数据（引用值）</code>:  array    &emsp;  object    &emsp;  function  …..<br>引用值大致存在堆里面：引用值（复杂数据类型）是把引用变量的名称（内存地址）存储在栈中，但是把其实际对象存储在堆中，栈中的内存地址指向堆中的实际对象，当把引用对象传递给另一个变量时，复制的其实是指向实际对象的指针（内存地址），此时两者指向的是同一个数据，若通过方法改变其中一个变量的值，则访问另一个变量时，其值也会跟着改变， 因为JavaScript 中对象的赋值是默认引用赋值的。</p>
+<pre><code>var a = [1];
+var b = a;
+a.push(2);
+console.log(a);   //[1, 2]
+console.log(b);   //[1, 2]</code></pre>
+<h4 id="null和undefined的区别"><a href="#null和undefined的区别" class="headerlink" title="null和undefined的区别"></a>null和undefined的区别</h4><p>在一些情况下，null和undefined几乎是一样的。例如：</p>
+<pre><code>if (!undefined) &#123;// undefined is false
+    console.log(&#39;undefined is false&#39;);
 &#125;
-var arr2 = norepeat(arr);
-console.log(arr2);      //[1, 2, 3, 4, 5, 6]
-console.log(arr)        //[1, 2, 3, 4, 5, 6]</code></pre>
-<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><p>使用 es6 中Set方法，此方法最为简便</p>
-<pre><code>let arr = [1, 4, 3, 6, 3, 4, 5, 7, 6, 2];
-//写法一
-let set = new Set(arr);
-let arr1 = Array.from(set); // Array.from方法可以将 Set 结构转为数组。
-// 写法二
-let arr2 = [...new Set(arr)]
-console.log(arr1);      //[ 1, 2, 4, 3, 6 ]
-console.log(arr2);      //[1, 4, 3, 6, 5, 7, 2]
-console.log(arr);       //[1, 4, 3, 6, 3, 4, 5, 7, 6, 2]</code></pre>
-<h3 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h3><p>将数组的每一个元素依次与其他元素做比较，发现重复元素，利用数组方法splice()删除重复元素</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5, 5, 5, 5];
-function norepeat(arr) &#123;
-  for (var i = 0; i &lt; arr.length - 1; i++) &#123;
-    for (var j = i + 1; j &lt; arr.length; j++) &#123;
-      if (arr[i] == arr[j]) &#123;
-        arr.splice(j, 1);
-        j--;
-      &#125;
-    &#125;
-  &#125;
-  return arr;
-&#125;
-var arr2 = norepeat(arr);
-console.log(arr2);         //[1, 23, 3, 5, 6, 7, 9, 8]
-console.log(arr);          //[1, 23, 3, 5, 6, 7, 9, 8]</code></pre>
-<h3 id="方法四"><a href="#方法四" class="headerlink" title="方法四"></a>方法四</h3><p>借助新数组，判断新数组中是否存在该元素如果不存在则将此元素添加到新数组中（原数组长度不变但被按字符串顺序排序）</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5];
-function norepeat(arr) &#123;
-  var temp = [];
-  var end; //临时变量用于对比重复元素
-  arr.sort();
-  end = arr[0];
-  temp.push(arr[0]);
-  for (var i = 1; i &lt; arr.length; i++) &#123;
-    if (arr[i] != end) &#123;
-      //当前元素如果和临时元素不等则将此元素添加到新数组中
-      temp.push(arr[i]);
-      end = arr[i];
-    &#125;
-  &#125;
-  return temp;
-&#125;
-var arr2 = norepeat(arr);
-console.log(arr2);       //[1, 23, 3, 5, 6, 7, 8, 9]
-console.log(arr);        //[1, 1, 1, 1, 23, 23, 3, 5, 5, 6, 7, 8, 9, 9]</code></pre>
-<h3 id="方法五"><a href="#方法五" class="headerlink" title="方法五"></a>方法五</h3><p>创建一个新数组，判断新数组中是否存在该元素如果不存在则将此元素添加到新数组中</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5];
-function norepeat(arr) &#123;
-  var temp = [];
-  for (var i = 0; i &lt; arr.length; i++) &#123;
-    if (temp.indexOf(arr[i]) == -1) &#123;
-      temp.push(arr[i]);
-    &#125;
-  &#125;
-  return temp;
-&#125;
-var arr2 = norepeat(arr);
-console.log(arr2);      //[1, 23, 3, 5, 6, 7, 9, 8]
-console.log(arr);       //[1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5]</code></pre>
-<h3 id="方法六"><a href="#方法六" class="headerlink" title="方法六"></a>方法六</h3><p>借助indexOf()方法判断此元素在该数组中首次出现的位置下标与循环的下标是否相等</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5, 5, 5];
-function norepeat(arr) &#123;
-  for (var i = 0; i &lt; arr.length; i++) &#123;
-    if (arr.indexOf(arr[i]) != i) &#123;
-      arr.splice(i, 1); //删除数组元素后数组长度减1后面的元素前移
-      i--; //数组下标回退
-    &#125;
-  &#125;
-  return arr;
-&#125;
-var arr2 = norepeat(arr);
-console.log(arr2);      //[1, 23, 3, 5, 6, 7, 9, 8]
-console.log(arr);       //[1, 23, 3, 5, 6, 7, 9, 8]</code></pre>
-<h3 id="方法七"><a href="#方法七" class="headerlink" title="方法七"></a>方法七</h3><p>创建一个新数组 通过indexOf方判断当前元素在数组中的索引如果与循环的下标相等则添加到新数组中</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5, 5, 5];
-function norepeat(arr) &#123;
-  var temp = [];
-  for (var i = 0; i &lt; arr.length; i++) &#123;
-    if (arr.indexOf(arr[i]) == i) &#123;
-      temp.push(arr[i]);
-    &#125;
-  &#125;
-  return temp;
-&#125;
-var arr2 = norepeat(arr);
-console.log(arr2);     //[1, 23, 3, 5, 6, 7, 9, 8]
-console.log(arr);      //[1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5, 5, 5]</code></pre>
-<h3 id="方法八"><a href="#方法八" class="headerlink" title="方法八"></a>方法八</h3><p>利用数组中的filter方法</p>
-<pre><code>var arr = [1, 4, 2, 2, 3, 1, 3, 4, 5, 6, 6, 8, 9];
-var arr2 = arr.filter(function (value, index, self) &#123;
-  return self.indexOf(value) === index;
-&#125;);
-console.log(arr2);    //[1, 4, 2, 3, 5, 6, 8, 9]
-console.log(arr);     //[1, 4, 2, 2, 3, 1, 3, 4, 5, 6, 6, 8, 9]</code></pre>
-<h3 id="方法九"><a href="#方法九" class="headerlink" title="方法九"></a>方法九</h3><p>利用空对象来记录新数组中已经存储过的元素</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5, 5, 5];
-var obj = &#123;&#125;;
-var arr2 = [];
-for (var i = 0; i &lt; arr.length; i++) &#123;
-  if (!obj[arr[i]]) &#123;
-    obj[arr[i]] = true;
-    arr2.push(arr[i]);
-  &#125;
-&#125;
-console.log(arr2);    //[1, 23, 3, 5, 6, 7, 9, 8]
-console.log(arr);     //[1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5, 5, 5]</code></pre>
-<h3 id="方法十"><a href="#方法十" class="headerlink" title="方法十"></a>方法十</h3><p>借助两个新数组</p>
-<pre><code>var arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 4, 3, 2, 1, 1, 1];
-var arr2 = [];
-for (var i = 0; i &lt; arr.length; i++) &#123;
-  var arr3 = []; //接收重复数据后面的下标
-  //内层循环找出有重复数据的下标
-  for (var j = i + 1; j &lt; arr.length; j++) &#123;
-    if (arr[i] == arr[j]) &#123;
-      arr3.push(j); //找出后面重复数据的下标
-    &#125;
-  &#125;
-  // console.log(arr3);
-  if (arr3.length == 0) &#123;
-    //若重复数组没有值说明其不是重复数据
-    arr2.push(arr[i]);
-  &#125;
-&#125;
-console.log(arr2);     //[5, 4, 3, 2, 1]
-console.log(arr);      //[1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 4, 3, 2, 1, 1, 1]</code></pre>
-<h3 id="方法十一"><a href="#方法十一" class="headerlink" title="方法十一"></a>方法十一</h3><p>此方法没有借助新数组直接改变原数组,并且去重后的数组被排序</p>
-<pre><code>var arr = [1, 23, 1, 1, 1, 3, 23, 5, 6, 7, 9, 9, 8, 5];
-function norepeat(arr) &#123;
-  var temp;
-  arr.sort();
-  temp = arr[0];
-  for (var i = 1; i &lt; arr.length; i++) &#123;
-    if (arr[i] == temp) &#123;
-      //当前元素如果和临时元素相等则将此元素从数组中删除
-      arr.splice(i, 1);
-      i--;
-    &#125; else &#123;
-      temp = arr[i];
-    &#125;
-  &#125;
-  return arr;
-&#125;
-var arr2 = norepeat(arr);
-console.log(arr2);     //[1, 23, 3, 5, 6, 7, 8, 9]
-console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
 
+if (!null) &#123;// null is false
+    console.log(&#39;null is false&#39;);
+&#125;
+
+if(undefined == null) &#123;// true
+    console.log(&#39;undefined == null&#39;);
+&#125;</code></pre>
+<p><strong>但是null和undefined仍然存在一些区别：</strong><br>1.类型不一样<br>null是一个object！所以，我们可以这么理解，null是一个对象的占位符，表示这个对象还未初始化，是个”空对象”；而undefined表示压根没人对这个变量做定义，没人知道这到底是个什么玩意儿。</p>
+<pre><code>console.log(typeof undefined); //undefined
+console.log(typeof null); //object</code></pre>
+<p>2.转为数值时，值不一样<br>undefined转为数值NaN，null转为数值0。</p>
+<pre><code>console.log(Number(undefined)); //NaN
+console.log(undefined + 10);//NaN
+
+console.log(Number(null)); //0
+console.log(null + 10); //10</code></pre>
+<p><strong>null的典型用法</strong><br>（1） 作为函数的参数，表示该函数的参数不是对象。</p>
+<pre><code>function testObj(obj) &#123;
+    if(null == obj) &#123;
+        // 异常处理,比如创造一个新对象
+    &#125;
+&#125;</code></pre>
+<p>（2） 作为对象原型链的终点。</p>
+<pre><code>Object.getPrototypeOf(Object.prototype)
+// null</code></pre>
+<p><strong>undefined的典型用法</strong></p>
+<pre><code>// (1)变量被声明了，但没有赋值时，就等于undefined。
+var i;
+i // undefined
+
+//（2) 调用函数时，应该提供的参数没有提供，该参数等于undefined。
+function f(x) &#123;
+    console.log(x)
+&#125;
+f() // undefined
+
+// (3)对象没有赋值的属性，该属性的值为undefined。
+var  o = new Object();
+o.p // undefined
+
+//（4）函数没有返回值时，默认返回undefined。
+var x = f();
+x // undefined</code></pre>
+<h4 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h4><p>优先级&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;运算符&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;顺序&emsp;&emsp;&emsp;<br>&emsp;1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 小括号&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ()<br>&emsp;2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 一元运算符&emsp;&emsp;&emsp;&emsp;&emsp; ++  &emsp;  – &emsp;   ！<br>&emsp;3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 算术运算符&emsp;&emsp;&emsp;&emsp;&emsp; 先&emsp; * /  % &emsp;后&emsp; + -<br>&emsp;4&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 比较运算符&emsp;&emsp;&emsp;&emsp;&emsp; &gt; &emsp; &gt;=&emsp;  &lt;&emsp;  &lt;=<br>&emsp;5&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 相等运算符&emsp;&emsp;&emsp;&emsp;&emsp; == &emsp;  !=&emsp;  ===&emsp;  !==&emsp;<br>&emsp;6&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 逻辑运算符&emsp;&emsp;&emsp;&emsp;&emsp; 先 &emsp; &amp;&amp;  &emsp;后 &emsp; ||<br>&emsp;7&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 赋值运算符&emsp;&emsp;&emsp;&emsp;&emsp; =</p>
+<h4 id="与-或-非"><a href="#与-或-非" class="headerlink" title="与 或 非"></a>与 或 非</h4><p>用来进行布尔值运算的运算符，其返回值也是布尔值（后续开发中常用于多个条件判断）<br> underfined   &emsp;&emsp;&emsp;&emsp;    null  &emsp;&emsp;&emsp;  &emsp;  NaN   &emsp;&emsp;&emsp;          “” &emsp;&emsp;&emsp;&emsp;           0 &emsp;&emsp;&emsp;&emsp;       false  </p>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3>
             </div>
             <hr/>
 
@@ -617,7 +536,7 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://zuojiahui.github.io/2021/012228872.html">http://zuojiahui.github.io/2021/012228872.html</a>
+                    <a href="http://zuojiahui.github.io/2021/03131314.html">http://zuojiahui.github.io/2021/03131314.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -655,8 +574,8 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">
-                                    <span class="chip bg-color">数组去重</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
                                 </a>
                             
                         </div>
@@ -1087,9 +1006,10 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03131314.html">
                     <div class="card-image">
@@ -1107,9 +1027,9 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1122,6 +1042,7 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1140,13 +1061,13 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/012113696.html">
+                <a href="/2021/012228872.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/logding.gif" data-original="/medias/featureimages/6.jpg" class="responsive-img" alt="将数组转换为数组对象">
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="数组去重的几种常见写法">
                         
-                        <span class="card-title">将数组转换为数组对象</span>
+                        <span class="card-title">数组去重的几种常见写法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1157,7 +1078,7 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-22
                             </span>
                         <span class="publish-author">
                             
@@ -1174,8 +1095,8 @@ console.log(arr);      //[1, 23, 3, 5, 6, 7, 8, 9]</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/">
-                        <span class="chip bg-color">数组对象</span>
+                    <a href="/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">
+                        <span class="chip bg-color">数组去重</span>
                     </a>
                     
                 </div>
