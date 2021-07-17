@@ -460,15 +460,6 @@
                 </a>
                 
                 
-                <a href="/tags/Javascript/" title="Javascript: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Javascript" style="background-color: #85C1E9;">Javascript
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/" title="数组对象: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
@@ -483,6 +474,15 @@
                              chip-default "
                             data-tagname="数组去重" style="background-color: #F8F9F9;">数组去重
                         <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/Javascript/" title="Javascript: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="Javascript" style="background-color: #85C1E9;">Javascript
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -546,7 +546,7 @@
 <script type="text/javascript">
     
 
-    $('#tag-wordcloud').jQCloud([{"text":"浅拷贝","weight":1,"link":"/tags/浅拷贝/"},{"text":"深拷贝","weight":1,"link":"/tags/深拷贝/"},{"text":"this","weight":1,"link":"/tags/this/"},{"text":"Markdown","weight":1,"link":"/tags/Markdown/"},{"text":"redux","weight":1,"link":"/tags/redux/"},{"text":"axios","weight":1,"link":"/tags/axios/"},{"text":"双向绑定","weight":1,"link":"/tags/双向绑定/"},{"text":"React组件生命周期","weight":1,"link":"/tags/React组件生命周期/"},{"text":"call","weight":1,"link":"/tags/call/"},{"text":"apply","weight":1,"link":"/tags/apply/"},{"text":"bind","weight":1,"link":"/tags/bind/"},{"text":"hooks","weight":1,"link":"/tags/hooks/"},{"text":"对象","weight":1,"link":"/tags/对象/"},{"text":"数组","weight":2,"link":"/tags/数组/"},{"text":"props","weight":1,"link":"/tags/props/"},{"text":"state","weight":1,"link":"/tags/state/"},{"text":"前端","weight":1,"link":"/tags/前端/"},{"text":"git命令","weight":1,"link":"/tags/git命令/"},{"text":"响应式布局","weight":1,"link":"/tags/响应式布局/"},{"text":"Javascript","weight":2,"link":"/tags/Javascript/"},{"text":"数组对象","weight":1,"link":"/tags/数组对象/"},{"text":"数组去重","weight":1,"link":"/tags/数组去重/"},{"text":"闭包","weight":1,"link":"/tags/闭包/"},{"text":"React创建组件","weight":1,"link":"/tags/React创建组件/"},{"text":"React组件传值","weight":1,"link":"/tags/React组件传值/"},{"text":"react-router","weight":1,"link":"/tags/react-router/"}], {
+    $('#tag-wordcloud').jQCloud([{"text":"浅拷贝","weight":1,"link":"/tags/浅拷贝/"},{"text":"深拷贝","weight":1,"link":"/tags/深拷贝/"},{"text":"this","weight":1,"link":"/tags/this/"},{"text":"Markdown","weight":1,"link":"/tags/Markdown/"},{"text":"redux","weight":1,"link":"/tags/redux/"},{"text":"axios","weight":1,"link":"/tags/axios/"},{"text":"双向绑定","weight":1,"link":"/tags/双向绑定/"},{"text":"React组件生命周期","weight":1,"link":"/tags/React组件生命周期/"},{"text":"call","weight":1,"link":"/tags/call/"},{"text":"apply","weight":1,"link":"/tags/apply/"},{"text":"bind","weight":1,"link":"/tags/bind/"},{"text":"hooks","weight":1,"link":"/tags/hooks/"},{"text":"对象","weight":1,"link":"/tags/对象/"},{"text":"数组","weight":2,"link":"/tags/数组/"},{"text":"props","weight":1,"link":"/tags/props/"},{"text":"state","weight":1,"link":"/tags/state/"},{"text":"前端","weight":1,"link":"/tags/前端/"},{"text":"git命令","weight":1,"link":"/tags/git命令/"},{"text":"响应式布局","weight":1,"link":"/tags/响应式布局/"},{"text":"数组对象","weight":1,"link":"/tags/数组对象/"},{"text":"数组去重","weight":1,"link":"/tags/数组去重/"},{"text":"Javascript","weight":2,"link":"/tags/Javascript/"},{"text":"闭包","weight":1,"link":"/tags/闭包/"},{"text":"React创建组件","weight":1,"link":"/tags/React创建组件/"},{"text":"React组件传值","weight":1,"link":"/tags/React组件传值/"},{"text":"react-router","weight":1,"link":"/tags/react-router/"}], {
         autoResize: true
     });
 </script>
@@ -727,17 +727,17 @@ $(function () {
 
     
     <script>
-        (async function (i, s, o, g, r, a, m) {
-            // setTimeout(function(){ 
-            //     let tage = s.getElementsByClassName('daodream-powered-by')
-            //     let daodreaFooter = s.getElementsByClassName('daodream-app-profile-text')
-            //     let headersTop = s.getElementsByClassName('daodream-sheet-header')
-            //     console.log(daodreaFooter,headersTop)
-            //     tage[0].style.display = "none"
-            //     daodreaFooter[0].style.display = "none"
-            //     headersTop[0].style.backgroundImage = "none"
-            //     headersTop[0].style.boxShadow = "none"
-            // },2000)
+        ( function (i, s, o, g, r, a, m) {
+           setTimeout(function(){ 
+                let tage = s.getElementsByClassName('daodream-powered-by')
+                let daodreaFooter = s.getElementsByClassName('daodream-app-profile-text')
+                let headersTop = s.getElementsByClassName('daodream-sheet-header')
+                console.log(tage,daodreaFooter,headersTop)
+                tage[0].style.display = "none"
+                daodreaFooter[0].style.display = "none"
+                headersTop[0].style.backgroundImage = "none"
+                headersTop[0].style.boxShadow = "none"
+            },2000)
             i["DaoVoiceObject"] = r;
             i[r] = i[r] || function () {
                 (i[r].q = i[r].q || []).push(arguments)
@@ -787,7 +787,7 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
