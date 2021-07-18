@@ -6,7 +6,7 @@
   <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
   
   <link href="http://zuojiahui.github.io/"/>
-  <updated>2021-03-17T13:03:56.749Z</updated>
+  <updated>2021-07-18T12:39:21.013Z</updated>
   <id>http://zuojiahui.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>npm初始化或安装模块报错</title>
+    <link href="http://zuojiahui.github.io/2021/07187920.html"/>
+    <id>http://zuojiahui.github.io/2021/07187920.html</id>
+    <published>2021-07-18T12:08:39.110Z</published>
+    <updated>2021-07-18T12:39:21.013Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h3&gt;&lt;p&gt;报错信息如图:&lt;/p&gt;
+&lt;div&gt;    
+&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="http://zuojiahui.github.io/categories/npm/"/>
+    
+    
+    <category term="npm" scheme="http://zuojiahui.github.io/tags/npm/"/>
+    
+  </entry>
   
   <entry>
     <title>前端</title>
@@ -502,33 +529,6 @@
     
     
     <category term="react-router" scheme="http://zuojiahui.github.io/tags/react-router/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React中props与state的区别</title>
-    <link href="http://zuojiahui.github.io/2020/102745355.html"/>
-    <id>http://zuojiahui.github.io/2020/102745355.html</id>
-    <published>2020-10-27T03:35:03.000Z</published>
-    <updated>2020-11-03T01:21:53.983Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;props&quot;&gt;&lt;a href=&quot;#props&quot; class=&quot;headerlink&quot; title=&quot;props&quot;&gt;&lt;/a&gt;props&lt;/h2&gt;&lt;p&gt;主要是用于组件之间传递参数，获取组件的属性值。 组件之间数据单向流动</summary>
-        
-      
-    
-    
-    
-    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
-    
-    
-    <category term="props" scheme="http://zuojiahui.github.io/tags/props/"/>
-    
-    <category term="state" scheme="http://zuojiahui.github.io/tags/state/"/>
     
   </entry>
   
