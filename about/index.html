@@ -374,10 +374,6 @@
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 
                                 </div>
                             </div>
@@ -413,10 +409,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 
                         </div>
@@ -526,7 +518,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"JavaScript","value":9},{"name":"Markdown","value":1},{"name":"React","value":8},{"name":"Git","value":1},{"name":"前端","value":1},{"name":"npm","value":1},{"name":"CSS","value":1},{"name":"炫酷特效","value":2}],
+                data: [{"name":"JavaScript","value":9},{"name":"Markdown","value":1},{"name":"React","value":8},{"name":"npm","value":1},{"name":"前端","value":1},{"name":"Git","value":1},{"name":"CSS","value":1},{"name":"炫酷特效","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -550,7 +542,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["数组","Javascript","浅拷贝","深拷贝","Markdown","this","redux","axios","React组件生命周期","call"]
+                data: ["数组","Javascript","this","浅拷贝","深拷贝","Markdown","axios","双向绑定","redux","React组件生命周期"]
             }
         ],
         yAxis: [
@@ -733,6 +725,12 @@
         <div class="tag-chips center-align">
             
             
+            <a href="/tags/this/">
+                <span class="chip center-align waves-effect waves-light chip-default">this</span>
+            </a>
+            
+            
+            
             <a href="/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D/">
                 <span class="chip center-align waves-effect waves-light chip-default">浅拷贝</span>
             </a>
@@ -751,8 +749,14 @@
             
             
             
-            <a href="/tags/this/">
-                <span class="chip center-align waves-effect waves-light chip-default">this</span>
+            <a href="/tags/axios/">
+                <span class="chip center-align waves-effect waves-light chip-default">axios</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/">
+                <span class="chip center-align waves-effect waves-light chip-default">双向绑定</span>
             </a>
             
             
@@ -763,14 +767,14 @@
             
             
             
-            <a href="/tags/axios/">
-                <span class="chip center-align waves-effect waves-light chip-default">axios</span>
+            <a href="/tags/React%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+                <span class="chip center-align waves-effect waves-light chip-default">React组件生命周期</span>
             </a>
             
             
             
-            <a href="/tags/React%E7%BB%84%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
-                <span class="chip center-align waves-effect waves-light chip-default">React组件生命周期</span>
+            <a href="/tags/hooks/">
+                <span class="chip center-align waves-effect waves-light chip-default">hooks</span>
             </a>
             
             
@@ -793,14 +797,8 @@
             
             
             
-            <a href="/tags/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/">
-                <span class="chip center-align waves-effect waves-light chip-default">双向绑定</span>
-            </a>
-            
-            
-            
-            <a href="/tags/hooks/">
-                <span class="chip center-align waves-effect waves-light chip-default">hooks</span>
+            <a href="/tags/%E6%95%B0%E7%BB%84/">
+                <span class="chip center-align waves-effect waves-light chip-default">数组</span>
             </a>
             
             
@@ -811,8 +809,14 @@
             
             
             
-            <a href="/tags/%E6%95%B0%E7%BB%84/">
-                <span class="chip center-align waves-effect waves-light chip-default">数组</span>
+            <a href="/tags/npm/">
+                <span class="chip center-align waves-effect waves-light chip-default">npm</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">前端</span>
             </a>
             
             
@@ -835,26 +839,8 @@
             
             
             
-            <a href="/tags/%E5%89%8D%E7%AB%AF/">
-                <span class="chip center-align waves-effect waves-light chip-default">前端</span>
-            </a>
-            
-            
-            
-            <a href="/tags/npm/">
-                <span class="chip center-align waves-effect waves-light chip-default">npm</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/">
                 <span class="chip center-align waves-effect waves-light chip-default">数组对象</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">
-                <span class="chip center-align waves-effect waves-light chip-default">数组去重</span>
             </a>
             
             
@@ -865,14 +851,20 @@
             
             
             
-            <a href="/tags/Javascript/">
-                <span class="chip center-align waves-effect waves-light chip-default">Javascript</span>
+            <a href="/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/">
+                <span class="chip center-align waves-effect waves-light chip-default">数组去重</span>
             </a>
             
             
             
             <a href="/tags/%E9%97%AD%E5%8C%85/">
                 <span class="chip center-align waves-effect waves-light chip-default">闭包</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Javascript/">
+                <span class="chip center-align waves-effect waves-light chip-default">Javascript</span>
             </a>
             
             
@@ -911,60 +903,6 @@
 
 
     <footer class="page-footer bg-color">
-    
-    <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        display: none;
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        display: none;
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="">
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="627809082"
-                   fixed='true'
-                   autoplay='true'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='true'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
     
     <div class="container row center-align"
         style="margin-bottom: 0px !important;">
@@ -1011,10 +949,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
