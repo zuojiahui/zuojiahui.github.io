@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -411,7 +411,8 @@
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>Redux 是 JavaScript 状态容器，提供可预测化得状态管理，可以跨组件、跨页面推送数据。应用场景如 : 购物车、会员登录等功能模块。Redux 由 Flux 演变而来<br><strong>存储流程:</strong><br>Redux 的基本思想是整个应用的 state 保持在一个单一的 store 中，store 是简单的 JavaScript 对象，而改变应用的 start 的唯一方式是在应用中触发 actions，然后为这些 actions 编写 reducers来修改 state。整个 state 转化是在 reducers 中完成  </p>
 <p><strong>流程可分为4大部:</strong><br><strong>1. 选购商品</strong><br><strong>2. 商品装车</strong><br><strong>3. 存入仓库</strong><br><strong>4. 从仓库获取商品</strong></p>
 <h2 id="安装-redux"><a href="#安装-redux" class="headerlink" title="安装 redux"></a>安装 redux</h2><pre><code>npm install redux --save
-npm install react-redux --save</code></pre>
+npm install react-redux --save
+</code></pre>
 <p><font size=5>计数器案例:</font></p>
 <p>在 src 新建一个 store 文件, 再次文件下分别建立 actions reducers 文件<br>子组件 :</p>
 <pre><code>import React from &#39;react&#39;;
@@ -426,7 +427,8 @@ class Couter extends React.Component &#123;
         )
     &#125;
 &#125;
-export default Couter;</code></pre>
+export default Couter;
+</code></pre>
 <h2 id="选购商品"><a href="#选购商品" class="headerlink" title="选购商品"></a>选购商品</h2><pre><code>import React from &#39;react&#39;
 // 关联仓库，将组件进行包裹起来，此时该组件就有 redux 的属性
 import &#123;connect&#125; from &#39;react-redux&#39;
@@ -459,7 +461,8 @@ class IndexPage extends React.Component &#123;
         )
     &#125;
 &#125;
-export default connect()(IndexPage);</code></pre>
+export default connect()(IndexPage);
+</code></pre>
 <p><strong>actions 文件下建立 index.js  和 counter.js</strong><br><strong>counter.js文件</strong></p>
 <pre><code>export function incCount(data) &#123;
     return &#123;
@@ -472,13 +475,15 @@ export function decCount(data) &#123;
         type: &quot;DEC&quot;,
         data
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p><strong>index.js文件</strong></p>
 <pre><code>// import &#123;decCount, decCount&#125; from &#39;./couter&#39; 导入 decCount decCount方法
 import * as counter from &#39;./counter&#39;    //导入 counter文件中所有的方法
 export default &#123;
     counter,    //counter: counter
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h2 id="商品装车"><a href="#商品装车" class="headerlink" title="商品装车"></a>商品装车</h2><p><strong>reducers 文件下建立 counter.js</strong><br><strong>counter.js文件</strong></p>
 <pre><code>//2. 商品装车
 let defaultState = &#123; 
@@ -495,7 +500,8 @@ function counterReducer(state = defaultState, action) &#123;
       return state;    //必须的返回 state， 否则会出错
   &#125;
 &#125;
-export default counterReducer;</code></pre>
+export default counterReducer;
+</code></pre>
 <h2 id="存入仓库"><a href="#存入仓库" class="headerlink" title="存入仓库"></a>存入仓库</h2><p><strong>reducers 文件下建立 index.js</strong><br><strong>index.js文件</strong></p>
 <pre><code>// 引入 createStore 仓库，为 store 的创建做准备  combineReducers用于组合关联使用
 import &#123; createStore, combineReducers &#125; from &#39;redux&#39;;
@@ -505,7 +511,8 @@ import CounterReducer from &#39;./counter&#39;;
 let store = createStore(combineReducers(&#123;   //传入多个个方法
     counter: CounterReducer,
   &#125;))
-  export default store;</code></pre>
+  export default store;
+</code></pre>
 <p><strong>在入口index中添加 store</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import ReactDOM from &#39;react-dom&#39;;
@@ -563,7 +570,8 @@ export default connect((state) =&gt;&#123;  //  state 接收第二步中的 stat
     return &#123;
         state : state
     &#125;
-&#125;)(IndexPage);</code></pre>
+&#125;)(IndexPage);
+</code></pre>
 <p>子组件 :</p>
 <pre><code>import React from &#39;react&#39;;
 import &#123;connect&#125; from &#39;react-redux&#39;
@@ -582,7 +590,8 @@ class Couter extends React.Component &#123;
 //只有和仓关联起来，才可访问 redux 的属性
 export default connect((state) =&gt;(&#123;
     count:state.counter.count
-&#125;))(Couter);</code></pre>
+&#125;))(Couter);
+</code></pre>
 
             </div>
             <hr/>
@@ -1538,10 +1547,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -429,7 +429,8 @@
   return (
     &lt;div&gt;无状态组件&lt;/div&gt;
   )
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="2-有状态组件"><a href="#2-有状态组件" class="headerlink" title="2. 有状态组件"></a>2. 有状态组件</h3><ol>
 <li>是一个class类，继承了类的组件是有状态组件,继承自Component类</li>
 <li>可以使用state和props,并且都是使用this来调用this.state或this.props</li>
@@ -453,7 +454,8 @@
       // 此时页面上的展示的是 : 你好,我是有状态组件
     )
   &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="3-高阶组件"><a href="#3-高阶组件" class="headerlink" title="3. 高阶组件"></a>3. 高阶组件</h3><p><strong>高阶组件类似高阶函数</strong>  </p>
 <ol>
 <li><strong>高阶函数</strong><br>高阶函数就是一个函数，但 <code>参数</code> 和 <code>返回值</code> 为 <code>函数</code> <pre><code>function hoc() &#123;
@@ -461,7 +463,8 @@
      console.log(args)
  &#125;
 &#125;
-hoc()(&quot;我是高级函数&quot;)</code></pre>
+hoc()(&quot;我是高级函数&quot;)
+</code></pre>
 </li>
 <li><strong>高阶组件</strong><br>高阶组件也是一个函数，但 <code>参数</code> 和 <code>返回值</code>为 <code>组件</code></li>
 </ol>
@@ -499,7 +502,8 @@ class App extends React.Component &#123;
     )
   &#125;
 &#125;
-export default Hoc(App, &quot;我是属性代理高阶组件参数&quot;); //App:传递的组件</code></pre>
+export default Hoc(App, &quot;我是属性代理高阶组件参数&quot;); //App:传递的组件
+</code></pre>
 <ol start="2">
 <li><strong>反向继承方式 :</strong><br>反向继承返回的React组件继承了被传入的组件，它能够访问的区域、权限更多，相比属性代理方式，它更像打入组织的内部，对其进行修改  </li>
 </ol>
@@ -535,7 +539,8 @@ class App extends React.Component &#123;
     )
   &#125;
 &#125;
-export default Hoc(App, &quot;我是反向继承高阶组件参数&quot;); //App:传递的组件 </code></pre>
+export default Hoc(App, &quot;我是反向继承高阶组件参数&quot;); //App:传递的组件 
+</code></pre>
 <h2 id="组件之间的传值"><a href="#组件之间的传值" class="headerlink" title="组件之间的传值"></a>组件之间的传值</h2><h3 id="1-父向子传值"><a href="#1-父向子传值" class="headerlink" title="1. 父向子传值"></a>1. 父向子传值</h3><p><strong>无状态组件直接使用props参数不需要this</strong><br><strong>有状态组件必须使用this.props</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import PropTypes from &#39;prop-types&#39;     //检测数据类型
@@ -612,7 +617,8 @@ class App extends React.Component&#123;
         )
     &#125;
 &#125;
-export default App;</code></pre>
+export default App;
+</code></pre>
 <p><strong>子组件:</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class Son extends React.Component &#123;
@@ -630,7 +636,8 @@ class Son extends React.Component &#123;
         )
     &#125;
 &#125;
-export default Son</code></pre>
+export default Son
+</code></pre>
 <h2 id="组件之间传递方法"><a href="#组件之间传递方法" class="headerlink" title="组件之间传递方法"></a>组件之间传递方法</h2><h3 id="父向子传递方法"><a href="#父向子传递方法" class="headerlink" title="父向子传递方法"></a>父向子传递方法</h3><p><strong>父组件:</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import Son from &quot;./son&quot;
@@ -652,7 +659,8 @@ class Father extends React.Component &#123;
         )
     &#125;
 &#125;
-export default Father</code></pre>
+export default Father
+</code></pre>
 <p><strong>子组件:</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class Son extends React.Component &#123;
@@ -668,7 +676,8 @@ class Son extends React.Component &#123;
         )
     &#125;
 &#125;
-export default Son;</code></pre>
+export default Son;
+</code></pre>
 <h3 id="子向父传递方法"><a href="#子向父传递方法" class="headerlink" title="子向父传递方法"></a>子向父传递方法</h3><h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><h3 id="1-登录案例"><a href="#1-登录案例" class="headerlink" title="1. 登录案例"></a>1. 登录案例</h3><pre><code>import React from &quot;react&quot;
 import Hoc from &quot;./proxy&quot;
 
@@ -706,7 +715,8 @@ class App extends React.Component &#123;
         )
     &#125;
 &#125;
-export default App;</code></pre>
+export default App;
+</code></pre>
 <pre><code>//proxy文件
 // 属性代理
 import React from &quot;react&quot;
@@ -755,7 +765,7 @@ export default function Hoc(WithComponent) &#123;              //接收组件
                     isNullpassword: this.state.isNullpassword,
                 &#125;
             &#125;
-
+            
             return (
                 &lt;React.Fragment&gt;
                     &#123;/* &lt;WithComponent title=&#123;this.props.title&#125; &#123;...this.props&#125; setUsername=&#123;this.setUsername.bind(this)&#125; username=&#123;this.state.username&#125;&gt;&lt;/WithComponent&gt; */&#125;
@@ -765,7 +775,8 @@ export default function Hoc(WithComponent) &#123;              //接收组件
             )
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="2-轮播图案例"><a href="#2-轮播图案例" class="headerlink" title="2. 轮播图案例"></a>2. 轮播图案例</h3><p><strong>父组件 :</strong></p>
 <pre><code>//轮播图数据源
 import React from &#39;react&#39;
@@ -790,7 +801,8 @@ class App extends React.Component &#123;
         )
     &#125;
 &#125;
-export default App;</code></pre>
+export default App;
+</code></pre>
 <pre><code>//轮播图逻辑
 import React from &#39;react&#39;;
 import Proptypes from &#39;prop-types&#39;;
@@ -878,7 +890,8 @@ export default function Hoc(WithCompont) &#123;
             )
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <pre><code>//轮播图视图层
 import React from &#39;react&#39;
 import Hoc from &#39;./hoc&#39;
@@ -913,7 +926,8 @@ export default Hoc((props) =&gt; &#123;
             &lt;/div&gt;
         &lt;/div&gt;
     )
-&#125;)</code></pre>
+&#125;)
+</code></pre>
 
             </div>
             <hr/>
@@ -1873,10 +1887,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

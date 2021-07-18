@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -416,7 +416,8 @@
 ### 三级标题
 #### 四级标题
 ##### 五级标题
-###### 六级标题</code></pre>
+###### 六级标题
+</code></pre>
 <p><strong>效果如下:</strong>  </p>
 <div align=center>
 <img src="/medias/logding.gif" data-original="https://img-blog.csdnimg.cn/20200426182643977.png?" width = 50% height = 50%>
@@ -426,37 +427,44 @@
 <pre><code>*这是倾斜的文字*
 **这是加粗的文字**
 ***这是斜体加粗的文字***
-~~这是加删除线的文字~~</code></pre>
+~~这是加删除线的文字~~
+</code></pre>
 <p><strong>效果如下:</strong><br><em>这是倾斜的文字</em><br><strong>这是加粗的文字</strong><br><strong><em>这是斜体加粗的文字</em></strong><br><del>这是加删除线的文字</del>  </p>
 <h3 id="3-分割线"><a href="#3-分割线" class="headerlink" title="3. 分割线"></a>3. 分割线</h3><p>三个 - 或者 *<br><strong>示列:</strong></p>
 <pre><code>---
-***</code></pre>
+***
+</code></pre>
 <p><strong>效果如下:</strong></p>
 <hr>
 <hr>
 <h3 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h3><p>在需要引用的文字前加 &gt;<br><strong>示列:</strong></p>
-<pre><code>&gt;大家好，你们好</code></pre>
+<pre><code>&gt;大家好，你们好
+</code></pre>
 <p><strong>效果如下:</strong></p>
 <blockquote>
 <p>大家好，你们好</p>
 </blockquote>
 <h3 id="5-图片"><a href="#5-图片" class="headerlink" title="5. 图片"></a>5. 图片</h3><p>![图片下方显示名字](“图片url 鼠标放在图片上的显示信息”)<br><strong>示列:</strong></p>
-<pre><code>![我是皮卡丘](https://img-blog.csdnimg.cn/20200507103002365.png &quot;皮卡皮卡&quot;)</code></pre>
+<pre><code>![我是皮卡丘](https://img-blog.csdnimg.cn/20200507103002365.png &quot;皮卡皮卡&quot;)
+</code></pre>
 <p><strong>效果如下:</strong></p>
 <div align=center>
 
 <p><img src="/medias/logding.gif" data-original="https://img-blog.csdnimg.cn/20200507103002365.png" alt="我是皮卡丘" title="皮卡皮卡"></p>
 </div>
 
-<h3 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6. 超链接"></a>6. 超链接</h3><pre><code>[网址名](网址) </code></pre>
+<h3 id="6-超链接"><a href="#6-超链接" class="headerlink" title="6. 超链接"></a>6. 超链接</h3><pre><code>[网址名](网址) 
+</code></pre>
 <p><strong>示列:</strong></p>
 <pre><code>[GitHub](https://github.com/)
-[百度](https://www.baidu.com/) </code></pre>
+[百度](https://www.baidu.com/) 
+</code></pre>
 <p><a target="_blank" rel="noopener" href="https://github.com/">GitHub</a><br><a target="_blank" rel="noopener" href="https://www.baidu.com/">百度</a> </p>
 <h3 id="7-列表"><a href="#7-列表" class="headerlink" title="7. 列表"></a>7. 列表</h3><p><strong>有序列表:</strong><br>数字加上 . (后面跟上一个空格)<br><strong>示列:</strong></p>
 <pre><code>1. 有序列表
 2. 有序列表
-3. 有序列表</code></pre>
+3. 有序列表
+</code></pre>
 <ol>
 <li>有序列表</li>
 <li>有序列表</li>
@@ -465,7 +473,8 @@
 <p><strong>无序列表:</strong><br>内容前面加上 *，+，- (后面跟上一个空格)<br><strong>示列:</strong></p>
 <pre><code>* 无序列表
 + 无序列表
-- 无序列表</code></pre>
+- 无序列表
+</code></pre>
 <ul>
 <li>无序列表</li>
 </ul>
@@ -481,20 +490,24 @@
 <pre><code>var num =(function(a, b ,c)&#123;
     var d = a + b + c + 1;  
     return d
-&#125;(1,2,3))</code></pre>
+&#125;(1,2,3))
+</code></pre>
 <h2 id="Markdown进阶"><a href="#Markdown进阶" class="headerlink" title="Markdown进阶"></a>Markdown进阶</h2><h3 id="1-文字缩进"><a href="#1-文字缩进" class="headerlink" title="1. 文字缩进"></a>1. 文字缩进</h3><p>在要缩进的文字前使用 <code>&amp;emsp;</code>(注意后面要加上空格)<br><strong>示列:</strong><br>我是缩进前的文字<br>&emsp; &emsp; &emsp; 我是缩进后的文字</p>
 <h3 id="2-文字居中"><a href="#2-文字居中" class="headerlink" title="2. 文字居中"></a>2. 文字居中</h3><p>对于标准的markdown文本，是不支持居中对齐的。但是markdown支持html语言，所以可以采用html语法格式来实现<br><strong>示列:</strong></p>
-<pre><code>&lt;center&gt;我要居中显示&lt;/center&gt;</code></pre>
+<pre><code>&lt;center&gt;我要居中显示&lt;/center&gt;
+</code></pre>
 <center>我要居中显示</center>
 
 <h3 id="3-字体字号及颜色"><a href="#3-字体字号及颜色" class="headerlink" title="3. 字体字号及颜色"></a>3. 字体字号及颜色</h3><p>同样采用HTML语法实现<br><strong>示列:</strong></p>
-<pre><code>&lt;center&gt;&lt;font face=&quot;微软雅黑&quot; size=8 color=red&gt;我是一行文本&lt;/font&gt;&lt;/center&gt;</code></pre>
+<pre><code>&lt;center&gt;&lt;font face=&quot;微软雅黑&quot; size=8 color=red&gt;我是一行文本&lt;/font&gt;&lt;/center&gt;
+</code></pre>
 <center><font face="微软雅黑" size=8 color=red>我是一行文本</font></center>
 
 <h3 id="4-图片的大小和位置"><a href="#4-图片的大小和位置" class="headerlink" title="4. 图片的大小和位置"></a>4. 图片的大小和位置</h3><p>center 居中 ，center换成 left 和 right 可以实现居左，居右<br>width 和 height 调控宽度和高度<br><strong>示列:</strong></p>
 <pre><code>&lt;div  align=&quot;center&quot;&gt;    
 &lt;img src=&quot;https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3222272914,986927614&amp;fm=26&amp;gp=0.jpg&quot; width = 50% height = 50% /&gt;
-&lt;/div&gt;  </code></pre>
+&lt;/div&gt;  
+</code></pre>
 <div  align="center">    
 <img src="/medias/logding.gif" data-original="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3222272914,986927614&fm=26&gp=0.jpg" width = 50% height = 50% />
 </div>  
@@ -1460,10 +1473,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

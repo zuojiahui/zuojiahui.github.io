@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -411,7 +411,8 @@
                 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>面向对象语言中 this 表示当前对象的一个引用,但在 JavaScript 中 this 不是固定不变的，它会随着执行环境的改变而改变。</p>
 <h3 id="1-全局作用域或者普通函数中-this-指向全局对象-window"><a href="#1-全局作用域或者普通函数中-this-指向全局对象-window" class="headerlink" title="1. 全局作用域或者普通函数中 this 指向全局对象 window"></a>1. 全局作用域或者普通函数中 this 指向全局对象 window</h3><pre><code>//直接打印
 var a = 10;
-console.log(this.a)</code></pre>
+console.log(this.a)
+</code></pre>
 <blockquote>
 <p>10</p>
 </blockquote>
@@ -421,7 +422,8 @@ function bar() &#123;
   var a = 20
   console.log(this.a);
 &#125;
-bar();</code></pre>
+bar();
+</code></pre>
 <blockquote>
 <p>10</p>
 </blockquote>
@@ -431,7 +433,8 @@ var bar = function () &#123;
   var a = 20;
   console.log(this.a);
 &#125;;
-bar();</code></pre>
+bar();
+</code></pre>
 <blockquote>
 <p>10</p>
 </blockquote>
@@ -440,7 +443,8 @@ var a = 10;
 (function () &#123;
   var a = 20;
   console.log(this.a);
-&#125;)();</code></pre>
+&#125;)();
+</code></pre>
 <blockquote>
 <p>10</p>
 </blockquote>
@@ -449,7 +453,8 @@ var a = 10;
 setInterval(function () &#123;
     var a = 20
   console.log(this.a);
-&#125;, 2000);</code></pre>
+&#125;, 2000);
+</code></pre>
 <blockquote>
 <p>10</p>
 </blockquote>
@@ -461,7 +466,8 @@ var person = &#123;
     console.log(this.a);
   &#125;,
 &#125;;
-person.run();</code></pre>
+person.run();
+</code></pre>
 <blockquote>
 <p>20</p>
 </blockquote>
@@ -472,7 +478,8 @@ person.run();</code></pre>
   btn.onclick = function () &#123;
     console.log(this);
   &#125;;
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;
+</code></pre>
 <blockquote>
 <p>&lt; button button button type=”button”&gt;点我 &lt; /button&gt;</p>
 </blockquote>
@@ -483,7 +490,8 @@ person.run();</code></pre>
   btn.addEventListener(&quot;click&quot;, function () &#123;
     console.log(this);
   &#125;);
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;
+</code></pre>
 <blockquote>
 <p>&lt; button button button type=”button”&gt;点我 &lt; /button&gt;</p>
 </blockquote>
@@ -501,7 +509,8 @@ function Person(name) &#123;
 &#125;
 var people = new Person(&#39;iwen&#39;)
 console.log(self === people)       //true
-//这里new改变了this指向，将this由window指向Person的实例对象people</code></pre>
+//这里new改变了this指向，将this由window指向Person的实例对象people
+</code></pre>
 <blockquote>
 <p>window<br>people<br>true</p>
 </blockquote>
@@ -514,7 +523,8 @@ console.log(self === people)       //true
   &#125;
 &#125;
 obj.foo()    // &#123;foo: ƒ, bar: ƒ&#125;
-obj.bar()    // window</code></pre>
+obj.bar()    // window
+</code></pre>
 <blockquote>
 <p>{foo: ƒ, bar: ƒ}<br>window</p>
 </blockquote>
@@ -1473,10 +1483,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

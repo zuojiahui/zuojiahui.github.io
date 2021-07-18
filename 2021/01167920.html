@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -422,7 +422,8 @@ $ git init --bare &lt;directory&gt;
 
 # 下载一个项目和它的整个代码历史
 # 这个命令就是将一个版本库拷贝到另一个目录中，同时也将分支都拷贝到新的版本库中。这样就可以在新的版本库中提交到远程分支
-$ git clone [url]</code></pre>
+$ git clone [url]
+</code></pre>
 <h3 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h3><p>管理分支，可以通过下列命令对分支进行增删改查切换等</p>
 <pre><code># 创建一个新的分支
 $ git branch [branch-name]
@@ -496,19 +497,22 @@ $ git co $id -b &lt;new_branch&gt;
 $ git br -d &lt;branch&gt;
 
 # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
-$ git br -D &lt;branch&gt;</code></pre>
+$ git br -D &lt;branch&gt;
+</code></pre>
 <h3 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h3><pre><code># 从远端origin的master分支更新版本库
 # git pull &lt;远端&gt; &lt;分支&gt;
 $ git pull origin master
 
 # 抓取远程仓库所有分支更新并合并到本地，不要快进合并
-$ git pull --no-ff</code></pre>
+$ git pull --no-ff
+</code></pre>
 <h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><p>显示索引文件（也就是当前工作空间）和当前的头指针指向的提交的不同</p>
 <pre><code># 显示分支，未跟踪文件，更改和其他不同
 $ git status
 
 # 查看其他的git status的用法
-$ git help status</code></pre>
+$ git help status
+</code></pre>
 <h3 id="添加"><a href="#添加" class="headerlink" title="添加"></a>添加</h3><p>添加文件到当前工作空间中。如果你不使用 git add 将文件添加进去，那么这些文件也不会添加到之后的提交之中</p>
 <pre><code># 添加一个文件
 $ git add test.js
@@ -530,7 +534,8 @@ $ git add [dir]
 
 # 添加每个变化前，都会要求确认
 # 对于同一个文件的多处变化，可以实现分次提交
-$ git add -p</code></pre>
+$ git add -p
+</code></pre>
 <h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>rm 和上面的 add 命令相反，从工作空间中去掉某个文件</p>
 <pre><code># 移除 HelloWorld.js
 $ git rm HelloWorld.js
@@ -542,7 +547,8 @@ $ git rm /pather/to/the/file/HelloWorld.js
 $ git rm [file1] [file2] ...
 
 # 停止追踪指定文件，但该文件会保留在工作区
-$ git rm --cached [file]</code></pre>
+$ git rm --cached [file]
+</code></pre>
 <h3 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h3><p>将当前索引的更改保存为一个新的提交，这个提交包括用户做出的更改与信息</p>
 <pre><code># 提交暂存区到仓库区附带提交信息
 $ git commit -m [message]
@@ -562,7 +568,8 @@ $ git commit -v
 $ git commit --amend -m [message]
 
 # 重做上一次commit，并包括指定文件的新变化
-$ git commit --amend [file1] [file2] ...</code></pre>
+$ git commit --amend [file1] [file2] ...
+</code></pre>
 <h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><pre><code># 上传本地指定分支到远程仓库
 # 把本地的分支更新到远端origin的master分支上
 # git push &lt;远端&gt; &lt;分支&gt;
@@ -597,7 +604,8 @@ $ git remote set-url origin git@ github.com:xxx/xxx.git
 $ git push [remote] --force
 
 # 推送所有分支到远程仓库
-$ git push [remote] --all</code></pre>
+$ git push [remote] --all
+</code></pre>
 <h3 id="撤销"><a href="#撤销" class="headerlink" title="撤销"></a>撤销</h3><pre><code># 恢复暂存区的指定文件到工作区
 $ git checkout [file]
 
@@ -640,7 +648,8 @@ $ git stash list
 $ git stash apply
 
 # 删除暂存区
-$ git stash drop</code></pre>
+$ git stash drop
+</code></pre>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>更改设置。可以是版本库的设置，也可以是系统的或全局的</p>
 <pre><code># 显示当前的Git配置
 $ git config --list
@@ -659,7 +668,8 @@ $ git config --global user.name &quot;My Name&quot;
 $ git config --global alias.&lt;alias-name&gt; &lt;git-command&gt;
 
 # 为Git命令创建一个快捷方式（别名）。
-$ git config --system core.editor &lt;editor&gt;</code></pre>
+$ git config --system core.editor &lt;editor&gt;
+</code></pre>
 <h3 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h3><p>git 内置了对命令非常详细的解释，可以供我们快速查阅</p>
 <pre><code># 查找可用命令
 $ git help
@@ -671,7 +681,8 @@ $ git help -a
 # git help &lt;命令&gt;
 $ git help add
 $ git help commit
-$ git help init</code></pre>
+$ git help init
+</code></pre>
 <h3 id="信息"><a href="#信息" class="headerlink" title="信息"></a>信息</h3><p>获取某些文件，某些分支，某次提交等 git 信息</p>
 <pre><code># 显示commit历史，以及每次commit发生变更的文件
 $ git log --stat
@@ -760,7 +771,8 @@ $ git diff
 $ git diff --cached
 
 # 显示工作目录和最近一次提交的不同
-$ git diff HEAD</code></pre>
+$ git diff HEAD
+</code></pre>
 <h3 id="log"><a href="#log" class="headerlink" title="log"></a>log</h3><pre><code># 显示所有提交
 $ git log
 
@@ -780,14 +792,16 @@ $ git log -p &lt;file&gt;
 $ git log -p -2
 
 #查看提交统计信息
-$ git log --stat</code></pre>
+$ git log --stat
+</code></pre>
 <h3 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h3><p>合并就是将外部的提交合并到自己的分支中</p>
 <pre><code># 将其他分支合并到当前分支
 $ git merge branchName
 
 # 在合并时创建一个新的合并后的提交
 # 不要 Fast-Foward 合并，这样可以生成 merge 提交
-$ git merge --no-ff branchName</code></pre>
+$ git merge --no-ff branchName
+</code></pre>
 <h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>重命名或移动一个文件</p>
 <pre><code># 重命名
 $ git mv test.js test2.js
@@ -800,7 +814,8 @@ $ git mv [file-original] [file-renamed]
 
 # 强制重命名或移动
 # 这个文件已经存在，将要覆盖掉
-$ git mv -f myFile existingFile</code></pre>
+$ git mv -f myFile existingFile
+</code></pre>
 <h3 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h3><pre><code># 列出所有tag
 $ git tag
 
@@ -826,7 +841,8 @@ $ git push [remote] [tag]
 $ git push [remote] --tags
 
 # 新建一个分支，指向某个tag
-$ git checkout -b [branch] [tag]</code></pre>
+$ git checkout -b [branch] [tag]
+</code></pre>
 
             </div>
             <hr/>
@@ -1782,10 +1798,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

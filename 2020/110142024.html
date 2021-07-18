@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -409,7 +409,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>使用React构建的单页面应用，要想实现页面间的跳转，首先想到的就是使用路由。在最新React中，使用的是<strong>react-router-dom</strong></p>
-<h3 id="安装路由"><a href="#安装路由" class="headerlink" title="安装路由"></a>安装路由</h3><pre><code>npm install --save-dev react-router-dom</code></pre>
+<h3 id="安装路由"><a href="#安装路由" class="headerlink" title="安装路由"></a>安装路由</h3><pre><code>npm install --save-dev react-router-dom
+</code></pre>
 <h3 id="路由的基础配置"><a href="#路由的基础配置" class="headerlink" title="路由的基础配置"></a>路由的基础配置</h3><p><strong>第一步:</strong><br>将 <code>App.js</code> 更改成 <code>router.js</code>, 内容如下 :</p>
 <pre><code>/*router.js 页面里的代码
 HashRouter: 有#号
@@ -438,7 +439,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <p><strong>第二步:</strong><br>将入口文件<code>index.js</code>内容更改如下:</p>
 <pre><code>import React from &#39;react&#39;;
 import ReactDOM from &#39;react-dom&#39;;
@@ -474,7 +476,8 @@ class IndexPage extends React.Component &#123;
         )
     &#125;
 &#125;
-export default IndexPage</code></pre>
+export default IndexPage
+</code></pre>
 <pre><code>// New文件夹下index.js
 import React from &#39;react&#39;;
 import &#123; Link &#125; from &#39;react-router-dom&#39;;
@@ -490,7 +493,8 @@ class News extends React.Component &#123;
         )
     &#125;
 &#125;
-export default News;</code></pre>
+export default News;
+</code></pre>
 <pre><code>// New文件夹下details.js
 import React from &#39;react&#39;;
 class NewsDetails extends React.Component &#123;
@@ -502,7 +506,8 @@ class NewsDetails extends React.Component &#123;
         )
     &#125;
 &#125;
-export default NewsDetails;</code></pre>
+export default NewsDetails;
+</code></pre>
 <p><strong><code>router</code> 配置文件 <code>router.js</code>代码如下:</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import &#123;BrowserRouter as Router, Route,Switch&#125; from &#39;react-router-dom&#39;;
@@ -526,7 +531,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <p><strong>此时已经可以完成简单的路由跳转:</strong><br><img src="/medias/logding.gif" data-original="https://gitee.com/zuo_jiahui/blogimage/raw/master/img/5ab8e180349328960ed54a43ff67140.png"></p>
 <h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3><h4 id="方法一-params"><a href="#方法一-params" class="headerlink" title="方法一 : params"></a>方法一 : params</h4><p><strong>通过<code>params</code>接受到传递过来的参数</strong><br><strong>路由表中 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
@@ -552,7 +558,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <p><strong>Link处 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import &#123; Link &#125; from &#39;react-router-dom&#39;;
@@ -569,7 +576,8 @@ class News extends React.Component &#123;
         )
     &#125;
 &#125;
-export default News;</code></pre>
+export default News;
+</code></pre>
 <p><strong>sort页面 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class NewsDetails extends React.Component &#123;
@@ -590,7 +598,8 @@ class NewsDetails extends React.Component &#123;
         )
     &#125;
 &#125;
-export default NewsDetails;</code></pre>
+export default NewsDetails;
+</code></pre>
 <h4 id="方法二-query"><a href="#方法二-query" class="headerlink" title="方法二 : query"></a>方法二 : query</h4><p><strong>通过<code>query</code>接受到传递过来的参数</strong><br><strong>前提：</strong>不能刷新页面,必须由其他页面跳过来，参数才会被传递过来<br><strong>注：</strong>不需要配置路由表。路由表中的内容照常<br><strong>路由表中 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import &#123;BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
@@ -615,7 +624,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <p><strong>Link处 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class News extends React.Component &#123;
@@ -639,7 +649,8 @@ class News extends React.Component &#123;
         )
     &#125;
 &#125;
-export default News;</code></pre>
+export default News;
+</code></pre>
 <p><strong>sort页面 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class NewsDetails extends React.Component &#123;
@@ -658,7 +669,8 @@ class NewsDetails extends React.Component &#123;
         )
     &#125;
 &#125;
-export default NewsDetails;</code></pre>
+export default NewsDetails;
+</code></pre>
 <h4 id="方法三-自定义函数"><a href="#方法三-自定义函数" class="headerlink" title="方法三 : 自定义函数"></a>方法三 : 自定义函数</h4><p><strong>通过自定义函数接受到传递过来的参数</strong><br><strong>在 utils 文件夹下建立一个 js 文件，内容如下 :</strong></p>
 <pre><code>export function localParam (search, hash) &#123;
     search = search || window.location.search;
@@ -702,7 +714,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <p><strong>Link处 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class News extends React.Component &#123;
@@ -719,7 +732,8 @@ class News extends React.Component &#123;
         )
     &#125;
 &#125;
-export default News;</code></pre>
+export default News;
+</code></pre>
 <p><strong>sort页面 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 // 引入自定义方法
@@ -751,7 +765,8 @@ class NewsDetails extends React.Component &#123;
         )
     &#125;
 &#125;
-export default NewsDetails;</code></pre>
+export default NewsDetails;
+</code></pre>
 <h3 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h3><h4 id="方法一-自定义组件"><a href="#方法一-自定义组件" class="headerlink" title="方法一 : 自定义组件"></a>方法一 : 自定义组件</h4><p><strong>制作异步函数组件</strong><br><strong>建立AsynComponent.js文件，内容如下：</strong></p>
 <pre><code>import React, &#123; Component &#125; from &quot;react&quot;;
 export default function asyncComponent(importComponent) &#123;
@@ -775,7 +790,8 @@ export default function asyncComponent(importComponent) &#123;
         &#125;
     &#125;
     return AsyncComponent;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p><strong>路由表中 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import &#123;BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
@@ -801,7 +817,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <h4 id="方法二-lazy和suspense"><a href="#方法二-lazy和suspense" class="headerlink" title="方法二 : lazy和suspense"></a>方法二 : lazy和suspense</h4><p><strong>路由表中 :</strong></p>
 <pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;      //导入 lazy, Suspense 
 import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
@@ -828,7 +845,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <h3 id="路由嵌套"><a href="#路由嵌套" class="headerlink" title="路由嵌套"></a>路由嵌套</h3><h4 id="路由嵌套-主子路由"><a href="#路由嵌套-主子路由" class="headerlink" title="路由嵌套(主子路由)"></a>路由嵌套(主子路由)</h4><p><strong>路由表中 :</strong></p>
 <pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
 import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
@@ -853,7 +871,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 <p><strong>sort页面 :</strong></p>
 <pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
 import &#123; Route, Switch, Redirect &#125; from &#39;react-router-dom&#39;;
@@ -890,7 +909,8 @@ class Index extends React.Component &#123;
         )
     &#125;
 &#125;
-export default Index;</code></pre>
+export default Index;
+</code></pre>
 <h4 id="子组件路由跳转"><a href="#子组件路由跳转" class="headerlink" title="子组件路由跳转"></a>子组件路由跳转</h4><p><strong>withRouter实现子组件路由跳转</strong><br><strong>sort页面 :</strong></p>
 <pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
 import &#123; Route, Switch, Redirect &#125; from &#39;react-router-dom&#39;;
@@ -921,7 +941,8 @@ class Index extends React.Component &#123;
         )
     &#125;
 &#125;
-export default Index;</code></pre>
+export default Index;
+</code></pre>
 <p><strong>新建一个GoodsNav组件 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import &#123; withRouter &#125; from &#39;react-router-dom&#39;    //引入 withRouter
@@ -938,7 +959,8 @@ function GoodsNav(props) &#123;
         &lt;/ul&gt;
     )
 &#125;
-export default withRouter(GoodsNav);</code></pre>
+export default withRouter(GoodsNav);
+</code></pre>
 <h3 id="路由认证"><a href="#路由认证" class="headerlink" title="路由认证"></a>路由认证</h3><p><strong>制作会员认证路由 :</strong></p>
 <pre><code>//在routes/private.js里面的代码
 import React from &#39;react&#39;;
@@ -959,7 +981,8 @@ export function AuthRoute(&#123; component:Component, ...rest &#125;) &#123;
             &#125;
         /&gt;
     );
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p><strong>建立首页 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 import &#123;Link&#125; from &#39;react-router-dom&#39;;
@@ -974,11 +997,12 @@ class IndexPage extends React.Component&#123;
                 &lt;/ul&gt;
 
             &lt;/React.Fragment&gt;
-
+            
         )
     &#125;
 &#125;
-export default IndexPage</code></pre>
+export default IndexPage
+</code></pre>
 <p><strong>建立会员登录 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class Login extends React.Component &#123;
@@ -1017,11 +1041,12 @@ class Login extends React.Component &#123;
                      &lt;/div&gt;
                      &lt;button type=&quot;button&quot; onClick=&#123;this.doLogin.bind(this)&#125;&gt;登录&lt;/button&gt;
             &lt;/React.Fragment&gt;
-
+       
         )
     &#125;
 &#125;
-export default Login;</code></pre>
+export default Login;
+</code></pre>
 <p><strong>建立会员中心页面 :</strong></p>
 <pre><code>import React from &#39;react&#39;;
 class User extends React.Component &#123;
@@ -1035,12 +1060,13 @@ class User extends React.Component &#123;
             &lt;React.Fragment&gt;
             &lt;div&gt;欢迎&#123;localStorage[&#39;username&#39;]&#125; 回来！&lt;/div&gt;
             &lt;button type=&quot;button&quot; onClick=&#123;this.outLogin.bind(this)&#125;&gt;安全退出&lt;/button&gt;
-
+     
             &lt;/React.Fragment&gt;
    )
     &#125;
 &#125;
-export default User;</code></pre>
+export default User;
+</code></pre>
 <p><strong>路由表中 :</strong></p>
 <pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
 import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
@@ -1069,7 +1095,8 @@ class RouterComponent extends React.Component &#123;
     )
   &#125;
 &#125;
-export default RouterComponent;</code></pre>
+export default RouterComponent;
+</code></pre>
 
             </div>
             <hr/>
@@ -2029,10 +2056,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -414,49 +414,57 @@
 for (let i = 0; i &lt; arr.length; i++) &#123;
   console.log(i)         // 0 1 2 3
   console.log(arr[i])    // apple banana watermelon pear
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="第二种-优化版for循环"><a href="#第二种-优化版for循环" class="headerlink" title="第二种: 优化版for循环"></a>第二种: 优化版for循环</h3><p>使用临时变量，将长度缓存起来，避免重复获取数组长度，当数组较大时优化效果才会比较明显<br>这种方法基本上是所有循环遍历方法中性能最高的一种</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 for(let i = 0, len = arr.length; i &lt; len; i++) &#123;
   console.log(i)         // 0 1 2 3
   console.log(arr[i])    // apple banana watermelon pear
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="第三种-弱化版for循环"><a href="#第三种-弱化版for循环" class="headerlink" title="第三种: 弱化版for循环"></a>第三种: 弱化版for循环</h3><p>这种方法其实严格上也属于for循环，只不过是没有使用length判断，而使用变量本身判断</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 for (let i = 0; arr[i] != null; i++) &#123;
   console.log(i);        // 0 1 2 3
   console.log(arr[i]);   // apple banana watermelon pear
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="第四种-forEach循环"><a href="#第四种-forEach循环" class="headerlink" title="第四种: forEach循环"></a>第四种: forEach循环</h3><p>数组自带的forEach循环，使用频率较高，实际上性能比普通for循环弱</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 arr.forEach((item, index, arr) =&gt; &#123;
   console.log(item);    // apple banana watermelon pear
   console.log(index);   // 0 1 2 3
   console.log(arr);     // 数组本身
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <h3 id="第五种-forEach变种"><a href="#第五种-forEach变种" class="headerlink" title="第五种: forEach变种"></a>第五种: forEach变种</h3><p>由于forEach是Array型自带的，对于一些非这种类型的，无法直接使用(如NodeList)，所以才有了这个变种，使用这个变种可以让类似的数组拥有forEach功能。<br>实际性能要比普通forEach弱</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 Array.prototype.forEach.call(arr, (item, index) =&gt; &#123;
   console.log(item);    // apple banana watermelon pear
   console.log(index);   // 0 1 2 3
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <h3 id="第六种-for-in循环"><a href="#第六种-for-in循环" class="headerlink" title="第六种: for in循环"></a>第六种: for in循环</h3><p>这个循环很多人爱用，但实际上，经分析测试，在众多的循环遍历方式中它的效率是最低的</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 for (let i in arr) &#123;
   console.log(i);       // 0 1 2 3
   console.log(arr[i]);  // apple banana watermelon pear
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="第七种-map遍历"><a href="#第七种-map遍历" class="headerlink" title="第七种: map遍历"></a>第七种: map遍历</h3><p>这种方式也是用的比较广泛的，虽然用起来比较优雅，但实际效率还比不上forEach</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 arr.map((item, index) =&gt; &#123;
   console.log(item);    // apple banana watermelon pear
   console.log(index);   // 0 1 2 3
-&#125;); </code></pre>
+&#125;); 
+</code></pre>
 <h3 id="第八种-for-of遍历-需要ES6支持"><a href="#第八种-for-of遍历-需要ES6支持" class="headerlink" title="第八种: for of遍历(需要ES6支持)"></a>第八种: for of遍历(需要ES6支持)</h3><p>这种方式是es6里面用到的，性能要好于for in，但仍然比不上普通for循环</p>
 <pre><code>let arr = [&quot;apple&quot;, &quot;banana&quot;, &quot;watermelon&quot;, &quot;pear&quot;];
 for (let value of arr) &#123;
   console.log(value);  // apple banana watermelon pear
-&#125;</code></pre>
+&#125;
+</code></pre>
 <h3 id="各种遍历方式的性能对比"><a href="#各种遍历方式的性能对比" class="headerlink" title="各种遍历方式的性能对比"></a>各种遍历方式的性能对比</h3><p>以下截图数据是，在chrome (支持es6)中运行了1000次后得出的结论(每次运行100次,一共10个循环，得到的分析结果) </p>
 <div  align="center">    
 <img src="/medias/logding.gif" data-original="https://gitee.com/zuo_jiahui/blogimage/raw/master/img/6361fb0c77ece9ce732852ee1699d60.png" width = 100% height = 100% />
@@ -1416,10 +1424,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

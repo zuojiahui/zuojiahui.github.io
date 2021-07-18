@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -455,7 +455,8 @@ var newobj1 = &#123;
 &#125;;
 newobj.myfun(&quot;上海&quot;,&quot;北京&quot;)                    // 佐助年龄20 来自上海去往北京
 newobj.myfun.call(newobj1,&quot;成都&quot;,&quot;北京&quot;)       // 小樱年龄18 来自成都去往北京
-newobj.myfun.apply(newobj1,[&quot;东京&quot;,&quot;上海&quot;])    // 小樱年龄18 来自东京去往上海</code></pre>
+newobj.myfun.apply(newobj1,[&quot;东京&quot;,&quot;上海&quot;])    // 小樱年龄18 来自东京去往上海
+</code></pre>
 <h4 id="call-与-bind"><a href="#call-与-bind" class="headerlink" title="call 与 bind"></a>call 与 bind</h4><p><code>call</code>: 不需要调用，自执行<br><code>bind</code>: 返回的是一个新的函数，你必须调用它才会被执行</p>
 <pre><code>var newobj = &#123;
   name: &quot;佐助&quot;,
@@ -470,7 +471,8 @@ var newobj1 = &#123;
 &#125;;
 newobj.myfun.call(newobj1,&#39;巴黎&#39;, &#39;东京&#39;)      // 小樱年龄18 来自巴黎去往东京
 newobj.myfun.bind(newobj1,&#39;上海&#39;, &#39;成都&#39;)()    // 小樱年龄18 来自上海去往成都
-newobj.myfun.bind(newobj1,[&#39;上海&#39;, &#39;成都&#39;])()  // 小樱年龄18 来自上海,成都去往undefined</code></pre>
+newobj.myfun.bind(newobj1,[&#39;上海&#39;, &#39;成都&#39;])()  // 小樱年龄18 来自上海,成都去往undefined
+</code></pre>
 <h3 id="栗子"><a href="#栗子" class="headerlink" title="栗子"></a>栗子</h3><pre><code>function fn(a, b) &#123;
     this.c = 3
     console.log(a, b, this)
@@ -499,23 +501,23 @@ fn.bind(obj, 5, 3)(1, 2) //  打印5, 3, &#123;d: 4&#125;
 <h3 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h3><pre><code>Function.prototype.call = function (obj, ...args) &#123;
     // 错误写法，有同学问fn调用call，那么这里的this是指向fn，直接调用函数并传入参数不就可以了吗？
     // this(...args)
-
+    
     // 上面这种写法，并不能改变fn函数内部的this指向，所以不符合的我们的需求。我们应该是让obj去调用fn函数，才能让fn指向obj
-
+    
     // 1. 处理obj是undefined或者null的情况
     if (obj === undefinded || obj === null) &#123;
         obj = window
     &#125;
-
+        
     // 2. 给obj添加一个方法tmpFn，等于fn函数
     obj.tmpFn = this
-
+    
     // 3. 调用obj的tmpFn的方法，并保存执行结果，此时fn函数中this指向obj
     const result = obj.tmpFn(...args)
-
+    
     // 4. 删除obj上的tmpFn
     delete obj.tmpFn
-
+    
     // 5. 返回方法的返回值
     return result
 &#125;
@@ -527,13 +529,13 @@ Function.prototype.apply = function (obj, args) &#123;
     &#125;
     // 2. 给obj添加一个方法tmpFn，等于fn函数
     obj.tmpFn = this
-
+    
     // 3. 调用obj的tmpFn的方法
     const result = obj.tmpFn(args)
-
+    
     // 4. 删除obj上的tmpFn
     delete obj.tmpFn
-
+    
     // 5. 返回方法的返回值
     return result
 &#125;
@@ -1513,10 +1515,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

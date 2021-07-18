@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -433,13 +433,15 @@
 var b = a;
 a = 2;
 console.log(a);   //2
-console.log(b);   //1</code></pre>
+console.log(b);   //1
+</code></pre>
 <p><code>堆数据（引用值）</code>: array &emsp; object &emsp; function …..<br>引用值大致存在堆里面：引用值（复杂数据类型）是把引用变量的名称（内存地址）存储在栈中，但是把其实际对象存储在堆中，栈中的内存地址指向堆中的实际对象，当把引用对象传递给另一个变量时，复制的其实是指向实际对象的指针（内存地址），此时两者指向的是同一个数据，若通过方法改变其中一个变量的值，则访问另一个变量时，其值也会跟着改变，  因为 JavaScript 中对象的赋值是默认引用赋值的。</p>
 <pre><code>var a = [1];
 var b = a;
 a.push(2);
 console.log(a);   //[1, 2]
-console.log(b);   //[1, 2]</code></pre>
+console.log(b);   //[1, 2]
+</code></pre>
 <h4 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h4><p>在一些情况下，null 和 undefined 几乎是一样的。例如：</p>
 <pre><code>if (!undefined) &#123;// undefined is false
     console.log(&#39;undefined is false&#39;);
@@ -451,25 +453,30 @@ if (!null) &#123;// null is false
 
 if(undefined == null) &#123;// true
     console.log(&#39;undefined == null&#39;);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p><strong>但是 null 和 undefined 仍然存在一些区别：</strong> 1.类型不一样<br>null 是一个 object！所以，我们可以这么理解，null 是一个对象的占位符，表示这个对象还未初始化，是个”空对象”；而 undefined 表示压根没人对这个变量做定义，没人知道这到底是个什么玩意儿。</p>
 <pre><code>console.log(typeof undefined); //undefined
-console.log(typeof null); //object</code></pre>
+console.log(typeof null); //object
+</code></pre>
 <p>2.转为数值时，值不一样<br>undefined 转为数值 NaN，null 转为数值 0。</p>
 <pre><code>console.log(Number(undefined)); //NaN
 console.log(undefined + 10);//NaN
 
 console.log(Number(null)); //0
-console.log(null + 10); //10</code></pre>
+console.log(null + 10); //10
+</code></pre>
 <p><strong>null 的典型用法</strong><br>（1） 作为函数的参数，表示该函数的参数不是对象。</p>
 <pre><code>function testObj(obj) &#123;
     if(null == obj) &#123;
         // 异常处理,比如创造一个新对象
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>（2） 作为对象原型链的终点。</p>
 <pre><code>Object.getPrototypeOf(Object.prototype)
-// null</code></pre>
+// null
+</code></pre>
 <p><strong>undefined 的典型用法</strong></p>
 <pre><code>// (1)变量被声明了，但没有赋值时，就等于undefined。
 var i;
@@ -487,7 +494,8 @@ o.p // undefined
 
 //（4）函数没有返回值时，默认返回undefined。
 var x = f();
-x // undefined</code></pre>
+x // undefined
+</code></pre>
 <h4 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h4><p>优先级&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;运算符&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;顺序&emsp;&emsp;&emsp;<br>&emsp;1&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 小括号&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ()<br>&emsp;2&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 一元运算符&emsp;&emsp;&emsp;&emsp;&emsp; ++ &emsp; – &emsp; ！<br>&emsp;3&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 算术运算符&emsp;&emsp;&emsp;&emsp;&emsp; 先&emsp; * / % &emsp;后&emsp; + -<br>&emsp;4&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 比较运算符&emsp;&emsp;&emsp;&emsp;&emsp; &gt; &emsp; &gt;=&emsp; &lt;&emsp; &lt;=<br>&emsp;5&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 相等运算符&emsp;&emsp;&emsp;&emsp;&emsp; == &emsp; !=&emsp; ===&emsp; !==&emsp;<br>&emsp;6&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 逻辑运算符&emsp;&emsp;&emsp;&emsp;&emsp; 先 &emsp; &amp;&amp; &emsp;后 &emsp; ||<br>&emsp;7&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 赋值运算符&emsp;&emsp;&emsp;&emsp;&emsp; =</p>
 <h4 id="与-或-非-逻辑运算符"><a href="#与-或-非-逻辑运算符" class="headerlink" title="与 或 非(逻辑运算符)"></a>与 或 非(逻辑运算符)</h4><p>用来进行布尔值运算的运算符，其返回值也是布尔值（后续开发中常用于多个条件判断）<br>underfined &emsp;&emsp;&emsp;&emsp; null &emsp;&emsp;&emsp; &emsp; NaN &emsp;&emsp;&emsp; “” &emsp;&emsp;&emsp;&emsp; 0 &emsp;&emsp;&emsp;&emsp; false<br><strong>&amp;&amp; ( 与 )——短路语句</strong><br>如果表达示为假，则会返回假的第一个假值，如果表达式都为真，则会返回最后那个真值（ 碰到假就会返回该值 ）</p>
 <pre><code>var  a  =  1  &amp;&amp;  2  &amp;&amp;  3;                    //3
@@ -496,14 +504,16 @@ var  a  =  1  &amp;&amp;  0  &amp;&amp;  3;                    //0
 //短路作用 ：确保代码能够正常执行，常用于后端获取数据后进行判断
 if(data &amp;&amp; data.下面的某个属性) &#123;
     ...执行代码段
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p><strong>|| ( 或 )——兼容语句</strong><br>如果表达式为真，则会返回第一个真值，如果表达式都为假，则会返回最后那个假值（碰到真就会返回该值）</p>
 <pre><code>var  a  =  2  ||  3；                           //2
 var  a  =  2  ||  0  ||  3 ；                   //2
 var  a  =  0  ||  false ；                      //false
 
 //兼容作用 ：常用于确保代码能够多条件执行
-var event  =  e  ||  window.event;</code></pre>
+var event  =  e  ||  window.event;
+</code></pre>
 <p><strong>！(非)—–取反符</strong><br>用来取布尔值在取反</p>
 <pre><code>var  a  =  !&quot;&quot;;                                //true
 var  a  =  !123;                               //fals
@@ -511,7 +521,8 @@ var  a  =  !123;                               //fals
 var obj = &#123;id:1, name:&quot;marry&quot;&#125;
     if(!!obj || id !==&quot;&quot;) &#123;
      console.log(obj.name)
-    &#125;</code></pre>
+    &#125;
+</code></pre>
 <h3 id="React"><a href="#React" class="headerlink" title="React"></a>React</h3><h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3>
             </div>
             <hr/>
@@ -1469,10 +1480,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>

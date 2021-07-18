@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
 </head>
 
 
@@ -411,19 +411,24 @@
                 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><font face="微软雅黑" size=5><strong>什么是数组</strong></font><br>数组对象是使用单独的变量名来存储一系列的值。简单意思就是普通变量一次只能储存一个值，数组可以储存多个值<br>如果你有一组数据（例如：车名字），存在单独变量如下所示:</p>
 <pre><code>var car1=&quot;奔驰&quot;;
 var car2=&quot;奥迪&quot;;
-var car3=&quot;宝马&quot;;</code></pre>
+var car3=&quot;宝马&quot;;
+</code></pre>
 <h2 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h2><p><font face="微软雅黑" size=5><strong>创建一个数组有3种方式</strong></font><br><strong>方式一 : 常规方式</strong></p>
 <pre><code>var myCars = new Array();
 myCars[0]=&quot;奔驰&quot;
 myCars[1]=&quot;奥迪&quot;
-myCars[2]=&quot;宝马&quot;</code></pre>
+myCars[2]=&quot;宝马&quot;
+</code></pre>
 <p><strong>方式二 : 简洁方式</strong></p>
-<pre><code>var myCars=new Array(&quot;奔驰&quot;,&quot;奥迪&quot;,&quot;宝马&quot;);</code></pre>
+<pre><code>var myCars=new Array(&quot;奔驰&quot;,&quot;奥迪&quot;,&quot;宝马&quot;);
+</code></pre>
 <p><strong>方式三 : 字面 (常用)</strong> </p>
-<pre><code>var myCars=[&quot;奔驰&quot;,&quot;奥迪&quot;,&quot;宝马&quot;];</code></pre>
+<pre><code>var myCars=[&quot;奔驰&quot;,&quot;奥迪&quot;,&quot;宝马&quot;];
+</code></pre>
 <h2 id="数组的属性"><a href="#数组的属性" class="headerlink" title="数组的属性"></a>数组的属性</h2><h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h3><p><strong>返回创建数组对象原型的函数</strong><br>返回myCars数组对象原型创建的函数：</p>
 <pre><code>var myCars = [&quot;奔驰&quot;, &quot;奥迪&quot;, &quot;宝马&quot;]
-myCars.constructor</code></pre>
+myCars.constructor
+</code></pre>
 <p><strong>结果输出:</strong></p>
 <blockquote>
 <p>function Array() { [native code] }</p>
@@ -434,7 +439,8 @@ myCars.constructor</code></pre>
 </blockquote>
 <h3 id="lenght"><a href="#lenght" class="headerlink" title="lenght"></a>lenght</h3><p><strong>设置或返回数组元素的个数。</strong></p>
 <pre><code>var myCars = [&quot;奔驰&quot;, &quot;奥迪&quot;, &quot;宝马&quot;]
-myCars.length</code></pre>
+myCars.length
+</code></pre>
 <p><strong>结果输出:</strong></p>
 <blockquote>
 <p>3</p>
@@ -444,7 +450,8 @@ myCars.length</code></pre>
 myCars.length=10
 console.log(myCars.length) 
 console.log(myCars) 
-console.log(myCars[5])</code></pre>
+console.log(myCars[5])
+</code></pre>
 <p><strong>结果输出:</strong></p>
 <blockquote>
 <p>10<br>[“奔驰”, “奥迪”, “宝马”, empty × 7] &emsp; &emsp; &emsp; 后面为空值<br>undefined</p>
@@ -456,7 +463,8 @@ Array.prototype.myUcase = function () &#123;
         this[i] = this[i].toUpperCase();      //toUpperCase() 方法用于把字符串转换为大写
     &#125;
 &#125;
-fruits.myUcase();</code></pre>
+fruits.myUcase();
+</code></pre>
 <p><strong>结果输出:</strong></p>
 <blockquote>
 <p>[“BANANA”, “ORANGE”, “APPLE”, “MANGO”]</p>
@@ -465,7 +473,8 @@ fruits.myUcase();</code></pre>
 <h3 id="不改变原数组"><a href="#不改变原数组" class="headerlink" title="不改变原数组"></a>不改变原数组</h3><h4 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h4><p><strong>把数组转换为字符串</strong></p>
 <pre><code>var arr = [1, 2, 3, 4]
 var sum = arr.toString()
-console.log(sum)</code></pre>
+console.log(sum)
+</code></pre>
 <p><strong>输出结果 :</strong></p>
 <blockquote>
 <p>1,2,3,4,     字符串类型</p>
@@ -474,35 +483,40 @@ console.log(sum)</code></pre>
 <pre><code>var fruits1 = [&quot;Banana&quot;, &quot;Orange&quot;,]
 var fruits2 = [&quot;Apple&quot;,&quot;Mango&quot;,]
 var fruits3 = [&quot;watermelon&quot;,&quot;pear&quot;,]
-var fruits = fruits1.concat(fruits2,fruits3)</code></pre>
+var fruits = fruits1.concat(fruits2,fruits3)
+</code></pre>
 <p><strong>fruits 输出结果:</strong></p>
 <blockquote>
 <p> [“Banana”, “Orange”, “Apple”, “Mango”, “watermelon”, “pear”]</p>
 </blockquote>
 <h4 id="entries"><a href="#entries" class="headerlink" title="entries()"></a>entries()</h4><p><strong>返回数组的可迭代对象</strong><br><strong>简单说就是 Object.entries() 可以把一个对象的键值以数组的形式遍历出来，迭代对象中数组的索引值作为 key，数组元素作为 value。结果和 for…in 一致，但不会遍历原型属性</strong><br><strong>1. 传入对象</strong></p>
 <pre><code>var obj = &#123;name: &#39;雏田&#39;,age: 18&#125;
-var x = Object.entries(obj)</code></pre>
+var x = Object.entries(obj)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>[[‘name’, ‘雏田’], [‘age’, 18]]</p>
 </blockquote>
 <p><strong>2. 传入数组</strong></p>
 <pre><code>var arr =  [&quot;鸣人&quot;, &quot;雏田&quot;, &quot;佐助&quot;]; 
-var x = Object.entries(arr)</code></pre>
+var x = Object.entries(arr)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>[[‘0’, “鸣人”], [‘1’, ‘雏田’], [‘2’, ‘佐助’]]</p>
 </blockquote>
 <p><strong>3. 传入数组中包含对象</strong></p>
 <pre><code>var arr =  [&#123;name:&quot;鸣人&quot;&#125;, &quot;雏田&quot;, &quot;佐助&quot;]; 
-var x = Object.entries(arr)</code></pre>
+var x = Object.entries(arr)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>[[‘0’, { name: “鸣人” }], [‘1’, ‘雏田’], [‘2’, ‘佐助’]]</p>
 </blockquote>
 <p><strong>4. 传入字符串</strong></p>
 <pre><code>var string =  &quot;123&quot; 
-var x = Object.entries(string)</code></pre>
+var x = Object.entries(string)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>[[“0”, “1”], [“1”, “2”], [“2”, “3”]]</p>
@@ -511,7 +525,8 @@ var x = Object.entries(string)</code></pre>
 <pre><code>var number =  123 
 var number1 =  123.3 
 var x = Object.entries(number)
-var y = Object.entries(number1)</code></pre>
+var y = Object.entries(number1)
+</code></pre>
 <p><strong>x y输出结果:</strong></p>
 <blockquote>
 <p>都为 [ ]</p>
@@ -520,7 +535,8 @@ var y = Object.entries(number1)</code></pre>
 <pre><code>var number = [2, 34, 45, 1]
 var x = number.every((i) =&gt;
     i &gt; 30
-)</code></pre>
+)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>false</p>
@@ -530,7 +546,8 @@ var x = number.every((i) =&gt;
 var x = number.some((i) =&gt;
     i &gt; 30
 )
-console.log(x)</code></pre>
+console.log(x)
+</code></pre>
 <p><strong>x 输出结果</strong></p>
 <blockquote>
 <p>true</p>
@@ -539,7 +556,8 @@ console.log(x)</code></pre>
 <pre><code>var number = [2, 34, 45, 1]
 var x = number.filter((i) =&gt;
     i &gt; 30
-)</code></pre>
+)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>[34, 45]</p>
@@ -548,7 +566,8 @@ var x = number.filter((i) =&gt;
 <pre><code>var number = [2, 34, 45, 1]
 var x = number.find((i) =&gt;
     i &gt; 30
-)</code></pre>
+)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>34</p>
@@ -557,7 +576,8 @@ var x = number.find((i) =&gt;
 <pre><code>var number = [2, 34, 45, 1]
 var x = number.findIndex((i) =&gt;
     i &gt; 30
-)</code></pre>
+)
+</code></pre>
 <p><strong>x 输出结果:</strong></p>
 <blockquote>
 <p>1</p>
@@ -575,7 +595,8 @@ arr.forEach((value, index, array) =&gt; &#123;
   b += index
     &#125;)
 console.log(a)
-console.log(b)</code></pre>
+console.log(b)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>a b c d e f<br>0 1 2 3 4 5<br>[“a”, “b”, “c”, “d”, “e”, “f”] * 6<br>a b c d e f<br>abcdef<br>15</p>
@@ -589,7 +610,8 @@ arr.forEach(function (item) &#123;
         return;       //3的元素跳过
     &#125;
     console.log(item);
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>1 2 3 4 5<br>1 2 4 5</p>
@@ -600,7 +622,8 @@ arr.some(function (item) &#123;
         return;     // 不能为 return false
     &#125;
     console.log(item);
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>1 3 4 5</p>
@@ -611,21 +634,24 @@ arr.every(function (item) &#123;
         console.log(item);
         return item !== 3;
         console.log(&quot;我被终止了&quot;)
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>1 2 3<br>不执行</p>
 </blockquote>
 <h4 id="from"><a href="#from" class="headerlink" title="from()"></a>from()</h4><p><strong><code>语法 : Array.from(object, mapFunction, thisValue)</code></strong><br><code>object : 必需，要转换为数组的对象</code><br><code>mapFunction : 可选，数组中每个元素要调用的函数</code><br><code>thisValue : 可选，映射函数(mapFunction)中的 this 对象</code><br><strong>通过给定的对象中创建一个数组</strong></p>
 <pre><code>var arr = Array.from(&quot;RUNOOB&quot;)
-console.log(arr)</code></pre>
+console.log(arr)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[“R”, “U”, “N”, “O”, “O”, “B”]<br><strong>下面的实例返回集合中包含的对象数组</strong></p>
 </blockquote>
 <pre><code>var setObj = new Set([&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]);
 var objArr = Array.from(setObj);
-console.log(objArr[1] == &quot;b&quot;)</code></pre>
+console.log(objArr[1] == &quot;b&quot;)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>true<br><strong>下面的实例演示如何使用箭头语法和映射函数更改元素的值</strong></p>
@@ -633,7 +659,8 @@ console.log(objArr[1] == &quot;b&quot;)</code></pre>
 <pre><code>var arr = Array.from([1, 2, 3], x =&gt; x * 10);
 console.log(arr[0]) 
 console.log(arr[1]) 
-console.log(arr[2]) </code></pre>
+console.log(arr[2]) 
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>10<br>20<br>30</p>
@@ -641,7 +668,8 @@ console.log(arr[2]) </code></pre>
 <h4 id="includes"><a href="#includes" class="headerlink" title="includes()"></a>includes()</h4><p><strong>判断一个数组是否包含一个指定的值</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;,&quot;Apple&quot;,&quot;Mango&quot;,&quot;pear&quot;]
 fruits.includes(&quot;Banana&quot;) 
-fruits.includes(&quot;哈粒嘎&quot;)</code></pre>
+fruits.includes(&quot;哈粒嘎&quot;)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>true<br>false</p>
@@ -650,7 +678,8 @@ fruits.includes(&quot;哈粒嘎&quot;)</code></pre>
 <pre><code>var obj = &#123;id:&quot;Banana&quot;&#125;
 var fruits = [&quot;Banana&quot;, &quot;Orange&quot;,&quot;Apple&quot;,&quot;Mango&quot;,&quot;pear&quot;]
 console.log(Array.isArray(fruits))
-console.log(Array.isArray(obj)) </code></pre>
+console.log(Array.isArray(obj)) 
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>true<br>false</p>
@@ -660,7 +689,8 @@ console.log(Array.isArray(obj)) </code></pre>
 var fruits1 = fruits.join();
 var fruits2 = fruits.join(&quot;~&quot;);
 console.log(fruits1)
-console.log(fruits2)</code></pre>
+console.log(fruits2)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>Banana,Orange,Apple,Mango<br>Banana<del>Orange</del>Apple~Mango</p>
@@ -671,7 +701,8 @@ var obj = &#123;a:123,b:345&#125;     //传入数组
 var str = &#39;ab1234&#39;;         //传入字符串
 console.log(Object.keys(obj))
 console.log(Object.keys(arr))
-console.log(Object.keys(str))</code></pre>
+console.log(Object.keys(str))
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[“a”, “b”]<br>[“0”, “1”, “2”]<br>[“0”, “1”, “2”, “3”, “4”, “5”]</p>
@@ -682,7 +713,8 @@ var fruits1=[&quot;Banana&quot;,&quot;Orange&quot;,&quot;Apple&quot;,&quot;Mango
 var a = fruits.indexOf(&quot;Apple&quot;);
 var b = fruits1.indexOf(&quot;Apple&quot;);
 console.log(a)
-console.log(b)</code></pre>
+console.log(b)
+</code></pre>
 <p><strong>输出 a b 结果:</strong></p>
 <blockquote>
 <p>2<br>2</p>
@@ -693,7 +725,8 @@ var fruits1=[&quot;Banana&quot;,&quot;Orange&quot;,&quot;Apple&quot;,&quot;Mango
 var a = fruits.lastIndexOf(&quot;Apple&quot;);
 var b = fruits1.lastIndexOf(&quot;Apple&quot;);
 console.log(a)
-console.log(b)</code></pre>
+console.log(b)
+</code></pre>
 <p><strong>输出 a b 结果:</strong></p>
 <blockquote>
 <p>2<br>6</p>
@@ -709,7 +742,8 @@ let num = arr.map(function (value, index, array) &#123;
 &#125;)
 console.log(num)
 //ES6箭头函数写法
-let newNum = arr.map((value, index, array) =&gt; value * 3)</code></pre>
+let newNum = arr.map((value, index, array) =&gt; value * 3)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>1 3 4 6<br>0 1 2 3<br>[1, 3, 4, 6]*4<br>[3, 9, 12, 18]</p>
@@ -720,7 +754,8 @@ var citrus = fruits.slice(2);
 var citrus1 = fruits.slice(1,3)
 console.log(fruits)
 console.log(citrus)
-console.log(citrus1)</code></pre>
+console.log(citrus1)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[“Banana”, “Orange”, “Lemon”, “Apple”, “Mango”]<br>[“Lemon”, “Apple”, “Mango”]<br> [“Orange”, “Lemon”]</p>
@@ -735,7 +770,8 @@ var y = arr.reduce(function (x, y) &#123;
 &#125;);
 console.log(arr)
 console.log(x)
-console.log(y)</code></pre>
+console.log(y)
+</code></pre>
 <p><strong>执行结果</strong></p>
 <blockquote>
 <p>[1, 3, 5, 7, 9]<br>25<br>13579</p>
@@ -750,7 +786,8 @@ var y = arr.reduceRight(function (x, y) &#123;
 &#125;); 
 console.log(arr)
 console.log(x)
-console.log(y)</code></pre>
+console.log(y)
+</code></pre>
 <p><strong>执行结果 :</strong></p>
 <blockquote>
 <p>[1, 3, 5, 7, 9]<br>25<br>97531</p>
@@ -758,34 +795,39 @@ console.log(y)</code></pre>
 <h4 id="valueOf-NaN"><a href="#valueOf-NaN" class="headerlink" title="valueOf()"></a>valueOf()</h4><p><strong>返回数组对象的原始值</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
 var x=fruits.valueOf();
-console.log(x)</code></pre>
+console.log(x)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[“Banana”, “Orange”, “Apple”, “Mango”]     fruits.valueOf()与 fruits返回值一样</p>
 </blockquote>
 <h3 id="改变原数组"><a href="#改变原数组" class="headerlink" title="改变原数组"></a>改变原数组</h3><h4 id="copyWithin"><a href="#copyWithin" class="headerlink" title="copyWithin()"></a>copyWithin()</h4><p><strong><code>语法: array.copyWithin(target, start, end)</code></strong><br><code>target : 必需。复制到指定目标索引位置</code><br><code>start : 可选。元素复制的起始位置</code><br><code>end : 可选。停止复制的索引位置 (默认为 array.length)。如果为负值，表示倒数</code><br><strong>从数组的指定位置拷贝元素到数组的另一个指定位置中</strong><br><strong>复制数组的前面两个元素到后面两个元素上</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;,&quot;Apple&quot;,&quot;Mango&quot;,&quot;pear&quot;]
-fruits.copyWithin(2, 0)</code></pre>
+fruits.copyWithin(2, 0)
+</code></pre>
 <p><strong>fruits 输出结果:</strong></p>
 <blockquote>
 <p>[“Banana”, “Orange”, “Banana”, “Orange”, “Apple”]</p>
 </blockquote>
 <p><strong>复制数组的前面两个元素到第三和第四个位置上：</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;, &quot;Kiwi&quot;, &quot;Papaya&quot;];
-fruits.copyWithin(2, 0, 2);</code></pre>
+fruits.copyWithin(2, 0, 2);
+</code></pre>
 <p><strong>fruits 输出结果:</strong></p>
 <blockquote>
 <p>[“Banana”,”Orange”,”Banana”,”Orange”,”Kiwi”,”Papaya”]</p>
 </blockquote>
 <h4 id="fill"><a href="#fill" class="headerlink" title="fill()"></a>fill()</h4><p><strong><code>语法 : array.fill(value, start, end)</code></strong><br><code>value : 必需。填充的值</code><br><code>start : 可选。开始填充位置</code><br><code>end : 可选。停止填充位置 (默认为 array.length)</code><br><strong>使用一个固定值来填充数组</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;, &quot;pear&quot;];
-fruits.fill(&quot;cantaloupe&quot;);</code></pre>
+fruits.fill(&quot;cantaloupe&quot;);
+</code></pre>
 <p><strong>fruits 输出结果:</strong></p>
 <blockquote>
 <p>[“cantaloupe”, “cantaloupe”, “cantaloupe”, “cantaloupe”, “cantaloupe”]</p>
 </blockquote>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;, &quot;pear&quot;];
-fruits.fill(&quot;cantaloupe&quot;, 2, 4);</code></pre>
+fruits.fill(&quot;cantaloupe&quot;, 2, 4);
+</code></pre>
 <p><strong>fruits 输出结果:</strong></p>
 <blockquote>
 <p>[“Banana”, “Orange”, “cantaloupe”, “cantaloupe”, “pear”]</p>
@@ -793,7 +835,8 @@ fruits.fill(&quot;cantaloupe&quot;, 2, 4);</code></pre>
 <h4 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h4><p><strong>删除数组的最后一个元素并返回删除的元素</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
 console.log(fruits.pop())
-console.log(fruits)</code></pre>
+console.log(fruits)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>Mango<br> [“Banana”, “Orange”, “Apple”]</p>
@@ -801,7 +844,8 @@ console.log(fruits)</code></pre>
 <h4 id="shift"><a href="#shift" class="headerlink" title="shift()"></a>shift()</h4><p><strong>删除数组的第一个元素并返回删除的元素</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
 fruits.shift()
-console.log(fruits)</code></pre>
+console.log(fruits)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p> [“Orange”, “Apple”, “Mango”]</p>
@@ -811,7 +855,8 @@ console.log(fruits)</code></pre>
 fruits.push(&quot;Kiwi&quot;)
 console.log(fruits)
 fruits.push(&quot;Lemon&quot;,&quot;Pineapple&quot;)
-console.log(fruits)</code></pre>
+console.log(fruits)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[“Banana”, “Orange”, “Apple”, “Mango”, “Kiwi”]<br>[“Banana”, “Orange”, “Apple”, “Mango”, “Kiwi”, “Lemon”, “Pineapple”]</p>
@@ -821,7 +866,8 @@ console.log(fruits)</code></pre>
 fruits.unshift(&quot;Kiwi&quot;)
 console.log(fruits)
 fruits.unshift(&quot;Lemon&quot;,&quot;Pineapple&quot;)
-console.log(fruits)</code></pre>
+console.log(fruits)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[“Kiwi”, “Banana”, “Orange”, “Apple”, “Mango”]<br>[“Lemon”, “Pineapple”, “Kiwi”, “Banana”, “Orange”, “Apple”, “Mango”]</p>
@@ -829,7 +875,8 @@ console.log(fruits)</code></pre>
 <h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h4><p><strong>反转数组的元素顺序</strong></p>
 <pre><code>var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
 fruits.reverse();
-console.log(fruits)</code></pre>
+console.log(fruits)
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p> [“Mango”, “Apple”, “Orange”, “Banana”]</p>
@@ -837,7 +884,8 @@ console.log(fruits)</code></pre>
 <h4 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h4><p><strong>对数组的元素进行排序</strong><br><strong>排序的方法比较的是 ASCLL，如果正常排序，此时 sort( ) 里面需要写一个匿名函数</strong></p>
 <pre><code>arr.sort( function ( a, b )&#123;
     return;
-    &#125;);</code></pre>
+    &#125;);
+</code></pre>
 <p><strong>匿名函数注意事项:</strong></p>
 <ol>
 <li>必须写 2 形参</li>
@@ -856,7 +904,8 @@ arr1.sort(function (a, b) &#123;
         return -1;
     &#125;
 &#125;);
-console.log(arr1);</code></pre>
+console.log(arr1);
+</code></pre>
 <p><strong>输出结果:</strong></p>
 <blockquote>
 <p>[-1, 1, 2, 3, 5]<br>[1, 10, 3, 4, 5]<br>[1, 3, 4, 5, 10]</p>
@@ -867,7 +916,8 @@ arr.splice(1, 2)
 console.log(arr)
 var arr1 = [1, 2, 3, 7, 8]
 arr1.splice(3, 0, 4, 5, 6)
-console.log(arr1)</code></pre>
+console.log(arr1)
+</code></pre>
 <p><strong>输出结果 :</strong></p>
 <blockquote>
 <p>[1, 4, 5]<br>[1, 2, 3, 4, 5, 6, 7, 8]</p>
@@ -1827,10 +1877,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
+                preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(l=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var r=0;r<l.length;r++)t=l[r],void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(t){var e,n,i,o,a=l[r];e=a,n=function(){l=l.filter(function(t){return a!==t})},i=new Image,o=e.getAttribute("data-original"),i.onload=function(){e.src=o,n&&n()},i.src=o}();var t,e}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 </html>
