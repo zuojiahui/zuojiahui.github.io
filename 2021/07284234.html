@@ -1,0 +1,1335 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="hooks使用, Aspirin">
+    <meta name="description" content="只要朝着一个方向努力，一切都会变得得心应手">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>hooks使用 | Aspirin</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+</head>
+
+
+
+<style>
+    body{
+       background-image: url(/medias/1.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+<body>
+    
+
+      
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <div>
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/logding.gif" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Aspirin</span>
+                    </div>
+                </a>
+            </div>
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logding.gif" data-original="/medias/logding.gif" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Aspirin</div>
+        <div class="logo-desc">
+            
+            只要朝着一个方向努力，一切都会变得得心应手
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+    
+
+
+
+<div class="bg-cover pd-header post-cover">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">hooks使用</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 125px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hooks/">
+                                <span class="chip bg-color">hooks</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/React/" class="post-category">
+                                React
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-07-28
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.1k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>hooks是 16.8 版本之后的新特性，React 团队希望，组件不要变成复杂的容器，最好只是数据流的管道。开发者根据需要，组合管道即可。 组件的最佳写法应该是函数，而不是类。<br>React 早就支持函数组件，<br>但是，这种写法有重大限制，必须是纯函数，不能包含状态，也不支持生命周期方法，因此无法取代类。<br>React Hooks 的设计目的，就是加强版函数组件，完全不使用”类”，就能写出一个全功能的组件。<br>Hooks可以让无状态组件实现有状态组件的部分功能，比如设置state，使用钩子函数</p>
+<h2 id="useState-状态"><a href="#useState-状态" class="headerlink" title="useState - 状态"></a>useState - 状态</h2><pre><code>import React, &#123; Fragment, useState &#125; from &#39;react&#39;;
+const HooksCompont = () =&gt; &#123;
+  const [count, setCount] = useState(0);
+  return (
+    &lt;Fragment&gt;
+      &lt;h3&gt;hello hooks!! &#123;count&#125;&lt;/h3&gt;
+      &lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;加&lt;/button&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+export default HooksCompont;
+</code></pre>
+<h2 id="useEffect-副作用"><a href="#useEffect-副作用" class="headerlink" title="useEffect - 副作用"></a>useEffect - 副作用</h2><pre><code>import React, &#123; Fragment, useState, useEffect &#125; from &#39;react&#39;;
+const HooksCompont = () =&gt; &#123;
+  const [count, setCount] = useState(0);
+  const [disable, setDisable] = useState(true);
+  // useEffect 相当于 conmponentDidMout,conmponentDidUpdate和 conmponentWillUnmount
+  useEffect(() =&gt; &#123;
+    console.log(count, &#39;页面挂载&#39;);
+    if (count === 2) &#123;
+      console.log(count, &#39;变化&#39;);
+    &#125;
+    return () =&gt; &#123;
+      // 这里相当于conmponentWillUnmount (页面离开时)
+      // 但是如果 第二参数值 发生改变时，触发副作用函数，并且执行里面逻辑
+      console.log(&#39;执行离开&#39;);
+    &#125;;
+    // 当 useEffect 未添加第二个参数时 ：页面每次重新渲染(任意点击按钮),都要执行一遍这些副作用函数，显然是不经济的。
+    // 怎么跳过一些不必要的计算呢？我们需要给 useEffect 传第二个参数即可。
+    // 用第二个参数来告诉 react只有当  这个参数的值 发生改变时，才执行我们传的副作用函数（第一个参数）。
+  &#125;, [count]);
+
+  useEffect(() =&gt; &#123;
+    return () =&gt; &#123;
+      // 这里相当于conmponentWillUnmount (页面离开时)
+      console.log(&#39;离开&#39;);
+    &#125;;
+  &#125;, []);
+  return (
+    &lt;Fragment&gt;
+      &lt;h3&gt;hello hooks!! &#123;count&#125;&lt;/h3&gt;
+      &lt;button onClick=&#123;() =&gt; setCount(count + 1)&#125;&gt;加&lt;/button&gt;
+      &lt;button onClick=&#123;() =&gt; setDisable(!disable)&#125;&gt;&#123;disable ? &#39;启用&#39; : &#39;禁用&#39;&#125;&lt;/button&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+export default HooksCompont;
+</code></pre>
+<h2 id="userReducer-复杂状态处理"><a href="#userReducer-复杂状态处理" class="headerlink" title="userReducer - 复杂状态处理"></a>userReducer - 复杂状态处理</h2><pre><code>import React, &#123; Fragment, useReducer &#125; from &#39;react&#39;;
+const ReducerDemo = () =&gt; &#123;
+  const initialState = &#123; count: 0, name: &#39;鸣人&#39; &#125;;
+  const reducer = (state, action) =&gt; &#123;
+    const &#123; type, payload = 1 &#125; = action;
+    switch (type) &#123;
+      case &#39;increment&#39;:
+        return &#123; ...state, count: state.count + payload &#125;;
+      case &#39;decrement&#39;:
+        return &#123; ...state, count: state.count - payload &#125;;
+      case &#39;rename&#39;:
+        return &#123; ...state, name: payload &#125;;
+      default:
+        throw new Error();
+    &#125;
+  &#125;;
+  // 第一位参数是函数, 第二参数为初始值
+  // useReducer((state, action)=&gt;&#123;&#125;, 0)
+  // const [state, dispatch] = useReducer(reducer, initialArg);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    &lt;Fragment&gt;
+      &lt;div&gt;
+        useReducer &#123;state.count&#125; ---- &#123;state.name&#125;
+      &lt;/div&gt;
+      &lt;button onClick=&#123;() =&gt; dispatch(&#123; type: &#39;increment&#39; &#125;)&#125;&gt;加&lt;/button&gt;
+      &lt;button onClick=&#123;() =&gt; dispatch(&#123; type: &#39;decrement&#39;, payload: 2 &#125;)&#125;&gt;减&lt;/button&gt;
+      &lt;button onClick=&#123;() =&gt; dispatch(&#123; type: &#39;rename&#39;, payload: &#39;佐助&#39; &#125;)&#125;&gt;changeName&lt;/button&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+export default ReducerDemo;
+</code></pre>
+<h2 id="useContext-深层值传递"><a href="#useContext-深层值传递" class="headerlink" title="useContext - 深层值传递"></a>useContext - 深层值传递</h2><pre><code>import React, &#123; Fragment, useState, createContext, useContext &#125; from &#39;react&#39;;
+
+// 创建 Context
+const theme = createContext(&#39;#fff&#39;);
+
+const Demo = () =&gt; &#123;
+  return &lt;Child /&gt;;
+&#125;;
+
+const Child = () =&gt; &#123;
+  const father = useContext(theme);
+  const style = &#123;
+    backgroundColor: father.bgColor,
+  &#125;;
+  return (
+    // 消费者
+    &lt;Fragment&gt;
+      &#123;/* 第一种写法 */&#125;
+      &lt;div style=&#123;style&#125;&gt;&#123;father.content&#125;&lt;/div&gt;
+      &#123;/* 第二种 使用 Consumer 属性 */&#125;
+      &lt;theme.Consumer&gt;&#123;(value) =&gt; &lt;div&gt;&#123;value.bgColor&#125;&lt;/div&gt;&#125;&lt;/theme.Consumer&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+
+const HooksContext = () =&gt; &#123;
+  // 深层值传递相当于 生产者 和 消费者模式
+  const [bgColor, setBgColor] = useState(&#39;#fff&#39;);
+  return (
+    &lt;Fragment&gt;
+      &lt;input
+        type=&quot;color&quot;
+        onChange=&#123;(e) =&gt; &#123;
+          setBgColor(e.target.value);
+        &#125;&#125;
+      /&gt;
+      &#123;/* 生产者 */&#125;
+      &lt;theme.Provider value=&#123;&#123; bgColor, content: 'Child' &#125;&#125;&gt;
+        &lt;Demo /&gt;
+      &lt;/theme.Provider&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+export default HooksContext;
+</code></pre>
+<h2 id="useRef-引用"><a href="#useRef-引用" class="headerlink" title="useRef - 引用"></a>useRef - 引用</h2><pre><code>import React, &#123; Fragment, useEffect, useRef, forwardRef &#125; from &#39;react&#39;;
+
+const Input = forwardRef((prpos, ref) =&gt; &#123;
+  // 将ref父类的ref作为参数传入函数式组件中，本身props只带有children这个参数，这样可以让子类转发父类的ref,
+  // 当父类把ref挂在到子组件上时，子组件外部通过forwrardRef包裹，可以直接将父组件创建的ref挂在到子组件的某个dom元素
+  return &lt;input &#123;...prpos&#125; ref=&#123;ref&#125; /&gt;;
+&#125;);
+
+const RefDemo = () =&gt; &#123;
+  // 用于获取元素的原生DOM或者获取自定义组件所暴露出来的ref方法(父组件可以通过ref获取子组件，并调用相对应子组件中的方法)
+  const inputRef = useRef();
+  useEffect(() =&gt; &#123;
+    inputRef.current.focus();
+    inputRef.current.value = &#39;hello react&#39;;
+  &#125;, []);
+  return (
+    &lt;Fragment&gt;
+      &lt;Input placeholder=&quot;请输入&quot; ref=&#123;inputRef&#125; /&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+export default RefDemo;
+</code></pre>
+<h2 id="useMemo"><a href="#useMemo" class="headerlink" title="useMemo"></a>useMemo</h2><pre><code>import React, &#123; Fragment, useState, useMemo &#125; from &#39;react&#39;;
+
+const Child = (&#123; name, children &#125;) =&gt; &#123;
+  const change = () =&gt; &#123;
+    // 要求点击 鸣人 才执行此语句    现点击任何按钮都会执行 导致子组件重新渲染
+    // 原因 : 父组件任何一个状态发生变化，子组件的代码块都会重新执行一遍
+    window.console.log(&#39;鸣人分身&#39;);
+    return name;
+  &#125;;
+  //  useMemo 是在DOM更新前触发的
+  const actionChange = useMemo(()=&gt;change(),[name]);
+  return (
+    &lt;Fragment&gt;
+      &lt;div&gt;&#123;actionChange&#125;&lt;/div&gt;
+      &lt;div&gt;&#123;children&#125;&lt;/div&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+const Demo = () =&gt; &#123;
+  const [mingren, setMingren] = useState(&#39;鸣人&#39;);
+  const [zuozhu, setZuozhu] = useState(&#39;佐助&#39;);
+  return (
+    &lt;Fragment&gt;
+      &lt;button
+        onClick=&#123;() =&gt; &#123;
+          setMingren(mingren + 1);
+        &#125;&#125;
+      &gt;
+        鸣人
+      &lt;/button&gt;
+      &lt;button
+        onClick=&#123;() =&gt; &#123;
+          setZuozhu(zuozhu + 2);
+        &#125;&#125;
+      &gt;
+        佐助
+      &lt;/button&gt;
+      &lt;Child name=&#123;mingren&#125;&gt;&#123;zuozhu&#125;&lt;/Child&gt;
+    &lt;/Fragment&gt;
+  );
+&#125;;
+export default Demo;
+</code></pre>
+<h2 id="轮播图案例"><a href="#轮播图案例" class="headerlink" title="轮播图案例"></a>轮播图案例</h2><pre><code>//轮播图数据源
+import React from &#39;react&#39;
+import Swiper from &#39;../../components/swiper&#39;
+class App extends React.Component &#123;
+    constructor() &#123;
+        super();
+        this.state = &#123;
+            images: [
+                &#123; src: require(&quot;../../assets/images/banner1.jpg&quot;), url:&quot;https://baidu.com&quot;&#125;,
+                &#123; src: require(&quot;../../assets/images/banner2.jpg&quot;), url:&quot;https://baidu.com&quot;&#125;,
+                &#123; src: require(&quot;../../assets/images/banner3.jpg&quot;), url:&quot;https://baidu.com&quot;&#125;,
+                &#123; src: require(&quot;../../assets/images/banner3.jpg&quot;), url:&quot;https://baidu.com&quot;&#125;,
+            ]
+        &#125;
+    &#125;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;Swiper data=&#123;this.state.images&#125; /&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default App;
+</code></pre>
+<pre><code>//轮播图UI
+import React from &#39;react&#39;
+import Hoc from &#39;./hoc&#39;
+import &quot;./style.css&quot;
+export default Hoc((props) =&gt; &#123;
+    return (
+        &lt;div className=&quot;banner&quot;&gt;
+            &lt;div className=&quot;my-swiper-main&quot; onMouseOver=&#123;props.stop&#125; onMouseOut=&#123;props.autoPlay&#125;&gt;
+                &#123;
+                    props.data.length &gt; 0 &amp;&amp; props.data.map((item, index) =&gt; &#123;
+                        return (
+                            &lt;div className=&#123;item.active ? &quot;my-slide show&quot; : &quot;my-slide&quot;&#125; key=&#123;index&#125;&gt;
+                                &lt;a href=&#123;item.url&#125; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+                                    &lt;img src=&#123;item.src&#125; alt=&quot;&quot; /&gt;
+                                &lt;/a&gt;
+                            &lt;/div&gt;
+                        )
+                    &#125;)
+                &#125;
+                &lt;div className=&quot;pagination&quot;&gt;
+                    &#123;
+                        props.data.length &gt; 0 &amp;&amp; props.data.map((item, index) =&gt; &#123;
+                            return (
+                                &lt;div className=&#123;item.active ? &quot;dot active&quot; : &quot;dot&quot;&#125; key=&#123;index&#125; onClick=&#123;() =&gt; &#123; props.change(index) &#125;&#125;&gt;&lt;/div&gt;
+                            )
+                        &#125;)
+                    &#125;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    )
+&#125;)
+</code></pre>
+<pre><code>//轮播图逻辑
+import React, &#123; useState, useEffect, useRef, useCallback &#125; from &#39;react&#39;;
+export default function Hoc(WithCompont) &#123;
+    return function HocCompont(props) &#123;
+        let [data, setData] = useState([]);
+        let [isInit, setIsInit] = useState(true)
+        let [iIndex, setIIndex] = useState(0)
+        // 创建一个表示，通用容器，专门解决 setInterval
+        let timer = useRef(null);
+
+        function change(index) &#123;       //点击切换图片
+            setIIndex(index)
+            if (data.length &gt; 0) &#123;
+                for (let i = 0; i &lt; data.length; i++) &#123;
+                    if (data[i].active) &#123;
+                        data[i].active = false;
+                        break;
+                    &#125;
+                &#125;
+            &#125;
+            data[index].active = true;
+            setData(data)
+        &#125;
+
+        const autoPlay = useCallback(() =&gt; &#123;      //自动播放
+            clearInterval(timer.current)
+            timer.current = setInterval(() =&gt; &#123;
+                let tmpIndex = iIndex;
+                if (data.length &gt; 0 &amp;&amp; data) &#123;
+                    for (let i = 0; i &lt; data.length; i++) &#123;
+                        if (data[i].active) &#123;
+                            data[i].active = false;
+                            break;
+                        &#125;
+                    &#125;
+                    if (tmpIndex &gt;= data.length - 1) &#123;
+                        tmpIndex = 0;
+                    &#125; else &#123;
+                        tmpIndex++
+                    &#125;
+                    data[tmpIndex].active = true;
+                    setIIndex(tmpIndex)
+                    setData(data)
+                &#125;
+
+            &#125;, (3000))
+        &#125;, [data, iIndex])  //  useState 中用到的值需要放在 第二个参数中
+        
+        function stop() &#123;     //鼠标经过清除定时器
+            clearInterval(timer.current)   
+        &#125;
+        useEffect(() =&gt; &#123;
+            if (props.data &amp;&amp; props.data.length &gt; 0 &amp;&amp; isInit) &#123;
+                setIsInit(false);
+                for (let i = 0; i &lt; props.data.length; i++) &#123;
+                    if (i === 0) &#123;
+                        props.data[i].active = true;
+                    &#125; else &#123;
+                        props.data[i].active = false
+                    &#125;
+                &#125;
+                setData(props.data); //将默认的空数组等于 props.data
+            &#125;
+            autoPlay();
+            return () =&gt; &#123;    //页面离开清除定时器 (页面离开时执行)
+                clearInterval(timer.current)
+            &#125;
+        &#125;, [props.data, isInit, autoPlay]);
+        let newsPros = &#123;
+            change: change,
+            data: data,
+            stop: stop,
+            autoPlay: autoPlay,
+        &#125;
+        return (
+            // &lt;WithCompont &#123;...props&#125; data=&#123;data&#125; change=&#123;change&#125; stop=&#123;stop&#125;&gt;&lt;/WithCompont&gt;
+            &lt;WithCompont &#123;...props&#125; &#123;...newsPros&#125;&gt;&lt;/WithCompont&gt;
+
+        )
+    &#125;
+&#125;
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/hooks/">
+                                    <span class="chip bg-color">hooks</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/logding.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/logding.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/080217690.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/9.jpg" class="responsive-img" alt="TypeScript从入门到入坑">
+                        
+                        <span class="card-title">TypeScript从入门到入坑</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-02
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/TypeScript/" class="post-category">
+                                    TypeScript
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/TypeScript/">
+                        <span class="chip bg-color">TypeScript</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/072029497.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/10.jpg" class="responsive-img" alt="React-Native入坑">
+                        
+                        <span class="card-title">React-Native入坑</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/react-native/" class="post-category">
+                                    react-native
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/react-native/">
+                        <span class="chip bg-color">react-native</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+        style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Aspirin个人博客</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/zuojiahui" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+    <a href="mailto:1691086772@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1691086772" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 16910876772" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+    <script>
+        ( function (i, s, o, g, r, a, m) {
+           setTimeout(function(){ 
+                let tage = s.getElementsByClassName('daodream-powered-by')
+                let daodreaFooter = s.getElementsByClassName('daodream-app-profile-text')
+                let headersTop = s.getElementsByClassName('daodream-sheet-header')
+                console.log(tage,daodreaFooter,headersTop)
+                tage[0].style.display = "none"
+                daodreaFooter[0].style.display = "none"
+                headersTop[0].style.backgroundImage = "none"
+                headersTop[0].style.boxShadow = "none"
+            },2000)
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "7816dd54"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+   <!-- <script type="text/javascript">
+        //只在桌面版网页启用樱花特效
+        //var windowWidth = $(window).width();
+       // if (windowWidth > 768) {
+          //  document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        //}
+    </script> -->
+    <!--动态线条背景-->
+
+<!-- <script type="text/javascript" color="231,90,90" opacity='0.9' zIndex="-2" count="150"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
+<!-- //color：表示线条颜色，三个数字分别为 (R,G,B)，默认：（0,0,0）
+// opacity：表示线条透明度（0~1），默认：0.5
+// count：表示线条的总数量，默认：150
+// zIndex：表示背景的 z-index 属性，css 属性用于控制所在层的位置，默认：-1 -->
+    </script>
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunntTitle.js"></script>
+<!-- 看板娘 -->
+<!-- <script src="https://github.com/.git"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
+<script src="/js/cursor.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>

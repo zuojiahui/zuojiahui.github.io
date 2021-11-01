@@ -1,0 +1,1695 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="React路由的基本使用, Aspirin">
+    <meta name="description" content="只要朝着一个方向努力，一切都会变得得心应手">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>React路由的基本使用 | Aspirin</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Aspirin" type="application/atom+xml">
+</head>
+
+
+
+<style>
+    body{
+       background-image: url(/medias/1.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+<body>
+    
+
+      
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    <div>
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/logding.gif" class="logo-img" alt="LOGO">
+                        
+                        <span class="logo-span">Aspirin</span>
+                    </div>
+                </a>
+            </div>
+
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logding.gif" data-original="/medias/logding.gif" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Aspirin</div>
+        <div class="logo-desc">
+            
+            只要朝着一个方向努力，一切都会变得得心应手
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+    
+
+
+
+<div class="bg-cover pd-header post-cover">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">React路由的基本使用</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 125px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/react-router/">
+                                <span class="chip bg-color">react-router</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/React/" class="post-category">
+                                React
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-11-01
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4k
+                </div>
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>使用React构建的单页面应用，要想实现页面间的跳转，首先想到的就是使用路由。在最新React中，使用的是<strong>react-router-dom</strong></p>
+<h3 id="安装路由"><a href="#安装路由" class="headerlink" title="安装路由"></a>安装路由</h3><pre><code>npm install --save-dev react-router-dom
+</code></pre>
+<h3 id="路由的基础配置"><a href="#路由的基础配置" class="headerlink" title="路由的基础配置"></a>路由的基础配置</h3><p><strong>第一步:</strong><br>将 <code>App.js</code> 更改成 <code>router.js</code>, 内容如下 :</p>
+<pre><code>/*router.js 页面里的代码
+HashRouter: 有#号
+BrowserRouter: 没有#号
+Route: 设置路由与组件关联
+Switch: 只要匹配到一个地址不往下匹配，相当于for循环里面的break
+Link: 跳转页面，相当于vue里面的router-link
+exact: 完全匹配路由
+Redirect: 路由重定向
+*/
+import React from &#39;react&#39;;
+import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+//如若更换成 hash 路由模式需要将  BrowserRouter 更换为 HashRouter
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Route&gt;&lt;/Route&gt;
+            &lt;/Switch&gt;            
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<p><strong>第二步:</strong><br>将入口文件<code>index.js</code>内容更改如下:</p>
+<pre><code>import React from &#39;react&#39;;
+import ReactDOM from &#39;react-dom&#39;;
+import RouterComponent from &#39;./router&#39;;
+import * as serviceWorker from &#39;./serviceWorker&#39;;
+function App() &#123;
+  return (
+    &lt;React.Fragment&gt;
+      &lt;RouterComponent /&gt;
+    &lt;/React.Fragment&gt;
+  )
+&#125;
+ReactDOM.render(&lt;App /&gt;, document.getElementById(&#39;root&#39;));
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
+</code></pre>
+<p><strong>完成以上操作基础配置完成</strong></p>
+<h3 id="路由的使用"><a href="#路由的使用" class="headerlink" title="路由的使用"></a>路由的使用</h3><p><strong>在 pages 文件夹下新建 3 页面 :</strong><br><img src="/medias/logding.gif" data-original="https://gitee.com/zuo_jiahui/blogimage/raw/master/img/a28b18e5b30b624193e834105772ac0.png"></p>
+<pre><code>// Index文件夹下的index.js
+import React from &#39;react&#39;;
+import &#123; Link &#125; from &#39;react-router-dom&#39;;
+class IndexPage extends React.Component &#123;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;div&gt;首页&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/news&quot;&gt;前往新闻页面&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default IndexPage
+</code></pre>
+<pre><code>// New文件夹下index.js
+import React from &#39;react&#39;;
+import &#123; Link &#125; from &#39;react-router-dom&#39;;
+class News extends React.Component &#123;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;div&gt;我是新闻页面&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/news/details&quot;&gt;新闻详情1&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default News;
+</code></pre>
+<pre><code>// New文件夹下details.js
+import React from &#39;react&#39;;
+class NewsDetails extends React.Component &#123;
+    render() &#123;
+        return (          
+            &lt;React.Fragment&gt;
+                 &lt;div&gt;新闻详情1页面&lt;/div&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default NewsDetails;
+</code></pre>
+<p><strong><code>router</code> 配置文件 <code>router.js</code>代码如下:</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123;BrowserRouter as Router, Route,Switch&#125; from &#39;react-router-dom&#39;;
+import IndexPage from &quot;./pages/Index&quot;;
+import NewsPage from &#39;./pages/News&#39;;
+import NewsDetails from &#39;./pages/News/details&#39;
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news&quot; exact component=&#123;NewsPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news/details&quot; exact component=&#123;NewsDetails&#125;&gt;&lt;/Route&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<p><strong>此时已经可以完成简单的路由跳转:</strong><br><img src="/medias/logding.gif" data-original="https://gitee.com/zuo_jiahui/blogimage/raw/master/img/5ab8e180349328960ed54a43ff67140.png"></p>
+<h3 id="路由传参"><a href="#路由传参" class="headerlink" title="路由传参"></a>路由传参</h3><h4 id="方法一-params"><a href="#方法一-params" class="headerlink" title="方法一 : params"></a>方法一 : params</h4><p><strong>通过<code>params</code>接受到传递过来的参数</strong><br><strong>路由表中 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+import IndexPage from &quot;./pages/Index&quot;;
+import NewsPage from &#39;./pages/News&#39;;
+import NewsDetails from &#39;./pages/News/details&#39;
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news&quot; exact component=&#123;NewsPage&#125;&gt;&lt;/Route&gt;
+              &lt;!-- 这里 id title 为需要接收的参数 --&gt;
+              &lt;Route path=&quot;/news/details/:id/:title&quot; exact component=&#123;NewsDetails&#125;&gt;&lt;/Route&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<p><strong>Link处 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123; Link &#125; from &#39;react-router-dom&#39;;
+class News extends React.Component &#123;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;div&gt;我是新闻页面&lt;/div&gt;
+                &lt;ul&gt;
+                     &lt;!-- 1 新闻详情1为传递的参数 --&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/news/details/1/新闻详情1&quot;&gt;新闻详情1&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default News;
+</code></pre>
+<p><strong>sort页面 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+class NewsDetails extends React.Component &#123;
+    constructor(props) &#123;
+        super(props);
+        this.state = &#123;&#125;;
+        console.log(&quot;id:&quot; + props.match.params.id,)
+    &#125;
+
+    //使用 this.props.match.params 就可以获取到传递过来的参数（ id title ）
+
+    componentDidMount() &#123;  // 组件生命钩子函数，组件已经加载完成
+        console.log(&quot;title:&quot; + this.props.match.params.title)
+    &#125;
+    render() &#123;
+        return (
+            &lt;div&gt;新闻详情1页面&lt;/div&gt;
+        )
+    &#125;
+&#125;
+export default NewsDetails;
+</code></pre>
+<h4 id="方法二-query"><a href="#方法二-query" class="headerlink" title="方法二 : query"></a>方法二 : query</h4><p><strong>通过<code>query</code>接受到传递过来的参数</strong><br><strong>前提：</strong>不能刷新页面,必须由其他页面跳过来，参数才会被传递过来<br><strong>注：</strong>不需要配置路由表。路由表中的内容照常<br><strong>路由表中 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123;BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+import IndexPage from &quot;./pages/Index&quot;;
+import NewsPage from &#39;./pages/News&#39;;
+import NewsDetails from &#39;./pages/News/details&#39;
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news&quot; exact component=&#123;NewsPage&#125;&gt;&lt;/Route&gt;
+              &#123;/* 不需要配置路由表,路由表中的内容照常 */&#125;
+              &lt;Route path=&quot;/news/details&quot; exact component=&#123;NewsDetails&#125;&gt;&lt;/Route&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<p><strong>Link处 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+class News extends React.Component &#123;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;div&gt;我是新闻页面&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li onClick=&#123;() =&gt; &#123;
+                        this.props.history.push(&#123;
+                            pathname: &quot;/news/details&quot;,
+                            search:&quot;?id=1&amp;title=新闻详情1&quot;,
+                            query: &#123;
+                                id: 1,
+                                title: &quot;新闻详情1&quot;
+                            &#125;
+                        &#125;)
+                    &#125;&#125;&gt;新闻详情1&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default News;
+</code></pre>
+<p><strong>sort页面 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+class NewsDetails extends React.Component &#123;
+    constructor(props) &#123;
+        super(props);
+        this.state = &#123;&#125;;
+    &#125;
+    componentDidMount() &#123;  // 组件生命钩子函数，组件已经加载完成
+        // 使用 this.props.location.query  就可以获取到传递过来的参数（ id title ）
+        console.log(this.props.location.query.id )
+        console.log(this.props.location.query.title )
+    &#125;
+    render() &#123;
+        return (
+        &lt;div&gt;新闻详情1页面,id:&#123;this.props.location.query.id &#125;&lt;/div&gt;
+        )
+    &#125;
+&#125;
+export default NewsDetails;
+</code></pre>
+<h4 id="方法三-自定义函数"><a href="#方法三-自定义函数" class="headerlink" title="方法三 : 自定义函数"></a>方法三 : 自定义函数</h4><p><strong>通过自定义函数接受到传递过来的参数</strong><br><strong>在 utils 文件夹下建立一个 js 文件，内容如下 :</strong></p>
+<pre><code>export function localParam (search, hash) &#123;
+    search = search || window.location.search;
+    hash = hash || window.location.hash;
+    var fn = function(str, reg) &#123;
+        if (str) &#123;
+            var data = &#123;&#125;;
+            str.replace(reg, function($0, $1, $2, $3) &#123;
+                data[$1] = $3;
+            &#125;);
+            return data;
+        &#125;
+    &#125;;
+    return &#123;
+            search : fn(search, new RegExp(&quot;([^?=&amp;]+)(=([^&amp;]*))?&quot;, &quot;g&quot;)) || &#123;&#125;,
+            hash : fn(hash, new RegExp(&quot;([^#=&amp;]+)(=([^&amp;]*))?&quot;, &quot;g&quot;)) || &#123;&#125;
+        &#125;;
+    &#125;
+</code></pre>
+<p><strong>路由表中 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123;BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+import IndexPage from &quot;./pages/Index&quot;;
+import NewsPage from &#39;./pages/News&#39;;
+import NewsDetails from &#39;./pages/News/details&#39;
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news&quot; exact component=&#123;NewsPage&#125;&gt;&lt;/Route&gt;
+              &#123;/* 不需要配置路由表,路由表中的内容照常 */&#125;
+              &lt;Route path=&quot;/news/details&quot; exact component=&#123;NewsDetails&#125;&gt;&lt;/Route&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<p><strong>Link处 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+class News extends React.Component &#123;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;div&gt;我是新闻页面&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li onClick=&#123;() =&gt; &#123;
+                        this.props.history.push(&quot;/news/details?id=1&amp;title=新闻详情1&quot;)
+                    &#125;&#125;&gt;新闻详情1&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default News;
+</code></pre>
+<p><strong>sort页面 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+// 引入自定义方法
+import &#123; localParam &#125; from &#39;../../utils&#39;
+class NewsDetails extends React.Component &#123;
+    constructor(props) &#123;
+        super(props);
+        this.state = &#123;&#125;;
+    &#125;
+    componentDidMount() &#123;  // 组件生命钩子函数，组件已经加载完成
+        console.log(&quot;id ：&quot; + localParam(this.props.location.search).search.id);
+        // 如是中文，则会出现乱码
+        console.log(&quot;title ：&quot; + localParam(this.props.location.search).search.title) 
+        // 如果想转回中文使用 decodeURIComponent 解码
+        console.log(&quot;title&quot; + decodeURIComponent(localParam(this.props.location.search).search.title));
+    &#125;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;div&gt;新闻详情1页面&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&#123;localParam(this.props.location.search).search.id&#125;&lt;/li&gt;
+                    &lt;li&gt;&#123;decodeURIComponent(localParam(this.props.location.search).search.title)&#125;&lt;/li&gt;
+                &lt;/ul&gt;
+                &#123;/* （-1）返回上一级路由 */&#125;
+                &lt;button type=&#123;&quot;button&quot;&#125; onClick=&#123;() =&gt; &#123; this.props.history.go(-1) &#125;&#125;&gt;返回&lt;/button&gt;
+            &lt;/React.Fragment&gt;
+
+        )
+    &#125;
+&#125;
+export default NewsDetails;
+</code></pre>
+<h3 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h3><h4 id="方法一-自定义组件"><a href="#方法一-自定义组件" class="headerlink" title="方法一 : 自定义组件"></a>方法一 : 自定义组件</h4><p><strong>制作异步函数组件</strong><br><strong>建立AsynComponent.js文件，内容如下：</strong></p>
+<pre><code>import React, &#123; Component &#125; from &quot;react&quot;;
+export default function asyncComponent(importComponent) &#123;
+    class AsyncComponent extends Component &#123;
+        constructor(props) &#123;
+            super(props);
+
+            this.state = &#123;
+                component: null
+            &#125;;
+        &#125;
+        async componentDidMount() &#123;
+            const &#123; default: component &#125; = await importComponent();
+            this.setState(&#123;
+                component: component
+            &#125;);
+        &#125;
+        render() &#123;
+            const C = this.state.component;
+            return C ? &lt;C &#123;...this.props&#125; /&gt; : null;
+        &#125;
+    &#125;
+    return AsyncComponent;
+&#125;
+</code></pre>
+<p><strong>路由表中 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123;BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+import asyncComponent from &#39;./assets/components/async/asyncComponent&#39;;  // 引入懒加载组件
+// 激活chunkFilename,默认不激活(路由懒加载)
+const  IndexPage = asyncComponent(() =&gt;import(&quot;./pages/Index&quot;));
+const  NewsPage = asyncComponent(() =&gt;import(&quot;./pages/News&quot;));
+const  NewsDetails = asyncComponent(() =&gt;import(&quot;./pages/News/details&quot;));
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news&quot; exact component=&#123;NewsPage&#125;&gt;&lt;/Route&gt;
+              &lt;Route path=&quot;/news/details&quot; exact component=&#123;NewsDetails&#125;&gt;&lt;/Route&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<h4 id="方法二-lazy和suspense"><a href="#方法二-lazy和suspense" class="headerlink" title="方法二 : lazy和suspense"></a>方法二 : lazy和suspense</h4><p><strong>路由表中 :</strong></p>
+<pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;      //导入 lazy, Suspense 
+import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+const IndexPage = lazy(() =&gt; import(&quot;./pages/Index&quot;));
+const NewsPage = lazy(() =&gt; import(&quot;./pages/News&quot;));
+const NewsDetails = lazy(() =&gt; import(&quot;./pages/News/details&quot;));
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &#123;/* 用 Suspense 包裹 Route */&#125;
+              &lt;Suspense fallback=&#123;&lt;React.Fragment /&gt;&#125;&gt;
+                &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+                &lt;Route path=&quot;/news&quot; exact component=&#123;NewsPage&#125;&gt;&lt;/Route&gt;
+                &lt;Route path=&quot;/news/details&quot; exact component=&#123;NewsDetails&#125;&gt;&lt;/Route&gt;
+              &lt;/Suspense&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<h3 id="路由嵌套"><a href="#路由嵌套" class="headerlink" title="路由嵌套"></a>路由嵌套</h3><h4 id="路由嵌套-主子路由"><a href="#路由嵌套-主子路由" class="headerlink" title="路由嵌套(主子路由)"></a>路由嵌套(主子路由)</h4><p><strong>路由表中 :</strong></p>
+<pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
+import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+const IndexPage = lazy(() =&gt; import(&quot;./pages/Index&quot;));
+const GoodssPage = lazy(() =&gt; import(&quot;./pages/Home&quot;));
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Suspense fallback=&#123;&lt;React.Fragment /&gt;&#125;&gt;
+                &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+                &#123;/* 这里不需要添加 exact */&#125;
+                &lt;Route path=&quot;/goods&quot; component=&#123;GoodssPage&#125;&gt;&lt;/Route&gt;
+              &lt;/Suspense&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+<p><strong>sort页面 :</strong></p>
+<pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
+import &#123; Route, Switch, Redirect &#125; from &#39;react-router-dom&#39;;
+const GoodsItem = lazy(() =&gt; import(&quot;./item&quot;))
+const GoodsDetails = lazy(() =&gt; import(&quot;./details&quot;))
+const GoodsEvaluation = lazy(() =&gt; import(&quot;./evaluation&quot;))
+class Index extends React.Component &#123;
+    goPage(url) &#123;
+        // 这里使用 replace 方法，不采用 push
+        this.props.history.replace(url);
+    &#125;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &lt;ul&gt;
+                    &lt;li onClick=&#123;this.goPage.bind(this, &#39;/goods/item&#39;)&#125;&gt;商品&lt;/li&gt;
+                    &lt;li onClick=&#123;this.goPage.bind(this, &#39;/goods/details&#39;)&#125;&gt;详情&lt;/li&gt;
+                    &lt;li onClick=&#123;this.goPage.bind(this, &#39;/goods/evaluation&#39;)&#125;&gt;评价&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;button type=&quot;button&quot; onClick=&#123;this.props.history.go.bind(this, -1)&#125;&gt;返回&lt;/button&gt;
+                &lt;div&gt;
+                    &lt;Switch&gt;
+                        &lt;Suspense fallback=&#123;&lt;React.Fragment /&gt;&#125;&gt;
+                            &#123;/* 这里不需要添加 exact */&#125;
+                            &lt;Route path=&quot;/goods/item&quot; component=&#123;GoodsItem&#125;&gt;&lt;/Route&gt;
+                            &lt;Route path=&quot;/goods/details&quot; component=&#123;GoodsDetails&#125;&gt;&lt;/Route&gt;
+                            &lt;Route path=&quot;/goods/evaluation&quot; component=&#123;GoodsEvaluation&#125;&gt;&lt;/Route&gt;
+                            &#123;/* 路由重定向 : 需要要放在最下面 ，先有 path*/&#125;
+                            &lt;Redirect to=&quot;/goods/item&quot;&gt;&lt;/Redirect&gt;
+                        &lt;/Suspense&gt;
+                    &lt;/Switch&gt;
+                &lt;/div&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default Index;
+</code></pre>
+<h4 id="子组件路由跳转"><a href="#子组件路由跳转" class="headerlink" title="子组件路由跳转"></a>子组件路由跳转</h4><p><strong>withRouter实现子组件路由跳转</strong><br><strong>sort页面 :</strong></p>
+<pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
+import &#123; Route, Switch, Redirect &#125; from &#39;react-router-dom&#39;;
+import GoodsNav from &quot;../../assets/components/GoodsNav&quot;      //引入 GoodsNav 组件
+const GoodsItem = lazy(() =&gt; import(&quot;./item&quot;))
+const GoodsDetails = lazy(() =&gt; import(&quot;./details&quot;))
+const GoodsEvaluation = lazy(() =&gt; import(&quot;./evaluation&quot;))
+class Index extends React.Component &#123;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                &#123;/* GoodsNav子组件 */&#125;
+                &lt;GoodsNav&gt;&lt;/GoodsNav&gt;
+                &lt;button type=&quot;button&quot; onClick=&#123;this.props.history.go.bind(this, -1)&#125;&gt;返回&lt;/button&gt;
+                &lt;div&gt;
+                    &lt;Switch&gt;
+                        &lt;Suspense fallback=&#123;&lt;React.Fragment /&gt;&#125;&gt;
+                            &#123;/* 这里不需要添加 exact */&#125;
+                            &lt;Route path=&quot;/goods/item&quot; component=&#123;GoodsItem&#125;&gt;&lt;/Route&gt;
+                            &lt;Route path=&quot;/goods/details&quot; component=&#123;GoodsDetails&#125;&gt;&lt;/Route&gt;
+                            &lt;Route path=&quot;/goods/evaluation&quot; component=&#123;GoodsEvaluation&#125;&gt;&lt;/Route&gt;
+                            &#123;/* 路由重定向 : 需要要放在最下面 ，先有 path*/&#125;
+                            &lt;Redirect to=&quot;/goods/item&quot;&gt;&lt;/Redirect&gt;
+                        &lt;/Suspense&gt;
+                    &lt;/Switch&gt;
+                &lt;/div&gt;
+            &lt;/React.Fragment&gt;
+        )
+    &#125;
+&#125;
+export default Index;
+</code></pre>
+<p><strong>新建一个GoodsNav组件 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123; withRouter &#125; from &#39;react-router-dom&#39;    //引入 withRouter
+function GoodsNav(props) &#123;
+    const goPage = (url) =&gt; &#123; 
+        console.log(this,props,url)   //这里没有 this : undefined
+        props.history.replace(url)
+    &#125;;
+    return (
+        &lt;ul&gt;
+            &lt;li onClick=&#123;goPage.bind(null, &#39;/goods/item&#39;)&#125;&gt;商品&lt;/li&gt;
+            &lt;li onClick=&#123;goPage.bind(null, &#39;/goods/details&#39;)&#125;&gt;详情&lt;/li&gt;
+            &lt;li onClick=&#123;goPage.bind(null, &#39;/goods/evaluation&#39;)&#125;&gt;评价&lt;/li&gt;
+        &lt;/ul&gt;
+    )
+&#125;
+export default withRouter(GoodsNav);
+</code></pre>
+<h3 id="路由认证"><a href="#路由认证" class="headerlink" title="路由认证"></a>路由认证</h3><p><strong>制作会员认证路由 :</strong></p>
+<pre><code>//在routes/private.js里面的代码
+import React from &#39;react&#39;;
+import &#123;Route,Redirect&#125; from &#39;react-router-dom&#39;;
+export function AuthRoute(&#123; component:Component, ...rest &#125;) &#123;
+    return (
+        &lt;Route &#123;...rest&#125; render=&#123;props =&gt;
+                Boolean(localStorage[&#39;isLogin&#39;]) ? (
+                    &lt;Component &#123;...props&#125; /&gt;
+                ) : (
+                    &lt;Redirect
+                        to=&#123;&#123;
+                            pathname: "/login",
+                            state: &#123; from: props.location &#125;
+                        &#125;&#125;
+                    /&gt;
+                )
+            &#125;
+        /&gt;
+    );
+&#125;
+</code></pre>
+<p><strong>建立首页 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+import &#123;Link&#125; from &#39;react-router-dom&#39;;
+class IndexPage extends React.Component&#123;
+    render() &#123;
+        return(
+            &lt;React.Fragment&gt;
+                &lt;div&gt;首页&lt;/div&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/login&quot;&gt;会员登录&lt;/Link&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;Link to=&quot;/user&quot;&gt;会员中心&lt;/Link&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+
+            &lt;/React.Fragment&gt;
+            
+        )
+    &#125;
+&#125;
+export default IndexPage
+</code></pre>
+<p><strong>建立会员登录 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+class Login extends React.Component &#123;
+    constructor() &#123;
+        super();
+        this.state=&#123;
+            username: &quot;&quot;,
+            password: &quot;&quot;,
+        &#125;
+    &#125;
+    doLogin() &#123;
+        if(this.state.username.match(/^\s*$/)) &#123;
+            alert(&quot;请输入用户名&quot;);
+            return;
+        &#125;
+        if(this.state.password.match(/^\s*$/)) &#123;
+            alert(&quot;请输入用密码&quot;);
+            return;
+        &#125;
+        // 登录成功将username进行存储，并返回上级
+        localStorage[&#39;username&#39;] = this.state.username;
+        localStorage[&#39;isLogin&#39;] = true;
+        this.props.history.go(-1);
+    &#125;
+    render() &#123;
+        return (
+            &lt;React.Fragment&gt;
+                     &lt;div&gt;
+                         用户名 : &lt;input type=&quot;text&quot; placeholder=&quot;请输入用户名&quot; onClick=&#123;(e)=&gt;&#123;
+                             this.setState(&#123;username : e.target.value&#125;)
+                         &#125;&#125;/&gt;
+                         &lt;br/&gt;
+                         密码 : &lt;input type=&quot;text&quot; placeholder=&quot;请输入密码&quot; onClick=&#123;(e)=&gt;&#123;
+                             this.setState(&#123;password: e.target.value&#125;)
+                         &#125;&#125;/&gt;
+                     &lt;/div&gt;
+                     &lt;button type=&quot;button&quot; onClick=&#123;this.doLogin.bind(this)&#125;&gt;登录&lt;/button&gt;
+            &lt;/React.Fragment&gt;
+       
+        )
+    &#125;
+&#125;
+export default Login;
+</code></pre>
+<p><strong>建立会员中心页面 :</strong></p>
+<pre><code>import React from &#39;react&#39;;
+class User extends React.Component &#123;
+    outLogin() &#123;
+        // 退出清空数据
+        localStorage.clear();
+        this.props.history.replace(&quot;/login&quot;)
+    &#125;
+    render() &#123;
+        return(
+            &lt;React.Fragment&gt;
+            &lt;div&gt;欢迎&#123;localStorage[&#39;username&#39;]&#125; 回来！&lt;/div&gt;
+            &lt;button type=&quot;button&quot; onClick=&#123;this.outLogin.bind(this)&#125;&gt;安全退出&lt;/button&gt;
+     
+            &lt;/React.Fragment&gt;
+   )
+    &#125;
+&#125;
+export default User;
+</code></pre>
+<p><strong>路由表中 :</strong></p>
+<pre><code>import React, &#123; lazy, Suspense &#125; from &#39;react&#39;;
+import &#123; BrowserRouter as Router, Route, Switch &#125; from &#39;react-router-dom&#39;;
+// 引入路由认证 js 
+import &#123; AuthRoute &#125; from &quot;./utils/router/private&quot;
+const IndexPage = lazy(() =&gt; import(&quot;./pages/Index&quot;));
+const LoginPage = lazy(() =&gt; import(&quot;./pages/login&quot;));
+const UserPage = lazy(() =&gt; import(&quot;./pages/user&quot;));
+class RouterComponent extends React.Component &#123;
+  render() &#123;
+    return (
+      &lt;React.Fragment&gt;
+        &lt;Router&gt;
+          &lt;React.Fragment&gt;
+            &lt;Switch&gt;
+              &lt;Suspense fallback=&#123;&lt;React.Fragment /&gt;&#125;&gt;
+                &lt;Route path=&quot;/&quot; exact component=&#123;IndexPage&#125;&gt;&lt;/Route&gt;
+                &lt;Route path=&quot;/login&quot; exact component=&#123;LoginPage&#125;&gt;&lt;/Route&gt;
+                &#123;/* 将 Route 更换成 AuthRoute*/&#125;
+                &lt;AuthRoute path=&quot;/user&quot; exact component=&#123;UserPage&#125;&gt;&lt;/AuthRoute&gt;
+              &lt;/Suspense&gt;
+            &lt;/Switch&gt;
+          &lt;/React.Fragment&gt;
+        &lt;/Router&gt;
+      &lt;/React.Fragment&gt;
+    )
+  &#125;
+&#125;
+export default RouterComponent;
+</code></pre>
+
+            </div>
+            <hr/>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/react-router/">
+                                    <span class="chip bg-color">react-router</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qq,wechat" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/logding.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/logding.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/110857455.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="React redux的使用">
+                        
+                        <span class="card-title">React redux的使用</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/React/" class="post-category">
+                                    React
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/redux/">
+                        <span class="chip bg-color">redux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/102745355.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/6.png" class="responsive-img" alt="React中props与state的区别">
+                        
+                        <span class="card-title">React中props与state的区别</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/React/" class="post-category">
+                                    React
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/props/">
+                        <span class="chip bg-color">props</span>
+                    </a>
+                    
+                    <a href="/tags/state/">
+                        <span class="chip bg-color">state</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align"
+        style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Aspirin个人博客</a>
+            <br>
+            
+            
+            
+            
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/zuojiahui" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+    <a href="mailto:1691086772@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1691086772" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 16910876772" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+
+    
+
+    
+    <script>
+        ( function (i, s, o, g, r, a, m) {
+           setTimeout(function(){ 
+                let tage = s.getElementsByClassName('daodream-powered-by')
+                let daodreaFooter = s.getElementsByClassName('daodream-app-profile-text')
+                let headersTop = s.getElementsByClassName('daodream-sheet-header')
+                console.log(tage,daodreaFooter,headersTop)
+                tage[0].style.display = "none"
+                daodreaFooter[0].style.display = "none"
+                headersTop[0].style.backgroundImage = "none"
+                headersTop[0].style.boxShadow = "none"
+            },2000)
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "7816dd54"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+   <!-- <script type="text/javascript">
+        //只在桌面版网页启用樱花特效
+        //var windowWidth = $(window).width();
+       // if (windowWidth > 768) {
+          //  document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        //}
+    </script> -->
+    <!--动态线条背景-->
+
+<!-- <script type="text/javascript" color="231,90,90" opacity='0.9' zIndex="-2" count="150"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script> -->
+<!-- //color：表示线条颜色，三个数字分别为 (R,G,B)，默认：（0,0,0）
+// opacity：表示线条透明度（0~1），默认：0.5
+// count：表示线条的总数量，默认：150
+// zIndex：表示背景的 z-index 属性，css 属性用于控制所在层的位置，默认：-1 -->
+    </script>
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunntTitle.js"></script>
+<!-- 看板娘 -->
+<!-- <script src="https://github.com/.git"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
+<script src="/js/cursor.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+</html>

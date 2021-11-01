@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Aspirin</title>
+  
+  <subtitle>茫</subtitle>
+  <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://zuojiahui.github.io/"/>
+  <updated>2021-11-01T15:01:24.197Z</updated>
+  <id>http://zuojiahui.github.io/</id>
+  
+  <author>
+    <name>Aspirin</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://zuojiahui.github.io/2021/11011111.html"/>
+    <id>http://zuojiahui.github.io/2021/11011111.html</id>
+    <published>2021-11-01T15:01:10.088Z</published>
+    <updated>2021-11-01T15:01:24.197Z</updated>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="闭包" scheme="http://zuojiahui.github.io/tags/%E9%97%AD%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序入坑</title>
+    <link href="http://zuojiahui.github.io/2021/10135140.html"/>
+    <id>http://zuojiahui.github.io/2021/10135140.html</id>
+    <published>2021-10-13T03:29:32.000Z</published>
+    <updated>2021-10-13T03:29:32.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;小程序简介&quot;&gt;&lt;a href=&quot;#小程序简介&quot; class=&quot;headerlink&quot; title=&quot;小程序简介&quot;&gt;&lt;/a&gt;小程序简介&lt;/h2&gt;&lt;p&gt;小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="小程序" scheme="http://zuojiahui.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="小程序" scheme="http://zuojiahui.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TypeScript从入门到入坑</title>
+    <link href="http://zuojiahui.github.io/2021/080217690.html"/>
+    <id>http://zuojiahui.github.io/2021/080217690.html</id>
+    <published>2021-08-02T14:45:20.000Z</published>
+    <updated>2021-08-02T14:45:20.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;在使用 npm 命令之前电脑必须安装 nodejs&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g</summary>
+        
+      
+    
+    
+    
+    <category term="TypeScript" scheme="http://zuojiahui.github.io/categories/TypeScript/"/>
+    
+    
+    <category term="TypeScript" scheme="http://zuojiahui.github.io/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hooks使用</title>
+    <link href="http://zuojiahui.github.io/2021/07284234.html"/>
+    <id>http://zuojiahui.github.io/2021/07284234.html</id>
+    <published>2021-07-28T15:47:04.000Z</published>
+    <updated>2021-07-28T15:47:04.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;hooks是 16.8 版本之后的新特性，React</summary>
+        
+      
+    
+    
+    
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
+    
+    
+    <category term="hooks" scheme="http://zuojiahui.github.io/tags/hooks/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React-Native入坑</title>
+    <link href="http://zuojiahui.github.io/2021/072029497.html"/>
+    <id>http://zuojiahui.github.io/2021/072029497.html</id>
+    <published>2021-07-19T16:47:38.000Z</published>
+    <updated>2021-07-19T16:47:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;RN历史简介&quot;&gt;&lt;a href=&quot;#RN历史简介&quot; class=&quot;headerlink&quot; title=&quot;RN历史简介&quot;&gt;&lt;/a&gt;RN历史简介&lt;/h2&gt;&lt;p&gt;RN是Facebook开源的一个框架,Facebook于2015年9月15日发布React</summary>
+        
+      
+    
+    
+    
+    <category term="react-native" scheme="http://zuojiahui.github.io/categories/react-native/"/>
+    
+    
+    <category term="react-native" scheme="http://zuojiahui.github.io/tags/react-native/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>npm初始化或安装模块报错</title>
+    <link href="http://zuojiahui.github.io/2021/07187920.html"/>
+    <id>http://zuojiahui.github.io/2021/07187920.html</id>
+    <published>2021-07-18T12:39:20.000Z</published>
+    <updated>2021-07-18T12:39:20.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;解决方案&quot;&gt;&lt;a href=&quot;#解决方案&quot; class=&quot;headerlink&quot; title=&quot;解决方案&quot;&gt;&lt;/a&gt;解决方案&lt;/h3&gt;&lt;p&gt;报错信息如图:&lt;/p&gt;
+&lt;div&gt;    
+&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="npm" scheme="http://zuojiahui.github.io/categories/npm/"/>
+    
+    
+    <category term="npm" scheme="http://zuojiahui.github.io/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端</title>
+    <link href="http://zuojiahui.github.io/2021/03171314.html"/>
+    <id>http://zuojiahui.github.io/2021/03171314.html</id>
+    <published>2021-03-17T13:03:56.000Z</published>
+    <updated>2021-03-17T13:03:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!-- ### 前言
+由于前端知识点太多就很复杂，面试的时候有很多面试官又经常问一些偏基础的技术点，故整理此文章来帮助大家更高的应对面试，也以备自己不时之需 --&gt;
+
+&lt;h3 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://zuojiahui.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="http://zuojiahui.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中遍历对象的几种方式</title>
+    <link href="http://zuojiahui.github.io/2021/012546907.html"/>
+    <id>http://zuojiahui.github.io/2021/012546907.html</id>
+    <published>2021-01-25T02:50:04.000Z</published>
+    <updated>2021-01-25T02:50:04.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="对象" scheme="http://zuojiahui.github.io/tags/%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数组去重的几种常见写法</title>
+    <link href="http://zuojiahui.github.io/2021/012228872.html"/>
+    <id>http://zuojiahui.github.io/2021/012228872.html</id>
+    <published>2021-01-22T03:58:40.000Z</published>
+    <updated>2021-01-22T03:58:40.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;在实际工作或面试中，我们经常会遇到“数组去重”问题，以下来是总结的一些实现的数组去重的多种方法&lt;/p&gt;
+&lt;h3 id=&quot;方法一&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="数组去重" scheme="http://zuojiahui.github.io/tags/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将数组转换为数组对象</title>
+    <link href="http://zuojiahui.github.io/2021/012113696.html"/>
+    <id>http://zuojiahui.github.io/2021/012113696.html</id>
+    <published>2021-01-21T11:04:06.000Z</published>
+    <updated>2021-01-21T11:04:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="数组对象" scheme="http://zuojiahui.github.io/tags/%E6%95%B0%E7%BB%84%E5%AF%B9%E8%B1%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中遍历数组的几种方式</title>
+    <link href="http://zuojiahui.github.io/2021/012030917.html"/>
+    <id>http://zuojiahui.github.io/2021/012030917.html</id>
+    <published>2021-01-20T01:23:06.000Z</published>
+    <updated>2021-01-20T01:23:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;JS数组遍历，基本就是for,for in,forEach,for</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="数组" scheme="http://zuojiahui.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS闭包的理解</title>
+    <link href="http://zuojiahui.github.io/2021/011850862.html"/>
+    <id>http://zuojiahui.github.io/2021/011850862.html</id>
+    <published>2021-01-18T03:44:24.000Z</published>
+    <updated>2021-01-18T03:44:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;闭包函数:&lt;/strong&gt; 声明在一个函数中的函数数，叫做闭包函数&lt;br&gt;&lt;strong&gt;闭包:&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="闭包" scheme="http://zuojiahui.github.io/tags/%E9%97%AD%E5%8C%85/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>务必记住的200条Git命令</title>
+    <link href="http://zuojiahui.github.io/2021/01167920.html"/>
+    <id>http://zuojiahui.github.io/2021/01167920.html</id>
+    <published>2021-01-16T09:21:08.000Z</published>
+    <updated>2021-01-16T09:21:08.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;我平时使用 Git 的时候，很多的 Git 命令我都不是很常用，工作中一般我们会配合一些可视化工具，或者编辑器自带的一些插件去维护 Git</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="http://zuojiahui.github.io/categories/Git/"/>
+    
+    
+    <category term="git命令" scheme="http://zuojiahui.github.io/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>call apply bind三者之间的区别及作用</title>
+    <link href="http://zuojiahui.github.io/2020/122918266.html"/>
+    <id>http://zuojiahui.github.io/2020/122918266.html</id>
+    <published>2020-12-29T02:38:36.000Z</published>
+    <updated>2020-12-29T02:38:36.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;说到 call apply bind</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="call" scheme="http://zuojiahui.github.io/tags/call/"/>
+    
+    <category term="apply" scheme="http://zuojiahui.github.io/tags/apply/"/>
+    
+    <category term="bind" scheme="http://zuojiahui.github.io/tags/bind/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JS中的浅拷贝与深拷贝</title>
+    <link href="http://zuojiahui.github.io/2020/122735313.html"/>
+    <id>http://zuojiahui.github.io/2020/122735313.html</id>
+    <published>2020-12-27T04:34:54.000Z</published>
+    <updated>2020-12-27T04:34:54.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;浅拷贝是拷贝一层，深层次的对象级别的就拷贝引用；&lt;br&gt;深拷贝是拷贝多层，每一级别的数据都会拷贝出来；&lt;br&gt;&lt;strong&gt;总结来看</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="浅拷贝" scheme="http://zuojiahui.github.io/tags/%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    
+    <category term="深拷贝" scheme="http://zuojiahui.github.io/tags/%E6%B7%B1%E6%8B%B7%E8%B4%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>星空特效</title>
+    <link href="http://zuojiahui.github.io/2020/122024884.html"/>
+    <id>http://zuojiahui.github.io/2020/122024884.html</id>
+    <published>2020-12-20T11:34:58.000Z</published>
+    <updated>2020-12-20T11:34:58.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;看到自己的电脑桌面是太空的界面，于是心血来潮，便有心次制作星空特效。&lt;br&gt;每次刷新页面都会生成新的页面&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="炫酷特效" scheme="http://zuojiahui.github.io/categories/%E7%82%AB%E9%85%B7%E7%89%B9%E6%95%88/"/>
+    
+    
+    <category term="Javascript" scheme="http://zuojiahui.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小星星特效</title>
+    <link href="http://zuojiahui.github.io/2020/12207920.html"/>
+    <id>http://zuojiahui.github.io/2020/12207920.html</id>
+    <published>2020-12-20T11:02:24.000Z</published>
+    <updated>2020-12-20T11:02:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;这是使用原生 JS 实现的一款鼠标经过特效，实现效果如下图&lt;/p&gt;
+&lt;h3 id=&quot;案例展示&quot;&gt;&lt;a href=&quot;#案例展示&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="炫酷特效" scheme="http://zuojiahui.github.io/categories/%E7%82%AB%E9%85%B7%E7%89%B9%E6%95%88/"/>
+    
+    
+    <category term="Javascript" scheme="http://zuojiahui.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中this指向问题</title>
+    <link href="http://zuojiahui.github.io/2020/12193329.html"/>
+    <id>http://zuojiahui.github.io/2020/12193329.html</id>
+    <published>2020-12-19T08:49:12.000Z</published>
+    <updated>2020-12-19T08:49:12.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;面向对象语言中 this 表示当前对象的一个引用,但在 JavaScript 中 this</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="this" scheme="http://zuojiahui.github.io/tags/this/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React中使用axios发送请求</title>
+    <link href="http://zuojiahui.github.io/2020/121850332.html"/>
+    <id>http://zuojiahui.github.io/2020/121850332.html</id>
+    <published>2020-12-18T10:39:16.000Z</published>
+    <updated>2020-12-18T10:39:16.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP client&lt;/p&gt;
+&lt;h4 id=&quot;特征&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
+    
+    
+    <category term="axios" scheme="http://zuojiahui.github.io/tags/axios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React实现数据双向绑定</title>
+    <link href="http://zuojiahui.github.io/2020/121351352.html"/>
+    <id>http://zuojiahui.github.io/2020/121351352.html</id>
+    <published>2020-12-13T14:53:50.000Z</published>
+    <updated>2020-12-13T14:53:50.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;双向数据绑定，带来双向数据流。数据（state）和视图（View）之间的双向绑定。&lt;br&gt;说到底就是 （value 的单向绑定 +</summary>
+        
+      
+    
+    
+    
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
+    
+    
+    <category term="双向绑定" scheme="http://zuojiahui.github.io/tags/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/"/>
+    
+  </entry>
+  
+</feed>
