@@ -4,31 +4,6 @@
   
     
     <entry>
-      <title>测试</title>
-      <link href="/2021/11011111.html"/>
-      <url>/2021/11011111.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 闭包 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>小程序入坑</title>
       <link href="/2021/10135140.html"/>
       <url>/2021/10135140.html</url>
@@ -271,31 +246,6 @@
         <tags>
             
             <tag> 数组 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JS闭包的理解</title>
-      <link href="/2021/011850862.html"/>
-      <url>/2021/011850862.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><strong>闭包函数:</strong> 声明在一个函数中的函数数，叫做闭包函数<br><strong>闭包:</strong> 内部函数总是可以访问其所在的外部函数中声明的参数和变量，即使在其外部函数被返回（寿命终结）了之后</p><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ul><li>函数嵌套函数</li><li>函数内部可以引用函数外部的参数和变量</li><li>参数和变量不会被垃圾回收机制回收</li></ul><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul><li>让外部访问函数内部变量成为可能</li><li>局部变量会常驻在内存中</li><li>可以避免使用全局变量，防止全局变量污染</li></ul><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ul><li>滥用闭包会造成内存泄露，因为闭包中引用到的包裹函数中定义的变量都永远不会被释放，所以我们应该在必要的时候，及时释放这个闭包函数。</li></ul><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p><strong>最终秘诀就这一句话:</strong> 闭包找到的是同一地址中父级函数中对应变量最终的值</p><h3 id="栗子1"><a href="#栗子1" class="headerlink" title="栗子1"></a>栗子1</h3><pre><code>function funA()&#123;  var a = 10;  // funA的活动对象之中;  return function()&#123;   //匿名函数的活动对象;        alert(a);  &#125;&#125;var b = funA();b();  //10</code></pre><h3 id="栗子2"><a href="#栗子2" class="headerlink" title="栗子2"></a>栗子2</h3><pre><code>function outerFn() &#123; var i = 0; function innerFn() &#123;    i++;    console.log(i);    &#125;    return innerFn;&#125;var inner = outerFn(); //每次外部函数执行的时候,都会开辟一块内存空间,外部函数的地址不同，都会重新创建一个新的地址inner();  // 1inner();  // 2inner();  // 3var inner2 = outerFn();inner2();  // 1inner2();  // 2inner2();  // 3</code></pre><h3 id="栗子3"><a href="#栗子3" class="headerlink" title="栗子3"></a>栗子3</h3><pre><code>var i = 0;function outerFn()&#123;  function innnerFn()&#123;       i++;       console.log(i);  &#125;  return innnerFn;&#125;var inner1 = outerFn();var inner2 = outerFn();inner1(); // 1inner2(); // 2inner1(); // 3inner2(); // 4    </code></pre><h3 id="栗子4"><a href="#栗子4" class="headerlink" title="栗子4"></a>栗子4</h3><pre><code>function fn()&#123;    var a = 3;    return function()&#123;        return  ++a;                                         &#125;&#125;alert(fn()());  // 4alert(fn()());  // 4  </code></pre><h3 id="栗子5"><a href="#栗子5" class="headerlink" title="栗子5"></a>栗子5</h3><pre><code>function outerFn()&#123;var i = 0;  function innnerFn()&#123;      i++;      console.log(i);  &#125;  return innnerFn;&#125;var inner1 = outerFn();var inner2 = outerFn();inner1(); // 1inner2(); // 1inner1(); // 2inner2(); // 2</code></pre><h3 id="栗子6"><a href="#栗子6" class="headerlink" title="栗子6"></a>栗子6</h3><pre><code>(function() &#123;   var m = 0;   function getM() &#123; return m; &#125;   function seta(val) &#123; m = val; &#125;   window.g = getM;   window.f = seta; &#125;)(); f(100);console.log(g());   //100  闭包找到的是同一地址中父级函数中对应变量最终的值 </code></pre><h3 id="栗子7"><a href="#栗子7" class="headerlink" title="栗子7"></a>栗子7</h3><pre><code>function a() &#123;   var i = 0;   function b() &#123;      alert(++i)      &#125;   return b; &#125; var c = a(); c();      //1 c();      //2 </code></pre><h3 id="栗子8"><a href="#栗子8" class="headerlink" title="栗子8"></a>栗子8</h3><pre><code>function f() &#123;   var count = 0;   return  function() &#123;       count++;       console.info(count);   &#125; &#125; var t1 = f();t1();     //1 t1();     //2 t1();     //3 </code></pre><h3 id="栗子9"><a href="#栗子9" class="headerlink" title="栗子9"></a>栗子9</h3><pre><code>function m1()&#123;     var x = 1;     return function()&#123;          console.log(++x);     &#125;&#125; m1()();   //2m1()();   //2m1()();   //2 var m2 = m1();m2();   //2m2();   //3m2();   //4</code></pre><h3 id="栗子10"><a href="#栗子10" class="headerlink" title="栗子10"></a>栗子10</h3><pre><code>var  fn=(function()&#123;   var  i=10;   function  fn()&#123;      console.log(++i);   &#125;   return   fn;&#125;)() fn();   //11fn();   //12</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> JavaScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 闭包 </tag>
             
         </tags>
       

@@ -6,7 +6,7 @@
   <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
   
   <link href="http://zuojiahui.github.io/"/>
-  <updated>2021-11-01T15:01:24.197Z</updated>
+  <updated>2021-10-13T03:29:32.000Z</updated>
   <id>http://zuojiahui.github.io/</id>
   
   <author>
@@ -15,23 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>测试</title>
-    <link href="http://zuojiahui.github.io/2021/11011111.html"/>
-    <id>http://zuojiahui.github.io/2021/11011111.html</id>
-    <published>2021-11-01T15:01:10.088Z</published>
-    <updated>2021-11-01T15:01:24.197Z</updated>
-    
-    
-    
-    
-    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
-    
-    
-    <category term="闭包" scheme="http://zuojiahui.github.io/tags/%E9%97%AD%E5%8C%85/"/>
-    
-  </entry>
   
   <entry>
     <title>小程序入坑</title>
@@ -292,31 +275,6 @@
   </entry>
   
   <entry>
-    <title>JS闭包的理解</title>
-    <link href="http://zuojiahui.github.io/2021/011850862.html"/>
-    <id>http://zuojiahui.github.io/2021/011850862.html</id>
-    <published>2021-01-18T03:44:24.000Z</published>
-    <updated>2021-01-18T03:44:24.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;闭包函数:&lt;/strong&gt; 声明在一个函数中的函数数，叫做闭包函数&lt;br&gt;&lt;strong&gt;闭包:&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
-    
-    
-    <category term="闭包" scheme="http://zuojiahui.github.io/tags/%E9%97%AD%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
     <title>务必记住的200条Git命令</title>
     <link href="http://zuojiahui.github.io/2021/01167920.html"/>
     <id>http://zuojiahui.github.io/2021/01167920.html</id>
@@ -522,6 +480,57 @@
     
     
     <category term="双向绑定" scheme="http://zuojiahui.github.io/tags/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript中数组的使用及方法</title>
+    <link href="http://zuojiahui.github.io/2020/12133498.html"/>
+    <id>http://zuojiahui.github.io/2020/12133498.html</id>
+    <published>2020-12-12T16:25:52.000Z</published>
+    <updated>2020-12-12T16:25:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&lt;font face=&quot;微软雅黑&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://zuojiahui.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="数组" scheme="http://zuojiahui.github.io/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>响应式布局</title>
+    <link href="http://zuojiahui.github.io/2020/11149461.html"/>
+    <id>http://zuojiahui.github.io/2020/11149461.html</id>
+    <published>2020-11-13T16:00:00.000Z</published>
+    <updated>2020-12-18T08:10:58.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;响应式布局是一个网站能够兼容多个终端，而不是为每个终端做一个特定的版本，这个概念就是为解决移动互联网而诞生的&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="CSS" scheme="http://zuojiahui.github.io/categories/CSS/"/>
+    
+    
+    <category term="响应式布局" scheme="http://zuojiahui.github.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
