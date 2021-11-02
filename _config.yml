@@ -48,11 +48,6 @@ relative_link: false
 future: true
 highlight:
   enable: false
-  prism_plugin:
-    mode: 'preprocess'    # realtime/preprocess
-    theme: 'tomorrow'
-    line_number: false    # default false
-    custom_css:
   line_number: true
   auto_detect: false
   tab_replace: ''
