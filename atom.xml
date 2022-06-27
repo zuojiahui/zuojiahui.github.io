@@ -6,7 +6,7 @@
   <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
   
   <link href="http://zuojiahui.github.io/"/>
-  <updated>2021-10-13T03:29:32.000Z</updated>
+  <updated>2021-11-04T15:17:14.326Z</updated>
   <id>http://zuojiahui.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React中使用axios发送请求</title>
+    <link href="http://zuojiahui.github.io/2021/110450332.html"/>
+    <id>http://zuojiahui.github.io/2021/110450332.html</id>
+    <published>2021-11-04T15:17:12.483Z</published>
+    <updated>2021-11-04T15:17:14.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP client&lt;/p&gt;
+&lt;h4 id=&quot;特征&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
+    
+    
+    <category term="axios" scheme="http://zuojiahui.github.io/tags/axios/"/>
+    
+  </entry>
   
   <entry>
     <title>小程序入坑</title>
@@ -73,7 +99,7 @@
     <link href="http://zuojiahui.github.io/2021/07284234.html"/>
     <id>http://zuojiahui.github.io/2021/07284234.html</id>
     <published>2021-07-28T15:47:04.000Z</published>
-    <updated>2021-07-28T15:47:04.000Z</updated>
+    <updated>2021-11-04T15:21:39.828Z</updated>
     
     
       
@@ -98,7 +124,7 @@
     <link href="http://zuojiahui.github.io/2021/072029497.html"/>
     <id>http://zuojiahui.github.io/2021/072029497.html</id>
     <published>2021-07-19T16:47:38.000Z</published>
-    <updated>2021-07-19T16:47:38.000Z</updated>
+    <updated>2021-11-04T15:25:37.455Z</updated>
     
     
       
@@ -429,32 +455,6 @@
     
     
     <category term="this" scheme="http://zuojiahui.github.io/tags/this/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React中使用axios发送请求</title>
-    <link href="http://zuojiahui.github.io/2020/121850332.html"/>
-    <id>http://zuojiahui.github.io/2020/121850332.html</id>
-    <published>2020-12-18T10:39:16.000Z</published>
-    <updated>2020-12-18T10:39:16.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;axios 是一个基于Promise 用于浏览器和 nodejs 的 HTTP client&lt;/p&gt;
-&lt;h4 id=&quot;特征&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
-    
-    
-    <category term="axios" scheme="http://zuojiahui.github.io/tags/axios/"/>
     
   </entry>
   
