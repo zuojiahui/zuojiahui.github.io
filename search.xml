@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Vue入坑</title>
+      <link href="/2022/062716678.html"/>
+      <url>/2022/062716678.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="Vue-js-是什么"><a href="#Vue-js-是什么" class="headerlink" title="Vue.js 是什么"></a>Vue.js 是什么</h3><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架</p><h3 id="Vue-的特点"><a href="#Vue-的特点" class="headerlink" title="Vue 的特点"></a>Vue 的特点</h3><ol><li>采用组件化模式，提高代码复用率、且让代码更好维护。</li><li>声明式编码，让编码人员无需直接操作 DOM，提高开发效率。</li><li>使用虛拟 DOM + Diff 算法，尽量复用 DOM 节点。</li></ol><h3 id="Vue-导入"><a href="#Vue-导入" class="headerlink" title="Vue 导入"></a>Vue 导入</h3><ul><li>注意: 容器和实例是一对一关系</li></ul><pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;  &lt;title&gt;创建一个Vue对象&lt;/title&gt;&lt;/head&gt;&lt;body&gt;  &lt;div id=&quot;app&quot;&gt;    &lt;h1&gt;用户名是: &#123;&#123;name&#125;&#125;&lt;/h1&gt;  &lt;/div&gt;  &lt;script type=&quot;text/javascript&quot;&gt;    //创建一个Vue对象    new Vue(&#123;      //指定,该对象代表&lt;div id=&quot;app&quot;&gt;,也就是说,这个div中的所有内容,都被当前的app对象管理      el: &quot;#app&quot;,      //定义vue中的数据      data: &#123;        name: &quot;张三&quot;      &#125;    &#125;);  &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><h3 id="Vue-基本语法"><a href="#Vue-基本语法" class="headerlink" title="Vue 基本语法"></a>Vue 基本语法</h3><h4 id="插值表达式"><a href="#插值表达式" class="headerlink" title="插值表达式"></a>插值表达式</h4><p>插值表达式用户把 vue 中所定义的数据, 显示在页面上. 插值表达式允许用户输入”JS 表达式”<br><strong>注意区分：js 表达式 和 js 代码（语句</strong><br>表达式： a, a+b, fun() … (一个表达式会产生一个值，可以放在任何一个需要值的地方)<br>语句： if(){ } for(){ }<br><strong>Vue 模板语法包括两大类：</strong></p><ol><li>插值语法：</li></ol><ul><li>功能：用于解析标签体内容</li><li>写法：<code>&#123;&#123; xxx &#125;&#125;</code> xxx 是 js 表达式，且可以直接读取到 data 中的所有区域</li></ul><ol start="2"><li>指令语法：</li></ol><ul><li>功能：用于解析标签（包括：标签属性、标签体内容、绑定事件…）</li><li>举例：<code>&lt;a v-bind:href=&quot;xxx&quot;&gt;或简写为&lt;a :href=&quot;xxx&quot;&gt;</code>，xxx 同样要写 js 表达式，且可以直接读取到 data 中的所有属性<br>备注：Vue 中有很多的指令，且形式都是 v-???，此处我们只是拿 v-bind 举个例子</li></ul><pre><code>&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;  &lt;meta charset=&quot;UTF-8&quot;&gt;  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;  &lt;title&gt;创建一个Vue对象&lt;/title&gt;&lt;/head&gt;&lt;body&gt;  &lt;div id=&quot;app&quot;&gt;    &lt;h1&gt;用户名是: &#123;&#123;name&#125;&#125;&lt;/h1&gt;    &lt;h1&gt;时间: &#123;&#123;Date.now()&#125;&#125;&lt;/h1&gt;    &lt;a v-bind:href=&quot;url&quot;&gt;点我去博客&lt;/a&gt;    &lt;a :href=&quot;url&quot;&gt;点我去博客&lt;/a&gt;  &lt;/div&gt;  &lt;script type=&quot;text/javascript&quot;&gt;    new Vue(&#123;      el: &quot;#app&quot;,      data: &#123;        name: &quot;你好👋&quot;,        url: &quot;https://zuojiahui.fun/&quot;      &#125;    &#125;);  &lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><!-- ### 初始化脚手架> 如果你已经全局安装了旧版本的 vue-cli (1.x 或 2.x)，你需要先通过 npm uninstall vue-cli -g 或 yarn global remove vue-cli 卸载它。> Vue CLI 4.x 需要 Node.js v8.9 或更高版本 (推荐 v10 以上)。你可以使用 n，nvm 或 nvm-windows 在同一台电脑中管理多个 Node 版本。#### 安装脚手架```npm install -g @vue/cli# ORyarn global add @vue/cli```安装之后，你就可以在命令行中访问 vue 命令。你可以通过简单运行 vue，看看是否展示出了一份所有可用命令的帮助信息，来验证它是否安装成功。你还可以用这个命令来检查其版本是否正确：```vue --version```#### 创建项目运行以下命令来创建一个新项目：```vue create hello-world```#### 启动项目```npm run serve --><!-- ``` -->]]></content>
+      
+      
+      <categories>
+          
+          <category> Vue </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>React中使用axios发送请求</title>
       <link href="/2021/110450332.html"/>
       <url>/2021/110450332.html</url>
@@ -54,31 +79,6 @@
     
     
     <entry>
-      <title>TypeScript从入门到入坑</title>
-      <link href="/2021/080217690.html"/>
-      <url>/2021/080217690.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>在使用 npm 命令之前电脑必须安装 nodejs</p><pre><code>npm install -g typescript或者cpm install -g typescript或者yarn global add typescript验证是否安装成功tsc -v</code></pre><h3 id="TypeScript-中的数据类型"><a href="#TypeScript-中的数据类型" class="headerlink" title="TypeScript 中的数据类型"></a>TypeScript 中的数据类型</h3><pre><code>// 布尔类型  booleanconst show: boolean = true// 数字类型  numberconst num: number = 123.4// 字符串类型  stringconst str: string = &quot;你好!&quot;// 数组类型  array   ts中定义数组有两种方式// 1. 第一种定义数组方式const arr: number[] = [1, 2, 3, 4, 5, 6]const arr1: string[] = [&quot;js&quot;, &quot;css&quot;]// 2. 第一种定义数组方式 (泛型)const arr2: Array&lt;number&gt; = [1, 2, 3, 4, 5, 6]const arr3: Array&lt;string&gt; = [&quot;js&quot;, &quot;css&quot;]// 2. 第三种定义数组方式const arr4: any[] = [11, &quot;22&quot;, true]// 元组类型  tuple  (属于数组的一种)const arr5: [boolean, string, number] = [true, &quot;你好&quot;, 123]/*枚举类型 enumenum 枚举名 &#123;    标识符[=整型常数]    ...    标识符[=整型常数]&#125;pay_status   0 未支付  1 支付  2 交易成功flag 1 true  2 false*/enum Flag &#123; true = 1, false = 2 &#125;const f: Flag = Flag.trueconsole.log(f)  // 1enum Num &#123; num0, num1, num2 &#125;   // 为赋值即为索引值const n: Num = Num.num0console.log(n)  // 0// 任意类型 any    const anyType: any = trueconst anyType1: any = 123const anyType3: any = &quot;你好&quot;// null 和 undefined  其他(never类型) 数据类型的子类型let numUndefined: number | undefined;console.log(numUndefined)  // undefined// 一个元素可能是 number 可能是 null 可能是 undefinedlet anyTypes: number | null | undefined;// void 类型 ：表示没有任何类型，一般用于定义方法没有返回值/*es5的定义方法function run() &#123;    console.log(&quot;run&quot;)&#125;run()*/function run(): void &#123;    console.log(&quot;run&quot;)&#125;run()// 如果有返回值function run1(): number &#123;    return 123&#125;run()// never类型：其他类型（包括 null 和 undefined）的子类型，代表从来不会出现值// 声明的 never 的变量只能被 never类型赋值let a: never = (() =&gt; &#123;    throw new Error(&quot;错误&quot;)&#125;)()</code></pre><h3 id="TypeScript-中的函数"><a href="#TypeScript-中的函数" class="headerlink" title="TypeScript 中的函数"></a>TypeScript 中的函数</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> TypeScript </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> TypeScript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hooks使用</title>
       <link href="/2021/07284234.html"/>
       <url>/2021/07284234.html</url>
@@ -96,31 +96,6 @@
         <tags>
             
             <tag> hooks </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>React-Native入坑</title>
-      <link href="/2021/072029497.html"/>
-      <url>/2021/072029497.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="RN历史简介"><a href="#RN历史简介" class="headerlink" title="RN历史简介"></a>RN历史简介</h2><p>RN是Facebook开源的一个框架,Facebook于2015年9月15日发布React Native。广大开发者可以使用 JavaScript 和 React 开发跨平台移动应用。目前，React Native 基本实现完成了多端的支持，实现了真正意义上的面向开发配置，开发者可以灵活的使用 HTNL 和 CSS 布局，使用React语法构建组件，实现 H5 Android ios 多端代码复用  </p><h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><pre><code>npm install -g yarn     // 安装 yarnyarn -v                 // 检测是否安装成功</code></pre><h3 id="JDK安装与配置"><a href="#JDK安装与配置" class="headerlink" title="JDK安装与配置"></a>JDK安装与配置</h3><p>安卓系统的App离不开JAVA环境，因此需要下载安装JDK,到该网站下载JDK<br>选择对应自已电脑系统版本</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> react-native </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> react-native </tag>
             
         </tags>
       
@@ -600,6 +575,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> React </tag>
+            
+        </tags>
       
     </entry>
     

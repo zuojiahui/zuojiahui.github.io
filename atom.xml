@@ -6,7 +6,7 @@
   <link href="http://zuojiahui.github.io/atom.xml" rel="self"/>
   
   <link href="http://zuojiahui.github.io/"/>
-  <updated>2021-11-04T15:17:14.326Z</updated>
+  <updated>2022-06-30T14:57:13.137Z</updated>
   <id>http://zuojiahui.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue入坑</title>
+    <link href="http://zuojiahui.github.io/2022/062716678.html"/>
+    <id>http://zuojiahui.github.io/2022/062716678.html</id>
+    <published>2022-06-27T13:05:56.611Z</published>
+    <updated>2022-06-30T14:57:13.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Vue-js-是什么&quot;&gt;&lt;a href=&quot;#Vue-js-是什么&quot; class=&quot;headerlink&quot; title=&quot;Vue.js 是什么&quot;&gt;&lt;/a&gt;Vue.js 是什么&lt;/h3&gt;&lt;p&gt;Vue (读音 /vjuː/，类似于 view)</summary>
+        
+      
+    
+    
+    
+    <category term="Vue" scheme="http://zuojiahui.github.io/categories/Vue/"/>
+    
+    
+    <category term="vue" scheme="http://zuojiahui.github.io/tags/vue/"/>
+    
+  </entry>
   
   <entry>
     <title>React中使用axios发送请求</title>
@@ -69,37 +94,11 @@
   </entry>
   
   <entry>
-    <title>TypeScript从入门到入坑</title>
-    <link href="http://zuojiahui.github.io/2021/080217690.html"/>
-    <id>http://zuojiahui.github.io/2021/080217690.html</id>
-    <published>2021-08-02T14:45:20.000Z</published>
-    <updated>2021-08-02T14:45:20.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;在使用 npm 命令之前电脑必须安装 nodejs&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g</summary>
-        
-      
-    
-    
-    
-    <category term="TypeScript" scheme="http://zuojiahui.github.io/categories/TypeScript/"/>
-    
-    
-    <category term="TypeScript" scheme="http://zuojiahui.github.io/tags/TypeScript/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hooks使用</title>
     <link href="http://zuojiahui.github.io/2021/07284234.html"/>
     <id>http://zuojiahui.github.io/2021/07284234.html</id>
     <published>2021-07-28T15:47:04.000Z</published>
-    <updated>2021-11-04T15:21:39.828Z</updated>
+    <updated>2022-08-26T00:59:32.117Z</updated>
     
     
       
@@ -116,31 +115,6 @@
     
     
     <category term="hooks" scheme="http://zuojiahui.github.io/tags/hooks/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React-Native入坑</title>
-    <link href="http://zuojiahui.github.io/2021/072029497.html"/>
-    <id>http://zuojiahui.github.io/2021/072029497.html</id>
-    <published>2021-07-19T16:47:38.000Z</published>
-    <updated>2021-11-04T15:25:37.455Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;RN历史简介&quot;&gt;&lt;a href=&quot;#RN历史简介&quot; class=&quot;headerlink&quot; title=&quot;RN历史简介&quot;&gt;&lt;/a&gt;RN历史简介&lt;/h2&gt;&lt;p&gt;RN是Facebook开源的一个框架,Facebook于2015年9月15日发布React</summary>
-        
-      
-    
-    
-    
-    <category term="react-native" scheme="http://zuojiahui.github.io/categories/react-native/"/>
-    
-    
-    <category term="react-native" scheme="http://zuojiahui.github.io/tags/react-native/"/>
     
   </entry>
   
@@ -531,6 +505,31 @@
     
     
     <category term="响应式布局" scheme="http://zuojiahui.github.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React redux的使用</title>
+    <link href="http://zuojiahui.github.io/2020/110857455.html"/>
+    <id>http://zuojiahui.github.io/2020/110857455.html</id>
+    <published>2020-11-08T13:35:03.000Z</published>
+    <updated>2020-12-20T11:38:08.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;Redux 是 JavaScript 状态容器，提供可预测化得状态管理，可以跨组件、跨页面推送数据。应用场景如 :</summary>
+        
+      
+    
+    
+    
+    <category term="React" scheme="http://zuojiahui.github.io/categories/React/"/>
+    
+    
+    <category term="redux" scheme="http://zuojiahui.github.io/tags/redux/"/>
     
   </entry>
   

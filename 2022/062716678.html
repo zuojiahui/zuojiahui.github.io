@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="React-Native入坑, Aspirin">
+    <meta name="keywords" content="Vue入坑, Aspirin">
     <meta name="description" content="只要朝着一个方向努力，一切都会变得得心应手">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>React-Native入坑 | Aspirin</title>
+    <title>Vue入坑 | Aspirin</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,7 +245,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">React-Native入坑</h1>
+                    <h1 class="description center-align post-title">Vue入坑</h1>
                 </div>
             </div>
         </div>
@@ -362,8 +362,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/react-native/">
-                                <span class="chip bg-color">react-native</span>
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -374,8 +374,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/react-native/" class="post-category">
-                                react-native
+                            <a href="/categories/Vue/" class="post-category">
+                                Vue
                             </a>
                         
                     </div>
@@ -387,7 +387,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-20
+                    2022-06-27
                 </div>
                 
 
@@ -396,7 +396,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    173
+                    727
                 </div>
                 
 
@@ -408,11 +408,123 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="RN历史简介"><a href="#RN历史简介" class="headerlink" title="RN历史简介"></a>RN历史简介</h2><p>RN是Facebook开源的一个框架,Facebook于2015年9月15日发布React Native。广大开发者可以使用 JavaScript 和 React 开发跨平台移动应用。目前，React Native 基本实现完成了多端的支持，实现了真正意义上的面向开发配置，开发者可以灵活的使用 HTNL 和 CSS 布局，使用React语法构建组件，实现 H5 Android ios 多端代码复用  </p>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><h3 id="Yarn"><a href="#Yarn" class="headerlink" title="Yarn"></a>Yarn</h3><pre><code>npm install -g yarn     // 安装 yarn
-yarn -v                 // 检测是否安装成功
+                <h3 id="Vue-js-是什么"><a href="#Vue-js-是什么" class="headerlink" title="Vue.js 是什么"></a>Vue.js 是什么</h3><p>Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架</p>
+<h3 id="Vue-的特点"><a href="#Vue-的特点" class="headerlink" title="Vue 的特点"></a>Vue 的特点</h3><ol>
+<li>采用组件化模式，提高代码复用率、且让代码更好维护。</li>
+<li>声明式编码，让编码人员无需直接操作 DOM，提高开发效率。</li>
+<li>使用虛拟 DOM + Diff 算法，尽量复用 DOM 节点。</li>
+</ol>
+<h3 id="Vue-导入"><a href="#Vue-导入" class="headerlink" title="Vue 导入"></a>Vue 导入</h3><ul>
+<li>注意: 容器和实例是一对一关系</li>
+</ul>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+  &lt;title&gt;创建一个Vue对象&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;用户名是: &#123;&#123;name&#125;&#125;&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    //创建一个Vue对象
+    new Vue(&#123;
+      //指定,该对象代表&lt;div id=&quot;app&quot;&gt;,也就是说,这个div中的所有内容,都被当前的app对象管理
+      el: &quot;#app&quot;,
+      //定义vue中的数据
+      data: &#123;
+        name: &quot;张三&quot;
+      &#125;
+    &#125;);
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
 </code></pre>
-<h3 id="JDK安装与配置"><a href="#JDK安装与配置" class="headerlink" title="JDK安装与配置"></a>JDK安装与配置</h3><p>安卓系统的App离不开JAVA环境，因此需要下载安装JDK,到该网站下载JDK<br>选择对应自已电脑系统版本</p>
+<h3 id="Vue-基本语法"><a href="#Vue-基本语法" class="headerlink" title="Vue 基本语法"></a>Vue 基本语法</h3><h4 id="插值表达式"><a href="#插值表达式" class="headerlink" title="插值表达式"></a>插值表达式</h4><p>插值表达式用户把 vue 中所定义的数据, 显示在页面上. 插值表达式允许用户输入”JS 表达式”<br><strong>注意区分：js 表达式 和 js 代码（语句</strong><br>表达式： a, a+b, fun() … (一个表达式会产生一个值，可以放在任何一个需要值的地方)<br>语句： if(){ } for(){ }<br><strong>Vue 模板语法包括两大类：</strong></p>
+<ol>
+<li>插值语法：</li>
+</ol>
+<ul>
+<li>功能：用于解析标签体内容</li>
+<li>写法：<code>&#123;&#123; xxx &#125;&#125;</code> xxx 是 js 表达式，且可以直接读取到 data 中的所有区域</li>
+</ul>
+<ol start="2">
+<li>指令语法：</li>
+</ol>
+<ul>
+<li>功能：用于解析标签（包括：标签属性、标签体内容、绑定事件…）</li>
+<li>举例：<code>&lt;a v-bind:href=&quot;xxx&quot;&gt;或简写为&lt;a :href=&quot;xxx&quot;&gt;</code>，xxx 同样要写 js 表达式，且可以直接读取到 data 中的所有属性<br>备注：Vue 中有很多的指令，且形式都是 v-???，此处我们只是拿 v-bind 举个例子</li>
+</ul>
+<pre><code>&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;
+  &lt;title&gt;创建一个Vue对象&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;h1&gt;用户名是: &#123;&#123;name&#125;&#125;&lt;/h1&gt;
+    &lt;h1&gt;时间: &#123;&#123;Date.now()&#125;&#125;&lt;/h1&gt;
+    &lt;a v-bind:href=&quot;url&quot;&gt;点我去博客&lt;/a&gt;
+    &lt;a :href=&quot;url&quot;&gt;点我去博客&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    new Vue(&#123;
+      el: &quot;#app&quot;,
+      data: &#123;
+        name: &quot;你好👋&quot;,
+        url: &quot;https://zuojiahui.fun/&quot;
+      &#125;
+    &#125;);
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<!-- ### 初始化脚手架
+
+> 如果你已经全局安装了旧版本的 vue-cli (1.x 或 2.x)，你需要先通过 npm uninstall vue-cli -g 或 yarn global remove vue-cli 卸载它。
+
+> Vue CLI 4.x 需要 Node.js v8.9 或更高版本 (推荐 v10 以上)。你可以使用 n，nvm 或 nvm-windows 在同一台电脑中管理多个 Node 版本。
+
+#### 安装脚手架
+
+```
+npm install -g @vue/cli
+# OR
+yarn global add @vue/cli
+```
+
+安装之后，你就可以在命令行中访问 vue 命令。你可以通过简单运行 vue，看看是否展示出了一份所有可用命令的帮助信息，来验证它是否安装成功。
+
+你还可以用这个命令来检查其版本是否正确：
+
+```
+vue --version
+```
+
+#### 创建项目
+
+运行以下命令来创建一个新项目：
+
+```
+vue create hello-world
+```
+
+#### 启动项目
+
+```
+npm run serve -->
+<!-- ``` -->
 
             </div>
             <hr/>
@@ -426,8 +538,8 @@ yarn -v                 // 检测是否安装成功
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/react-native/">
-                                    <span class="chip bg-color">react-native</span>
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -595,17 +707,18 @@ yarn -v                 // 检测是否安装成功
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07284234.html">
+                <a href="/2022/062716678.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/logding.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="hooks使用">
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="Vue入坑">
                         
-                        <span class="card-title">hooks使用</span>
+                        <span class="card-title">Vue入坑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -615,9 +728,59 @@ yarn -v                 // 检测是否安装成功
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-28
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-06-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Vue/" class="post-category">
+                                    Vue
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/vue/">
+                        <span class="chip bg-color">vue</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/110450332.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/logding.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="React中使用axios发送请求">
+                        
+                        <span class="card-title">React中使用axios发送请求</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -633,57 +796,8 @@ yarn -v                 // 检测是否安装成功
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hooks/">
-                        <span class="chip bg-color">hooks</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07187920.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/logding.gif" data-original="/medias/featureimages/6.png" class="responsive-img" alt="npm初始化或安装模块报错">
-                        
-                        <span class="card-title">npm初始化或安装模块报错</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/npm/" class="post-category">
-                                    npm
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/npm/">
-                        <span class="chip bg-color">npm</span>
+                    <a href="/tags/axios/">
+                        <span class="chip bg-color">axios</span>
                     </a>
                     
                 </div>
@@ -997,11 +1111,11 @@ $(function () {
 <!-- <script src="https://github.com/.git"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/zuojiahui/live-widget@1.0.2/autoload.js"></script> -->
 <script src="/js/cursor.js"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 preloadRatio: 1,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var e=n.imageLazyLoadSetting.isSPA,i=n.imageLazyLoadSetting.preloadRatio||1,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},t.src!==i&&(n.src=i)}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":235,"height":220},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
