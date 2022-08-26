@@ -1,11 +1,11 @@
 ---
 title: React入门基础
 categories: React
+tags:
+  - React
 abbrlink: 45464
 date: 2020-10-26 12:35:03
-top: 1
 ---
-
 ### 概念
 
 它是一个将数据渲染为 HTML 视图 的 js 库
